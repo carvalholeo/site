@@ -26,12 +26,13 @@
 </head>
 <body>
     <div class="container">
-        @component('layout.component_navbar', ["current" => $current])
+        @component('components.navbar', ["current" => $current])
         @endcomponent
         <main  role="main">
         @hasSection('body')
             @yield('body')
         @endif
+        </main>
     </div>
     
     @hasSection('javascript')
@@ -68,6 +69,9 @@
 
     });
     </script>
+
+    @component('components.footer')
+    @endcomponent
     
 </body>
 </html>
