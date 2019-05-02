@@ -16,5 +16,11 @@ Route::get('/', function () {
 });
 
 Route::resource('/contact', 'ContactController');
-Route::resource('/resume', 'ResumeController');
 Route::resource('/portfolio', 'PortfolioController');
+Route::prefix('/resume')->group(function() {
+    Route::get('/','ResumeController@index');
+    Route::get('/professional', 'ResumeController@professional');
+    Route::get('/academic', 'ResumeController@academic');
+    Route::get('/skills', 'ResumeController@skills');
+});
+
