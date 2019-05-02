@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('/contact', 'ContactController');
+Route::resource('/resume', 'ResumeController');
+Route::resource('/portfolio', 'PortfolioController');
