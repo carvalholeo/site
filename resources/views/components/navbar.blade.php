@@ -10,17 +10,14 @@
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item @if($current=='produtos') active @endif ">
-                    <a class="nav-link" href="http://fontenele.github.io/bootstrap-navbar-dropdowns/"
-                        target="_blank">Github</a>
-                </li>
-                <li class="nav-item @if($current=='produtos') active @endif ">
                     <a class="nav-link disabled" href="#">Disabled</a>
                 </li>
-                <li class="nav-item dropdown @if($current=='produtos') active @endif ">
+                <li class="nav-item dropdown @if($current=='resume') active @endif ">
                     <a class="nav-link dropdown-toggle" id="dropdown1" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false">Dropdown1</a>
+                        aria-expanded="false">Currículo</a>
                     <ul class="dropdown-menu" aria-labelledby="dropdown1">
-                        <li class="dropdown-item" href="#"><a>Action 1</a></li>
+                        <li class="dropdown-item" href="#"><a>Histórico Profissional</a></li>
+                        <li class="dropdown-item" href="#"><a>Histórico Acadêmico</a></li>
                         <li class="dropdown-item dropdown">
                             <a class="dropdown-toggle" id="dropdown1-1" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">Dropdown1.1</a>
