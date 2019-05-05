@@ -1,5 +1,9 @@
 <nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="/">Léo Carvalho</a>
+    <a class="navbar-brand" href="/">
+        <i class="fa fa-terminal">
+        </i>
+        Léo Carvalho
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -7,66 +11,49 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item @if($current=='resume') active @endif ">
-                <a class="nav-link" href="#">
+            <li class="nav-item @if($current=='home') active @endif ">
+                <a class="nav-link" href="/">
                     <i class="fa fa-home"></i>
                     Home
                     <span class="sr-only">(current)</span>
                 </a>
             </li>
-            <li class="nav-item @if($current=='resume') active @endif ">
-                <a class="nav-link" href="#">
-                    <i class="fa fa-envelope-o">
-                        <span class="badge badge-danger">11</span>
+            <li class="nav-item @if($current=='portfolio') active @endif ">
+                <a class="nav-link" href="/portfolio">
+                    <i class="fa fa-atlas">
                     </i>
-                    Link
+                    Portifólio
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#">
-                    <i class="fa fa-envelope-o">
-                        <span class="badge badge-warning">11</span>
-                    </i>
-                    Disabled
-                </a>
-            </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown @if($current=='resume') active @endif ">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
-                    <i class="fa fa-envelope-o">
-                        <span class="badge badge-primary">11</span>
+                    <i class="fa fa-file">
                     </i>
-                    Dropdown
+                    Currículo
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="/resume/professional">Histórico Profissional</a>
+                    <a class="dropdown-item" href="/resume/academic">Histórico Acadêmico</a>
+                    <a class="dropdown-item" href="/resume/skills">Conhecimentos e habilidades</a>
                 </div>
             </li>
         </ul>
-        <ul class="navbar-nav ">
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fa fa-bell">
-                        <span class="badge badge-info">11</span>
+        <ul class="navbar-nav">
+            <li class="nav-item @if($current=='contact') active @endif ">
+                <a class="nav-link" href="/contact">
+                    <i class="fa fa-envelope">
                     </i>
-                    Test
+                    Contato
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fa fa-globe">
-                        <span class="badge badge-success">11</span>
+                <a class="nav-link" href="/blog" target="_blank">
+                    <i class="fa fa-blog">
                     </i>
-                    Test
+                    Blog
                 </a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
     </div>
 </nav>
