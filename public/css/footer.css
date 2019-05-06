@@ -22,3 +22,8 @@ section .section-title {
     font-size: 3em;
     color: #000000;
 }
+
+#footerText ul li.list-inline-item a:hover{
+    font-size: 3em;
+    color: #4f4fff;
+}
