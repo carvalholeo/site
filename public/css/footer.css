@@ -18,6 +18,7 @@ section .section-title {
     color: #ffffff;
 }
 
-#footerSocial {
+#footerText ul li.list-inline-item a{
     font-size: 3em;
+    color: #000000;
 }
