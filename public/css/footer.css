@@ -1,0 +1,23 @@
+section .section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+#footerMain, #footerText {
+    background-color: transparent;
+    border: 0px;
+    border-color: transparent;
+}
+
+#footer h5 {
+    padding-left: 10px;
+    border-left: 3px solid #eeeeee;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+#footerSocial {
+    font-size: 3em;
+}
