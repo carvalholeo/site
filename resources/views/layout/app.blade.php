@@ -44,15 +44,13 @@
         </main>
     </div>
 
-    @hasSection('javascript')
-    @yield('javascript')
-    @endif
-
-
-
-    <footer class="footer navbar-fixed-bottom">
+    <footer class="container footer navbar-fixed-bottom">
         @component('components.footer')
         @endcomponent
+
+        @hasSection('javascript')
+        @yield('javascript')
+        @endif
     </footer>
 </body>
 
