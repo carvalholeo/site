@@ -48,9 +48,8 @@
     @yield('javascript')
     @endif
 
-    <script type="text/javascript">
 
-    </script>
+
     <footer class="footer navbar-fixed-bottom">
         @component('components.footer')
         @endcomponent
