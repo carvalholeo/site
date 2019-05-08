@@ -33,8 +33,10 @@
                     Currículo
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/resume/bio">Mini-bio</a>
                     <a class="dropdown-item" href="/resume/professional">Histórico Profissional</a>
-                    <a class="dropdown-item" href="/resume/academic">Histórico Acadêmico</a>
+                    <a class="dropdown-item" href="/resume/academic">Formação Acadêmica</a>
+                    <a class="dropdown-item" href="/resume/hobbies">Projetos e hobbies</a>
                     <a class="dropdown-item" href="/resume/skills">Conhecimentos e habilidades</a>
                 </div>
             </li>

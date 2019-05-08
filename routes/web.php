@@ -20,6 +20,9 @@ Route::prefix('/resume')->group(function() {
     Route::get('/','ResumeController@index')->name('resume.index');
     Route::get('/professional', 'ResumeController@professional')->name('resume.professional');
     Route::get('/academic', 'ResumeController@academic')->name('resume.academic');
+    Route::get('/hobbies','ResumeController@hobbies')->name('resume.hobbies');
+    Route::get('/courses', 'ResumeController@courses')->name('resume.courses');
+    Route::get('/bio', 'ResumeController@bio')->name('resume.bio');
     Route::get('/skills', 'ResumeController@skills')->name('resume.skills');
 });
 
