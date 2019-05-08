@@ -19,5 +19,9 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 
-    AllowOverride All Indexes
+    <Directory /home/u701084516/domains/leocarvalho.tech>
+        Options Indexes FollowSymLinks
+        AllowOverride None
+        Require all granted
+    </Directory> 
 </IfModule>
