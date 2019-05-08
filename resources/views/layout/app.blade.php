@@ -42,8 +42,9 @@
             @yield('body')
             @endif
         </main>
+        <hr />
     </div>
-
+    
     <footer class="container footer navbar-fixed-bottom">
         @component('components.footer')
         @endcomponent
