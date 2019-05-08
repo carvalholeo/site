@@ -19,7 +19,7 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 
-    <Directory /home/u701084516/domains/leocarvalho.tech/public_html>
+    <Directory /home/u701084516/domains/leocarvalho.tech/public_html/>
         Options Indexes FollowSymLinks
         AllowOverride All
         Require all granted
