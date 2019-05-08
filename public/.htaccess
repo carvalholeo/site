@@ -21,7 +21,8 @@
 
     <Directory /home/u701084516/domains/leocarvalho.tech>
         Options Indexes FollowSymLinks
-        AllowOverride None
+        AllowOverride All
         Require all granted
-    </Directory> 
+    </Directory>
+
 </IfModule>
