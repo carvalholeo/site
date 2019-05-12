@@ -12,7 +12,7 @@
  */
 
 Route::get('/', function () {
-    return view('construcion');
+    return view('construction');
 })->name('index');
 
 Route::resource('/contact', 'ContactController');
