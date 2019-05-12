@@ -1,4 +1,4 @@
-@extends('layout.app', ["current" => "resume"])
+@extends('layout.app', ["current" => "construction"])
 
 @section('body')
 <body>
