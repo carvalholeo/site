@@ -13,7 +13,7 @@ class PortfolioController extends Controller
      */
     public function index()
     {
-        //
+        return view ('construction');
     }
 
     /**
@@ -23,7 +23,7 @@ class PortfolioController extends Controller
      */
     public function create()
     {
-        //
+        return view ('construction');
     }
 
     /**
@@ -34,7 +34,7 @@ class PortfolioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return view ('construction');
     }
 
     /**
@@ -45,7 +45,7 @@ class PortfolioController extends Controller
      */
     public function show($id)
     {
-        //
+        return view ('construction');
     }
 
     /**
@@ -56,7 +56,7 @@ class PortfolioController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view ('construction');
     }
 
     /**
@@ -68,7 +68,7 @@ class PortfolioController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return view ('construction');
     }
 
     /**
@@ -79,6 +79,6 @@ class PortfolioController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return view ('construction');
     }
 }

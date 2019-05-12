@@ -13,36 +13,36 @@ class ResumeController extends Controller
      */
     public function index()
     {
-        return redirect('resume.bio');
+        return view ('construction');
     }
 
     public function professional()
     {
-        return view('resume.professional');
+        return view ('construction');
     }
 
     public function skills()
     {
-        return view('resume.skills');
+        return view ('construction');
     }
 
     public function academic()
     {
-        return view('resume.academic');
+        return view ('construction');
     }
 
     public function hobbies()
     {
-        return view('resume.hobbies');
+        return view ('construction');
     }
 
     public function courses()
     {
-        return view('resume.courses');
+        return view ('construction');
     }
 
     public function bio()
     {
-        return view('resume.bio');
+        return view ('construction');
     }
 }
