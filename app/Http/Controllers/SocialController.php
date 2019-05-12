@@ -13,67 +13,36 @@ class SocialController extends Controller
      */
     public function index()
     {
-        //
+        return redirect()->route('resume.bio');
     }
 
     public function blog()
     {
-        //
+        $url = 'https://medium.com/@carvalho_leo';
+        return redirect()->away($url);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function twitter()
     {
-        //
+        $url = 'https://twitter.com/_carvalho_leo';
+        return redirect()->away($url);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+    public function linkedin()
     {
-        //
+        $url = 'https://www.linkedin.com/in/carvalholeo/';
+        return redirect()->away($url);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+    public function instagram()
     {
-        //
+        $url = 'https://instagram.com/carvalho_leo';
+        return redirect()->away($url);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+    public function wordpress()
     {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        $url = 'https://carvalholeo.wordpress.com';
+        return redirect()->away($url);
     }
 }
