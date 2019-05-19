@@ -11,7 +11,7 @@
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/navbar.css') }}" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" async></script>
     <script src="{{ asset('js/app.js') }}" type="text/javascript" async></script>
     <script src="{{ asset('js/extended.js') }}" type="text/javascript" async></script>
 
