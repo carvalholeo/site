@@ -13,8 +13,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/navbar.css') }}" />
     <script src="{{ asset('js/app.js') }}" type="text/javascript"></script>
     <script src="{{ asset('js/extended.js') }}" type="text/javascript"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <style>
