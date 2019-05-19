@@ -10,7 +10,7 @@ section .section-title {
     border-color: transparent;
 }
 
-#footer h5 {
+#footer h5  {
     padding-left: 10px;
     border-left: 3px solid #eeeeee;
     padding-bottom: 6px;
@@ -23,7 +23,27 @@ section .section-title {
     color: #000000;
 }
 
-#footerText ul li.list-inline-item a:hover{
+#footerText ul li.list-inline-item#linkedin a:hover{
     font-size: 3em;
-    color: #0000bb;
+    color: #0e76a8;
+}
+
+#footerText ul li.list-inline-item#twitter a:hover{
+    font-size: 3em;
+    color: #00acee;
+}
+
+#footerText ul li.list-inline-item#github a:hover{
+    font-size: 3em;
+    color: #333;
+}
+
+#footerText ul li.list-inline-item#instagram a:hover{
+    font-size: 3em;
+    color: #bc2a8d;
+}
+
+#footerText ul li.list-inline-item#mail a:hover{
+    font-size: 3em;
+    color: #c71610;
 }

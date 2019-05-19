@@ -3,15 +3,15 @@
 <div class="card text-center" id="footerMain">
     <div class="card-footer" id="footerText">
         <ul class="list-unstyled list-inline social text-center">
-            <li class="list-inline-item" id="footerSocial"><a href="https://www.linkedin.com/in/carvalholeo/"
+            <li class="list-inline-item" id="linkedin"><a href="https://www.linkedin.com/in/carvalholeo/"
                     target="_blank"><i class="fab fa-linkedin"></i></a></li>
-            <li class="list-inline-item"><a href="https://github.com/carvalholeo/" target="_blank"><i
-                        class="fab fa-github" id="footerSocial"></i></a></li>
-            <li class="list-inline-item" id="footerSocial"><a href="https://twitter.com/_carvalho_leo"
+            <li class="list-inline-item"  id="github"><a href="https://github.com/carvalholeo/" target="_blank"><i
+                        class="fab fa-github"></i></a></li>
+            <li class="list-inline-item" id="twitter"><a href="https://twitter.com/_carvalho_leo"
                     target="_blank"><i class="fab fa-twitter"></i></a></li>
-            <li class="list-inline-item" id="footerSocial"><a href="https://instagram.com/carvalho_leo"
+            <li class="list-inline-item" id="instagram"><a href="https://instagram.com/carvalho_leo"
                     target="_blank"><i class="fab fa-instagram" id="footerInstagram"></i></a></li>
-            <li class="list-inline-item" id="footerSocial"><a href="/contact" target="_blank"><i
+            <li class="list-inline-item" id="mail"><a href="/contact" target="_blank"><i
                         class="fa fa-envelope"></i></a></li>
         </ul>
         <div class="text-muted">
