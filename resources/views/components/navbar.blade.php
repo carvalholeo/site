@@ -38,6 +38,7 @@
                     <a class="dropdown-item" href="/resume/academic">Formação Acadêmica</a>
                     <a class="dropdown-item" href="/resume/hobbies">Projetos e hobbies</a>
                     <a class="dropdown-item" href="/resume/skills">Conhecimentos e habilidades</a>
+                    <a class="dropdown-item" href="/resume/courses">Cursos</a>
                 </div>
             </li>
         </ul>
