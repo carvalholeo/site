@@ -27,10 +27,13 @@ Route::prefix('/resume')->group(function () {
 });
 
 Route::get('/social', 'SocialController@index')->name('social.index');
+Route::get('/facebook', 'SocialController@index')->name('social.facebook');
 Route::get('/blog', 'SocialController@blog')->name('social.blog');
 Route::get('/twitter', 'SocialController@twitter')->name('social.twitter');
 Route::get('/instagram', 'SocialController@instagram')->name('social.instagram');
 Route::get('/linkedin', 'SocialController@linkedin')->name('social.linkedin');
 Route::get('/wordpress', 'SocialController@wordpress')->name('social.wordpress');
+Route::get('/github', 'SocialController@github')->name('social.github');
+Route::get('/pinterest', 'SocialController@pinterest')->name('social.pinterest');
 
 Route::get('/portfolio', 'PortfolioController@index')->name('portfolio');

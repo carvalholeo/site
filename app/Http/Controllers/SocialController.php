@@ -13,36 +13,41 @@ class SocialController extends Controller
      */
     public function index()
     {
-        return redirect()->route('resume.bio');
+        return view('social.index');
     }
 
     public function blog()
     {
-        $url = 'https://medium.com/@carvalho_leo';
-        return redirect()->away($url);
+        return view('social.blog');
     }
 
     public function twitter()
     {
-        $url = 'https://twitter.com/_carvalho_leo';
-        return redirect()->away($url);
+        return view('social.twitter');
     }
 
     public function linkedin()
     {
-        $url = 'https://www.linkedin.com/in/carvalholeo/';
-        return redirect()->away($url);
+        return view('social.linkedin');
     }
 
     public function instagram()
     {
-        $url = 'https://instagram.com/carvalho_leo';
-        return redirect()->away($url);
+        return view('social.instagram');
     }
 
     public function wordpress()
     {
-        $url = 'https://carvalholeo.wordpress.com';
-        return redirect()->away($url);
+        return view('social.wordpress');
+    }
+
+    public function github()
+    {
+        return view('social.github');
+    }
+
+    public function pinterest()
+    {
+        return view('social.pinterest');
     }
 }

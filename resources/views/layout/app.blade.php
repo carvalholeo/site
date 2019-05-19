@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/navbar.css') }}" />
     <script src="{{ asset('js/app.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('js/extended.js') }}" type="text/javascript"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
@@ -26,9 +27,7 @@
     </style>
 
     <title>
-        @hasSection('title')
-        @yield('section')
-        @endif
+        @yield('title')
     </title>
 
 </head>
@@ -50,7 +49,7 @@
         @endcomponent
 
         @hasSection('javascript')
-        @yield('javascript')
+            @yield('javascript')
         @endif
     </footer>
 </body>
