@@ -1,5 +1,7 @@
 @extends('layout.app', ["current" => "construction"])
 
+@section('title', 'Em construção | Léo Carvalho')
+
 @section('body')
 <body>
     <div class="container">
