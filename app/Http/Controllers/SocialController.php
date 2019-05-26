@@ -50,4 +50,8 @@ class SocialController extends Controller
     {
         return view('social.pinterest');
     }
+    public function telegram()
+    {
+        return view('social.telegram');
+    }
 }
