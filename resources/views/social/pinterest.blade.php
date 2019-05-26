@@ -10,7 +10,7 @@ Aguarde um instante, você já está indo para o meu perfil no Pinterest!
 
 @section('javascript')
     <script type="text/javascript">
-        url = "https://www.github.com/carvalholeo/";
+        url = "https://pinterest.com/carvalho_leo/";
         redirect(url);
     </script>
 @endsection
