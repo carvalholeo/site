@@ -1,7 +1,7 @@
 @extends('layout.app', ["current" => "error"])
 
 <link rel="stylesheet" type="text/css" href="{{ asset('css/error.css') }}" />
-
+@section('title', 'Erro 404 | Léo Carvalho')
 @section('body')
 
 <body>

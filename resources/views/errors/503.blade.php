@@ -4,7 +4,7 @@
 <head>
 <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/app.css') }}" />
 <link rel="stylesheet" type="text/css" href="{{ asset('css/error.css') }}" />
-<title>Temporariamente indisponível</title>
+<title>Erro 503 - Temporariamente indisponível | Léo Carvalho</title>
 
 </head>
 
