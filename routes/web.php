@@ -36,5 +36,6 @@ Route::get('/wordpress', 'SocialController@wordpress')->name('social.wordpress')
 Route::get('/github', 'SocialController@github')->name('social.github');
 Route::get('/pinterest', 'SocialController@pinterest')->name('social.pinterest');
 Route::get('/telegram', 'SocialController@telegram')->name('social.telegram');
+Route::get('/stackoverflow', 'SocialController@stackoverflow')->name('social.stackoverflow');
 
 Route::get('/portfolio', 'PortfolioController@index')->name('portfolio');

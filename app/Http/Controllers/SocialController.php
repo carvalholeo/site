@@ -54,4 +54,8 @@ class SocialController extends Controller
     {
         return view('social.telegram');
     }
+    public function stackoverflow()
+    {
+        return view('social.stackoverflow');
+    }
 }
