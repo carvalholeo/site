@@ -1,5 +1,5 @@
-<nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="/">
+<nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark rounded">
+    <a class="navbar-brand" href="{{ route('index') }}">
         <i class="fa fa-terminal">
         </i>
         Léo Carvalho
@@ -12,14 +12,14 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item @if($current=='home') active @endif ">
-                <a class="nav-link" href="/">
+                <a class="nav-link" href="{{ route('index') }}">
                     <i class="fa fa-home"></i>
                     Home
                     <span class="sr-only">(current)</span>
                 </a>
             </li>
             <li class="nav-item @if($current=='portfolio') active @endif ">
-                <a class="nav-link" href="/portfolio">
+                <a class="nav-link" href="{{ route('portfolio') }}">
                     <i class="fa fa-atlas">
                     </i>
                     Portifólio
@@ -33,25 +33,25 @@
                     Currículo
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/resume/bio">Mini-bio</a>
-                    <a class="dropdown-item" href="/resume/professional">Histórico Profissional</a>
-                    <a class="dropdown-item" href="/resume/academic">Formação Acadêmica</a>
-                    <a class="dropdown-item" href="/resume/hobbies">Projetos e hobbies</a>
-                    <a class="dropdown-item" href="/resume/skills">Conhecimentos e habilidades</a>
-                    <a class="dropdown-item" href="/resume/courses">Cursos</a>
+                    <a class="dropdown-item" href="{{ route('resume.bio') }}">Mini-bio</a>
+                    <a class="dropdown-item" href="{{ route('resume.professional') }}">Histórico Profissional</a>
+                    <a class="dropdown-item" href="{{ route('resume.academic') }}">Formação Acadêmica</a>
+                    <a class="dropdown-item" href="{{ route('resume.hobbies') }}">Projetos e hobbies</a>
+                    <a class="dropdown-item" href="{{ route('resume.skills') }}">Conhecimentos e habilidades</a>
+                    <a class="dropdown-item" href="{{ route('resume.courses') }}">Cursos</a>
                 </div>
             </li>
         </ul>
         <ul class="navbar-nav">
             <li class="nav-item @if($current=='contact') active @endif ">
-                <a class="nav-link" href="/contact">
+                <a class="nav-link" href="{{ route('contact.index') }}">
                     <i class="fa fa-envelope">
                     </i>
                     Contato
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/blog" target="_blank">
+                <a class="nav-link" href="{{ route('social.blog') }}" target="_blank">
                     <i class="fa fa-blog">
                     </i>
                     Blog

@@ -11,11 +11,11 @@
                     target="_blank"><i class="fab fa-twitter"></i></a></li>
             <li class="list-inline-item" id="instagram"><a href="https://instagram.com/carvalho_leo"
                     target="_blank"><i class="fab fa-instagram" id="footerInstagram"></i></a></li>
-            <li class="list-inline-item" id="mail"><a href="/contact" target="_blank"><i
+            <li class="list-inline-item" id="mail"><a href="{{ route('contact.index') }}" target="_blank"><i
                         class="fa fa-envelope"></i></a></li>
         </ul>
         <div class="text-muted">
-            <p><u><a href="/resume">Léo Carvalho</a></u> é desenvolvedor de sites e sistemas, com maior conhecimento em
+            <p><u><a href="{{ route('resume.index') }}">Léo Carvalho</a></u> é desenvolvedor de sites e sistemas, com maior conhecimento em
                 PHP. Profissionalmente, trabalha como Instrutor de Treinamento.<a class="text-green ml-2"
                     href="https://github.com/carvalholeo/site" target="_blank">Acesse o código fonte no GitHub</a></p>
             </p>
