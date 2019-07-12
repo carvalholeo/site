@@ -19,8 +19,8 @@ class UpdateController extends Controller
         $rmStorage = 'rm storage';
         $lnStorage = 'ln -s /home/u701084516/domains/leocarvalho.tech/app/site/storage/app/public/ storage';
 
-        if(!$request->header("content-type: application/json")) {
-            $text = array("response" => "Event doesn't have a JSON.");
+        if(!$request->hasHeader("User-Agent: GitHub-Hookshot/f221634") || !$request->hasHeader("content-type: application/json")) {
+            $text = array("response" => "Event didn't come from GitHub.");
             $text = json_encode($text);
             return response($text, 406);
         }
