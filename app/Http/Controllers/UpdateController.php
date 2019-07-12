@@ -19,13 +19,13 @@ class UpdateController extends Controller
         $rmStorage = 'rm storage';
         $lnStorage = 'ln -s /home/u701084516/domains/leocarvalho.tech/app/site/storage/app/public/ storage';
 
-        if(!$request->header("User-Agent: GitHub-Hookshot/f221634") || !$request->header("content-type: application/json")) {
-            $text = array("response" => "Event didn't come from GitHub.");
+        if(!$request->header("content-type: application/json")) {
+            $text = array("response" => "Event doesn't have a JSON.");
             $text = json_encode($text);
             return response($text, 406);
         }
 
-        if(!$request->header("X-Hub-Signature: sha1=b1d6f8e3c68d39387622cfb87b7e49fabec57a92")){
+        if(!$request->header("X-Hub-Signature: sha1=0fe4a606178bf4e25b701ee9183371780b4cc9a4")){
             $text = array("response" => "Password sent doesn't match with GitHub.");
             $text = json_encode($text);
             return response($text, 403);
