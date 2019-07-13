@@ -11,6 +11,8 @@ class UpdateController extends Controller
     public function update(Request $request)
     {
         $text = array("response" => "");
+        $payload = $request->input();
+        
         $cdPull = 'cd /home/u701084516/domains/leocarvalho.tech/app/site/public';
         $gitPull = 'git pull https://github.com/carvalholeo/site.git';
         $gitCheckoutMaster = 'git checkout master -f';
@@ -35,16 +37,14 @@ class UpdateController extends Controller
             return response($text, 200);
         }
 
-        $payload = json_decode($request->input('payload'));
-
-        if($payload->ref == 'refs/heads/master') {
+        if($payload['ref'] == 'refs/heads/master') {
             $process = new Process([$cdPull, $gitPull, $gitCheckoutMaster, $cdStorage, $rmStorage, $lnStorage]);
             $process->run();
 
             $text = array("response" => "Request was sent to the server and will be processed ASAP.");
             $text = json_encode($text);
             return response($text, 202);
-        } elseif ($payload->ref == 'refs/heads/stage') {
+        } elseif ($payload['ref'] == 'refs/heads/stage') {
             $process = new Process([$cdPull, $gitPull, $gitCheckoutStage, $cdStorage, $rmStorage, $lnStorage]);
             $process->run();
 
