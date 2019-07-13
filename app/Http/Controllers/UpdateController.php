@@ -28,13 +28,6 @@ class UpdateController extends Controller
             return response($text, 406);
         }
 
-        if($request->header()["x-hub-signature"][0] != 'sha1=0fe4a606178bf4e25b701ee9183371780b4cc9a4'){
-            
-            $text = array("response" => "Password sent doesn't match with GitHub.");
-            $text = json_encode($text);
-            return response($text, 403);
-        }
-
         if($request->header()["x-github-event"][0] != 'push'){
             
             $text = array("response" => "Event received successful.");
