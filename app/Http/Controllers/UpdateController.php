@@ -38,9 +38,9 @@ class UpdateController extends Controller
             return response($text, 200);
         }
         try {
-            
+
             if($payload['ref'] == 'refs/heads/master') {
-                Artisan::call('down');
+                \Artisan::call('down');
                 $process = new Process([$cdPull, $gitPull, $gitCheckoutMaster, $cdStorage, $rmStorage, $lnStorage]);
                 $process->run();
 
@@ -48,7 +48,7 @@ class UpdateController extends Controller
                 $text = json_encode($text);
                 return response($text, 202);
             } elseif ($payload['ref'] == 'refs/heads/stage') {
-                Artisan::call('down');
+                \Artisan::call('down');
                 $process = new Process([$cdPull, $gitPull, $gitCheckoutStage, $cdStorage, $rmStorage, $lnStorage]);
                 $process->run();
 
@@ -67,7 +67,7 @@ class UpdateController extends Controller
             return response($text, 503);
         } finally {
 
-            Artisan::call('up');
+            \Artisan::call('up');
         }
     }
 }
