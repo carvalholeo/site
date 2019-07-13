@@ -15,9 +15,9 @@ class UpdateController extends Controller
         $payload = $request->input();
 
         $cdPull = 'cd /home/u701084516/domains/leocarvalho.tech/app/site/public';
-        $gitPull = 'git pull https://github.com/carvalholeo/site.git';
-        $gitCheckoutMaster = 'git checkout master -f';
-        $gitCheckoutStage = 'git checkout stage -f';
+        $gitPull = 'GIT_WORK_TREE=/home/u701084516/domains/leocarvalho.tech/app/site git pull';
+        $gitCheckoutMaster = 'GIT_WORK_TREE=/home/u701084516/domains/leocarvalho.tech/app/site git checkout master -f';
+        $gitCheckoutStage = 'GIT_WORK_TREE=/home/u701084516/domains/leocarvalho.tech/app/site git checkout stage -f';
         $cdStorage = 'cd /home/u701084516/domains/leocarvalho.tech/app/site/public';
         $rmStorage = 'rm storage';
         $lnStorage = 'ln -s /home/u701084516/domains/leocarvalho.tech/app/site/storage/app/public/ storage';
