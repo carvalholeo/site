@@ -20,19 +20,26 @@ class UpdateController extends Controller
         $lnStorage = 'ln -s /home/u701084516/domains/leocarvalho.tech/app/site/storage/app/public/ storage';
 
 
-        if(!$request->header()["user-agent"][0] == 'GitHub-Hookshot/f221634' || 
-        !$request->header()["content-type"][0] == 'application/json') {
+        if($request->header()["user-agent"][0] != 'GitHub-Hookshot/f221634' || 
+        $request->header()["content-type"][0] != 'application/json') {
 
             $text = array("response" => "Event didn't come from GitHub.");
             $text = json_encode($text);
             return response($text, 406);
         }
 
-        if(!$request->header()["x-hub-signature"][0] == 'sha1=0fe4a606178bf4e25b701ee9183371780b4cc9a4'){
+        if($request->header()["x-hub-signature"][0] != 'sha1=0fe4a606178bf4e25b701ee9183371780b4cc9a4'){
             
             $text = array("response" => "Password sent doesn't match with GitHub.");
             $text = json_encode($text);
             return response($text, 403);
+        }
+
+        if($request->header()["x-github-event"][0] != 'push'){
+            
+            $text = array("response" => "Event received successful.");
+            $text = json_encode($text);
+            return response($text, 200);
         }
 
         $payload = json_decode($request->input('payload'));
