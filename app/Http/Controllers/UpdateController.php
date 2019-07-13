@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Exceptions\Handler;
 use Illuminate\Http\Request;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 use Symfony\Component\Process\Process;
@@ -12,7 +13,7 @@ class UpdateController extends Controller
     {
         $text = array("response" => "");
         $payload = $request->input();
-        
+
         $cdPull = 'cd /home/u701084516/domains/leocarvalho.tech/app/site/public';
         $gitPull = 'git pull https://github.com/carvalholeo/site.git';
         $gitCheckoutMaster = 'git checkout master -f';
@@ -36,25 +37,37 @@ class UpdateController extends Controller
             $text = json_encode($text);
             return response($text, 200);
         }
+        try {
+            
+            if($payload['ref'] == 'refs/heads/master') {
+                Artisan::call('down');
+                $process = new Process([$cdPull, $gitPull, $gitCheckoutMaster, $cdStorage, $rmStorage, $lnStorage]);
+                $process->run();
 
-        if($payload['ref'] == 'refs/heads/master') {
-            $process = new Process([$cdPull, $gitPull, $gitCheckoutMaster, $cdStorage, $rmStorage, $lnStorage]);
-            $process->run();
+                $text = array("response" => "Request was sent to the server and will be processed ASAP.");
+                $text = json_encode($text);
+                return response($text, 202);
+            } elseif ($payload['ref'] == 'refs/heads/stage') {
+                Artisan::call('down');
+                $process = new Process([$cdPull, $gitPull, $gitCheckoutStage, $cdStorage, $rmStorage, $lnStorage]);
+                $process->run();
 
-            $text = array("response" => "Request was sent to the server and will be processed ASAP.");
-            $text = json_encode($text);
-            return response($text, 202);
-        } elseif ($payload['ref'] == 'refs/heads/stage') {
-            $process = new Process([$cdPull, $gitPull, $gitCheckoutStage, $cdStorage, $rmStorage, $lnStorage]);
-            $process->run();
+                $text = array("response" => "Request was sent to the server and will be processed ASAP.");
+                $text = json_encode($text);
+                return response($text, 202);
+            } else {
+                $text = array("response" => "Brach doesn't registered at server");
+                $text = json_encode($text);
+                return response($text, 412);
+            }
+        }  catch(Exception $e) {
 
-            $text = array("response" => "Request was sent to the server and will be processed ASAP.");
+            $text = array("response" => $e->getMessage());
             $text = json_encode($text);
-            return response($text, 202);
-        } else {
-            $text = array("response" => "Brach doesn't registered at server");
-            $text = json_encode($text);
-            return response($text, 412);
+            return response($text, 503);
+        } finally {
+
+            Artisan::call('up');
         }
     }
 }
