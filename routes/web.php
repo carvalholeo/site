@@ -11,9 +11,7 @@
 |
  */
 
-Route::get('/', function () {
-    return view('construction');
-})->name('index');
+Route::get('/', 'PortfolioController@index')->name('index');
 
 Route::resource('/contact', 'ContactController');
 Route::prefix('/resume')->group(function () {
