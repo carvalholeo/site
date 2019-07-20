@@ -13,12 +13,12 @@ class ResumeController extends Controller
      */
     public function index()
     {
-        return view ('construction');
+        return redirect()->route('resume.professional');
     }
 
     public function professional()
     {
-        return view ('construction');
+        return view ('resume.professional');
     }
 
     public function skills()
