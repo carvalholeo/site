@@ -14,10 +14,10 @@ class UpdateController extends Controller
         $text = array("response" => "");
         $payload = $request->input();
 
-        $cdPull = 'cd /home/u701084516/domains/leocarvalho.tech/app/site/public';
-        $gitPull = 'GIT_WORK_TREE=/home/u701084516/domains/leocarvalho.tech/app/site git pull';
-        $gitCheckoutMaster = 'GIT_WORK_TREE=/home/u701084516/domains/leocarvalho.tech/app/site git checkout master -f';
-        $gitCheckoutStage = 'GIT_WORK_TREE=/home/u701084516/domains/leocarvalho.tech/app/site git checkout stage -f';
+        $cdPull = 'cd /home/u701084516/domains/leocarvalho.tech/app/site/app.git';
+        $gitPull = 'GIT_WORK_TREE=/home/u701084516/domains/leocarvalho.tech/app/site/app.git git pull';
+        $gitCheckoutMaster = 'GIT_WORK_TREE=/home/u701084516/domains/leocarvalho.tech/app/site/app.git git checkout master -f';
+        $gitCheckoutStage = 'GIT_WORK_TREE=/home/u701084516/domains/leocarvalho.tech/app/site/app.git git checkout stage -f';
         $cdStorage = 'cd /home/u701084516/domains/leocarvalho.tech/app/site/public';
         $rmStorage = 'rm storage';
         $lnStorage = 'ln -s /home/u701084516/domains/leocarvalho.tech/app/site/storage/app/public/ storage';
@@ -75,10 +75,10 @@ class UpdateController extends Controller
         $text = array("response" => "");
         $payload = $request->input();
 
-        $cdPull = 'cd /home/u701084516/domains/leocarvalho.tech/app/site';
-        $gitPull = 'GIT_WORK_TREE=/home/u701084516/domains/leocarvalho.tech/app/site git pull';
-        $gitCheckoutMaster = 'GIT_WORK_TREE=/home/u701084516/domains/leocarvalho.tech/app/site git checkout master -f';
-        $gitCheckoutStage = 'GIT_WORK_TREE=/home/u701084516/domains/leocarvalho.tech/app/site git checkout stage -f';
+        $cdPull = 'cd /home/u701084516/domains/leocarvalho.tech/app/site/app.git';
+        $gitPull = 'GIT_WORK_TREE=/home/u701084516/domains/leocarvalho.tech/app/site/app.git git pull';
+        $gitCheckoutMaster = 'GIT_WORK_TREE=/home/u701084516/domains/leocarvalho.tech/app/site/app.git git checkout master -f';
+        $gitCheckoutStage = 'GIT_WORK_TREE=/home/u701084516/domains/leocarvalho.tech/app/site/app.git git checkout stage -f';
         $cdStorage = 'cd /home/u701084516/domains/leocarvalho.tech/app/site/public';
         $rmStorage = 'rm storage';
         $lnStorage = 'ln -s /home/u701084516/domains/leocarvalho.tech/app/site/storage/app/public/ storage';
