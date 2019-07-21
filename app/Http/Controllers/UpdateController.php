@@ -88,6 +88,7 @@ class UpdateController extends Controller
             \Artisan::call('route:clear');
             $process = new Process([$cdPull, $gitPull, $gitCheckoutMaster, $cdStorage, $rmStorage, $lnStorage]);
             $process = Process::fromShellCommandline([$cdPull, $gitPull, $gitCheckoutMaster, $cdStorage, $rmStorage, $lnStorage]);
+            $process->run();
 
             if (!$process->isSuccessful()) {
                 echo $process->getOutput();
