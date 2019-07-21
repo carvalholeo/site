@@ -69,4 +69,40 @@ class UpdateController extends Controller
             \Artisan::call('up');
         }
     }
+
+    public function test(Request $request)
+    {
+        $text = array("response" => "");
+        $payload = $request->input();
+
+        $cdPull = 'cd /home/u701084516/domains/leocarvalho.tech/app/site/public';
+        $gitPull = 'GIT_WORK_TREE=/home/u701084516/domains/leocarvalho.tech/app/site git pull';
+        $gitCheckoutMaster = 'GIT_WORK_TREE=/home/u701084516/domains/leocarvalho.tech/app/site git checkout master -f';
+        $gitCheckoutStage = 'GIT_WORK_TREE=/home/u701084516/domains/leocarvalho.tech/app/site git checkout stage -f';
+        $cdStorage = 'cd /home/u701084516/domains/leocarvalho.tech/app/site/public';
+        $rmStorage = 'rm storage';
+        $lnStorage = 'ln -s /home/u701084516/domains/leocarvalho.tech/app/site/storage/app/public/ storage';
+
+        if($payload['ref'] == 'refs/heads/master') {
+            \Artisan::call('down');
+            $process = new Process([$cdPull, $gitPull, $gitCheckoutMaster, $cdStorage, $rmStorage, $lnStorage]);
+            $process->run();
+
+            $text = array("response" => "Request was sent to the server and will be processed ASAP.");
+            $text = json_encode($text);
+            return response($text, 202);
+        } elseif ($payload['ref'] == 'refs/heads/stage') {
+            \Artisan::call('down');
+            $process = new Process([$cdPull, $gitPull, $gitCheckoutStage, $cdStorage, $rmStorage, $lnStorage]);
+            $process->run();
+
+            $text = array("response" => "Request was sent to the server and will be processed ASAP.");
+            $text = json_encode($text);
+            return response($text, 202);
+        } else {
+            $text = array("response" => "Brach doesn't registered at server");
+            $text = json_encode($text);
+            return response($text, 412);
+        }
+    }
 }

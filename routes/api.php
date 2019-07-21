@@ -14,3 +14,4 @@ use Illuminate\Http\Request;
 */
 
 Route::post('config/webhook', 'UpdateController@update')->name('api.webook');
+Route::post('config/test', 'UpdateController@test');
