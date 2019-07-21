@@ -76,7 +76,7 @@ class UpdateController extends Controller
         $text = array("response" => "");
         $payload = $request->input();
 
-        $cdPull = 'cd /home/u701084516/domains/leocarvalho.tech/app/site/app.git';
+        $cdPull = "cd /home/u701084516/domains/leocarvalho.tech/app/site/app.git";
         $gitPull = 'GIT_WORK_TREE=/home/u701084516/domains/leocarvalho.tech/app/site/app.git git pull';
         $gitCheckoutMaster = 'GIT_WORK_TREE=/home/u701084516/domains/leocarvalho.tech/app/site/app.git git checkout master -f';
         $gitCheckoutStage = 'GIT_WORK_TREE=/home/u701084516/domains/leocarvalho.tech/app/site/app.git git checkout stage -f';
@@ -87,7 +87,7 @@ class UpdateController extends Controller
         if($payload['ref'] == 'refs/heads/master') {
             \Artisan::call('route:clear');
             $process = new Process([$cdPull, $gitPull, $gitCheckoutMaster, $cdStorage, $rmStorage, $lnStorage]);
-            $process = Process::fromShellCommandline([$cdPull, $gitPull, $gitCheckoutMaster, $cdStorage, $rmStorage, $lnStorage]);
+            //$process = Process::fromShellCommandline([$cdPull, $gitPull, $gitCheckoutMaster, $cdStorage, $rmStorage, $lnStorage]);
             $process->run();
 
             if (!$process->isSuccessful()) {
