@@ -19,7 +19,7 @@
                         <h5 class="title">Análise e Desenv. de Sistemas</h5>
                         
                         <p class="description">
-                            Graduação técnológica iniciada em fevereiro/2018, estou no 4º semestre (4/5), pelo Centro Universitário Estácio de Ribeirão Preto, via EAD, no polo de Santos/SP.
+                            Graduação tecnológica iniciada em fevereiro/2018, estou no 4º semestre (4/5), pelo Centro Universitário Estácio de Ribeirão Preto, via EAD, no polo de Santos/SP.
                         </p>
                     </div>
                 </div>
