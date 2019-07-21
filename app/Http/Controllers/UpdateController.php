@@ -88,6 +88,20 @@ class UpdateController extends Controller
             $process = new Process([$cdPull, $gitPull, $gitCheckoutMaster, $cdStorage, $rmStorage, $lnStorage]);
             $process->run();
 
+            foreach ($process as $type => $data) {
+                if ($process::OUT === $type) {
+                    echo "\nRead from stdout: ".$data;
+                } else { // $process::ERR === $type
+                    echo "\nRead from stderr: ".$data;
+                }
+            }
+
+            if (!$process->isSuccessful()) {
+                echo $process->getOutput();
+                throw new ProcessFailedException($process);
+            }
+
+
             $text = array("response" => "Request was sent to the server and will be processed ASAP.");
             $text = json_encode($text);
             return response($text, 202);
