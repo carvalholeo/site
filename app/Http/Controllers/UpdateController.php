@@ -41,7 +41,8 @@ class UpdateController extends Controller
             if($payload['ref'] == 'refs/heads/master') {
                 \Artisan::call('down');
                 $process = new Process([$cdPull, $gitPull, $gitCheckoutMaster, $cdStorage, $rmStorage, $lnStorage]);
-                $process->run();
+                $process = Process::fromShellCommandline([$cdPull, $gitPull, $gitCheckoutMaster, $cdStorage, $rmStorage, $lnStorage]);
+                $process->start();
 
                 $text = array("response" => "Request was sent to the server and will be processed ASAP.");
                 $text = json_encode($text);
