@@ -84,10 +84,9 @@ class UpdateController extends Controller
         $lnStorage = 'ln -s /home/u701084516/domains/leocarvalho.tech/app/site/storage/app/public/ storage';
 
         if($payload['ref'] == 'refs/heads/master') {
-            \Artisan::call('down');
             \Artisan::call('route:clear');
             $process = new Process([$cdPull, $gitPull, $gitCheckoutMaster, $cdStorage, $rmStorage, $lnStorage]);
-            $process->start();
+            $process->run();
 
             foreach ($process as $type => $data) {
                 if ($process::OUT === $type) {
