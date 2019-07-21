@@ -28,7 +28,7 @@ class ResumeController extends Controller
 
     public function academic()
     {
-        return view ('construction');
+        return view ('resume.academic');
     }
 
     public function hobbies()
