@@ -23,10 +23,9 @@ class UpdateController extends Controller
         $lnStorage = 'ln -s /home/u701084516/domains/leocarvalho.tech/app/site/storage/app/public/ storage';
 
 
-        if($request->header()["user-agent"][0] != 'GitHub-Hookshot' || 
-        $request->header()["content-type"][0] != 'application/json') {
+        if($request->header()["content-type"][0] != 'application/json') {
 
-            $text = array("response" => "Event didn't come from GitHub.");
+            $text = array("response" => "Event isn't in Json.");
             $text = json_encode($text);
             return response($text, 406);
         }
