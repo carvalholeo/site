@@ -86,7 +86,7 @@ class UpdateController extends Controller
         if($payload['ref'] == 'refs/heads/master') {
             \Artisan::call('route:clear');
             $process = new Process([$cdPull, $gitPull, $gitCheckoutMaster, $cdStorage, $rmStorage, $lnStorage]);
-            $process->run();
+            $process = Process::fromShellCommandline($cdPull, $gitPull, $gitCheckoutMaster, $cdStorage, $rmStorage, $lnStorage);
 
             foreach ($process as $type => $data) {
                 if ($process::OUT === $type) {
