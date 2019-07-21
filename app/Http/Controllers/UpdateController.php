@@ -92,7 +92,7 @@ class UpdateController extends Controller
 
             if (!$process->isSuccessful()) {
                 echo $process->getOutput();
-                throw new ProcessFailedException($process);
+                
             }
 
             foreach ($process as $type => $data) {
