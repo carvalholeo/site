@@ -75,7 +75,7 @@ class UpdateController extends Controller
         $text = array("response" => "");
         $payload = $request->input();
 
-        $cdPull = 'cd /home/u701084516/domains/leocarvalho.tech/app/site/public';
+        $cdPull = 'cd /home/u701084516/domains/leocarvalho.tech/app/site';
         $gitPull = 'GIT_WORK_TREE=/home/u701084516/domains/leocarvalho.tech/app/site git pull';
         $gitCheckoutMaster = 'GIT_WORK_TREE=/home/u701084516/domains/leocarvalho.tech/app/site git checkout master -f';
         $gitCheckoutStage = 'GIT_WORK_TREE=/home/u701084516/domains/leocarvalho.tech/app/site git checkout stage -f';
@@ -87,7 +87,7 @@ class UpdateController extends Controller
             \Artisan::call('down');
             \Artisan::call('route:clear');
             $process = new Process([$cdPull, $gitPull, $gitCheckoutMaster, $cdStorage, $rmStorage, $lnStorage]);
-            $process = Process::fromShellCommandline($cdPull, $gitPull, $gitCheckoutMaster, $cdStorage, $rmStorage, $lnStorage);
+            $process->start();
 
             foreach ($process as $type => $data) {
                 if ($process::OUT === $type) {
