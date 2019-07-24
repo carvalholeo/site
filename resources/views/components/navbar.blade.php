@@ -18,8 +18,8 @@
                     <span class="sr-only">(current)</span>
                 </a>
             </li>
-            <li class="nav-item @if($current=='portfolio') active @endif ">
-                <a class="nav-link" href="{{ route('portfolio') }}">
+            <li class="nav-item @if($current=='portfolio') active @endif">
+                <a class="nav-link  disabled" href="{{ route('portfolio') }}" aria-disabled="true">
                     <i class="fa fa-atlas">
                     </i>
                     Portifólio
@@ -33,18 +33,18 @@
                     Currículo
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{ route('resume.bio') }}">Mini-bio</a>
-                    <a class="dropdown-item" href="{{ route('resume.professional') }}">Histórico Profissional</a>
+                    <a class="dropdown-item disabled" href="{{ route('resume.bio') }}"  aria-disabled="true">Mini-bio</a>
+                    <a class="dropdown-item" href="{{ route('resume.professional') }}" aria-disabled="true">Histórico Profissional</a>
                     <a class="dropdown-item" href="{{ route('resume.academic') }}">Formação Acadêmica</a>
-                    <a class="dropdown-item" href="{{ route('resume.hobbies') }}">Projetos e hobbies</a>
-                    <a class="dropdown-item" href="{{ route('resume.skills') }}">Conhecimentos e habilidades</a>
+                    <a class="dropdown-item disabled" href="{{ route('resume.hobbies') }}" aria-disabled="true">Projetos e hobbies</a>
+                    <a class="dropdown-item disabled" href="{{ route('resume.skills') }}" aria-disabled="true">Conhecimentos e habilidades</a>
                     <a class="dropdown-item" href="{{ route('resume.courses') }}">Cursos</a>
                 </div>
             </li>
         </ul>
         <ul class="navbar-nav">
             <li class="nav-item @if($current=='contact') active @endif ">
-                <a class="nav-link" href="{{ route('contact.index') }}">
+                <a class="nav-link  disabled" href="{{ route('contact.index') }}"  aria-disabled="true">
                     <i class="fa fa-envelope">
                     </i>
                     Contato
