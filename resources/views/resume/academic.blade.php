@@ -2,7 +2,7 @@
 
 @section('title', 'Formação Acadêmica | Léo Carvalho')
 
-<link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/academic.css') }}" />
+<link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/timelines.css') }}" />
 
 @section('body')
 
