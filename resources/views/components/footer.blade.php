@@ -16,7 +16,7 @@
         </ul>
         <div class="text-muted">
             <p><u><a href="{{ route('resume.index') }}">Léo Carvalho</a></u> é desenvolvedor de sites e sistemas, com maior conhecimento em
-                PHP. Profissionalmente, trabalha como Instrutor de Treinamento.<a class="text-green ml-2"
+                PHP.<a class="text-green ml-2"
                     href="https://github.com/carvalholeo/site" target="_blank">Acesse o código fonte no GitHub</a></p>
             </p>
             <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licença Creative Commons"
