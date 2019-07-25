@@ -38,7 +38,7 @@ class ResumeController extends Controller
 
     public function courses()
     {
-        return view ('construction');
+        return view ('resume.courses');
     }
 
     public function bio()
