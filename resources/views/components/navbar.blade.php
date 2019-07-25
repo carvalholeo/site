@@ -15,7 +15,6 @@
                 <a class="nav-link" href="{{ route('index') }}">
                     <i class="fa fa-home"></i>
                     Home
-                    <span class="sr-only">(current)</span>
                 </a>
             </li>
             <li class="nav-item @if($current=='portfolio') active @endif">
