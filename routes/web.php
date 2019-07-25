@@ -36,4 +36,11 @@ Route::get('/pinterest', 'SocialController@pinterest')->name('social.pinterest')
 Route::get('/telegram', 'SocialController@telegram')->name('social.telegram');
 Route::get('/stackoverflow', 'SocialController@stackoverflow')->name('social.stackoverflow');
 
+Route::get('/zap', 'SocialController@whatsapp')->name('social.whatsapp');
+Route::get('/zapzap', 'SocialController@whatsapp')->name('social.whatsapp');
+Route::get('/whats', 'SocialController@whatsapp')->name('social.whatsapp');
+Route::get('/wpp', 'SocialController@whatsapp')->name('social.whatsapp');
+Route::get('/whatzap', 'SocialController@whatsapp')->name('social.whatsapp');
+Route::get('/whatsapp', 'SocialController@whatsapp')->name('social.whatsapp');
+
 Route::get('/portfolio', 'PortfolioController@index')->name('portfolio');

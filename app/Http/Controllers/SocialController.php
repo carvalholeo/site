@@ -58,4 +58,8 @@ class SocialController extends Controller
     {
         return view('social.stackoverflow');
     }
+    public function whatsapp()
+    {
+        return view('social.whatsapp');
+    }
 }
