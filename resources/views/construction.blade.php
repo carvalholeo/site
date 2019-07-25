@@ -10,7 +10,6 @@
                 <div class="row">
                     <div class="col-lg-8 col-12 col-sm-10 offset-lg-2 offset-sm-1">
                         <h1 class="h1">Quase lá!</h1>
-                        <h1 class="h1">Teste!</h1>
                         <h5 class="h4">Ainda estamos em construção do site.</h4>
 
                             <div class="text-center">
