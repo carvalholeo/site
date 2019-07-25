@@ -28,9 +28,7 @@
     </div>
 </div>
 
-@env('developing')
-
-@else
+@env('production')
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139872605-1"></script>
 <script>
