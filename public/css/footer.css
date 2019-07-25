@@ -47,3 +47,8 @@ section .section-title {
     font-size: 3em;
     color: #0078d7;
 }
+
+#footerText ul li.list-inline-item#whatsapp a:hover{
+    font-size: 3em;
+    color: #25d366;
+}

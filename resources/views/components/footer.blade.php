@@ -11,6 +11,8 @@
                     target="_blank"><i class="fab fa-twitter"></i></a></li>
             <li class="list-inline-item" id="instagram"><a href="https://instagram.com/carvalho_leo"
                     target="_blank"><i class="fab fa-instagram" id="footerInstagram"></i></a></li>
+            <li class="list-inline-item" id="whatsapp"><a href="{{ route('social.whatsapp') }}" target="_blank"><i
+                        class="fab fa-whatsapp"></i></a></li>
             <li class="list-inline-item" id="mail"><a href="{{ route('contact.index') }}" target="_blank"><i
                         class="fa fa-envelope"></i></a></li>
         </ul>
