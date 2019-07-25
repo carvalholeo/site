@@ -9,7 +9,13 @@
 <div class="timeline-v">
     <div class="timelinecontainer approved timeline-left">
         <div class="timelinecontent">
-            <h3 class="company"><a href="http://atento.com/pt/" target="_blank">Atento Brasil</a></h3>
+            <h3 class="company">
+                <a href="http://atento.com/pt/" target="_blank">
+                    <div class="text-center">
+                        <img src="{{ asset('storage/images/brands/atento.png') }}" class="img-fluid" alt="Logo da Atento Brasil">
+                    </div>
+                </a>
+            </h3>
             <h5 class="role">Instrutor de Treinamento</h5>
             <p class="date">jan de 2017 - jul de 2019</p>
             <p>Atuação na área de Seleção & Treinamento, com foco na área de treinamento de novos colaboradores vindos do mercado de trabalho, preparando-os para a atuação no atendimento ao cliente em call center, nos produtos Vivo Móvel e Vivo Fixa PJ.</p>
@@ -22,7 +28,13 @@
 
     <div class="timelinecontainer timeline-right">
         <div class="timelinecontent">
-            <h3 class="company"><a href="http://capacitamais.com.br/" target="_blank">C+ Capacita Mais Brasil</a></h3>
+            <h3 class="company">
+                <a href="http://capacitamais.com.br/" target="_blank">
+                    <div class="text-center">
+                        <img src="{{ asset('storage/images/brands/capacita-mais.png') }}" class="img-fluid" alt="Logo da Capacita Mais">
+                    </div>
+                </a>
+            </h3>
             <h5 class="role">Instrutor de Informática</h5>
             <p class="date">jan de 2015 - jul de 2015</p>
             <p>Auxílio e tira-dúvidas de cursos profissionalizantes por vídeo-aula, nas áreas de informática, inglês e administração.</p>
@@ -31,17 +43,29 @@
 
     <div class="timelinecontainer timeline-left">
         <div class="timelinecontent">
-            <h3 class="company"><a href="https://pt.wikipedia.org/wiki/Funda%C3%A7%C3%A3o_do_Desenvolvimento_Administrativo" target="_blank">Fundação do Desenv. Adm. - Fundap*</a></h3>
+            <h3 class="company">
+                <a href="https://pt.wikipedia.org/wiki/Funda%C3%A7%C3%A3o_do_Desenvolvimento_Administrativo" target="_blank">
+                    <div class="text-center">
+                        <img src="{{ asset('storage/images/brands/fundap.png') }}" class="img-fluid" alt="Logo da Fundap">
+                    </div>
+                </a>
+            </h3>
             <h5 class="role">Estagiário do Ensino Médio</h5>
             <p class="date">ago de 2012 - ago de 2014</p>
             <p>Auxílio na secretaria da escola E. E. Vicente de Carvalho, arquivando documentos nos prontuários, preenchendo documentos escolares, solucionando dúvidas dos alunos e do público em geral e atendendo ligações telefônicas.</p>
-            <p class="disclaimer">* A Fundap era um órgao estadual paulista, extinta em 2015 pelo então governador Geraldo Alckimin</p>
+            <p class="disclaimer">* A Fundap foi um órgao estadual paulista, extinto em 2015 pelo então governador do estado, Geraldo Alckimin</p>
         </div>
     </div>
 
     <div class="timelinecontainer timeline-right">
         <div class="timelinecontent">
-            <h3 class="company"><a href="https://www.atacadao.com.br/" target="_blank">Atacadão</a></h3>
+            <h3 class="company">
+                <a href="https://www.atacadao.com.br/" target="_blank">
+                    <div class="text-center">
+                        <img src="{{ asset('storage/images/brands/atacadao.png') }}" class="img-fluid" alt="Logo da Atacadão">
+                    </div>
+                </a>
+            </h3>
             <h5 class="role">Menor Aprendiz</h5>
             <p class="date">set de 2010 - jul de 2011</p>
             <p>Passagem em diversos setores dentro da empresa, para auxílio dos mesmos e aprendizagem do que faz e a importância de cada departamento.</p>
