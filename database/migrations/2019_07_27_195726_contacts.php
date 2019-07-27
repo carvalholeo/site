@@ -18,6 +18,7 @@ class Contacts extends Migration
             $table->string('nome');
             $table->string('email');
             $table->string('mensagem');
+            $table->string('score');
             $table->timestamps();
         });
     }
