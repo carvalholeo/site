@@ -13,7 +13,7 @@
         </p>
         
         <p class="text-wrap">
-            Nascido e criado no litoral de SP, quer um dia morar na Europa, Canadá ou em São Paulo mesmo. Ama café (mas só pra beber mesmo, não conhece nada sobre) e dormir (atividade excelente, diga-se de passagem).
+            Nascido e criado no litoral de SP, diferente do que algumas pessoas pensam, não vai à praia todo fim de semana. Ama café (mas só pra beber mesmo, não conhece nada sobre) e dormir (atividade excelente, diga-se de passagem).
         </p>
         
         <p class="text-wrap">
