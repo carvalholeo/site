@@ -20,12 +20,15 @@ class ContactController extends Controller
     public function send(Request $request)
     {
         $recaptcha = self::validateRecaptcha($request->input('recaptcha_response'));
-
         
-        if ($recaptcha->score >= 0.5) {
-            
+        if (self::validateIfExistsError($recaptcha)) {
+            return "Error";
         } else {
-            // Not verified - show form error
+            if (self::returnRecaptchaScore($recaptcha)) {
+                return "Completamente validado";
+            } else {
+                return "Não confiável";
+            }
         }
         
     }
@@ -41,6 +44,42 @@ class ContactController extends Controller
         $recaptcha = json_decode($recaptcha);
 
         return $recaptcha;
+    }
+
+    public function validateIfExistsError($response)
+    {
+        if (!$response->success) {
+            return self::returnRecaptchaError($response);
+        } else {
+            return false;
+        }
+    }
+
+    public function returnRecaptchaError($response)
+    {
+        switch($response->error-codes) {
+            case "missing-input-response":
+            case "invalid-input-response":
+                return "Código Recaptcha está faltando ou é inválido.";
+            case "bad-request":
+                return "A requisição enviada não está nos parâmetros adequados.";
+            case "timeout-or-duplicate":
+                return "A requisição está duplicada ou está com o tempo expirado";
+            default:
+                return "Ocorreu um erro desconhecido";
+        }
+    }
+
+    public function returnRecaptchaScore($response)
+    {
+        $score = $response->score;
+
+        if ($score >= 0.5) {
+            return true;
+        } else {
+            return false;
+        }
+
     }
     
 }
