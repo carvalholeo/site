@@ -5,25 +5,15 @@
 @section('body')
 
 <div class="container">
-    <script src="https://www.google.com/recaptcha/api.js?render=6LdoxaYUAAAAAJx8MEuu-K5-AeStQBO9l8yBPpyq"></script>
-    <script>
-        $(document).ready(function() {
-            grecaptcha.ready(function() {
-                grecaptcha.execute('6LdoxaYUAAAAAJx8MEuu-K5-AeStQBO9l8yBPpyq', {action: 'contact'}).then(function(token) {
-                
-                });
-            });
-        });
-    </script>
- 
+
     <h1>Entre em contato comigo!</h1>
-    <p class="text-justify">Que tal se nós deixássemos essa conversa mais interessante e continuarmos no privado?
+    <p class="text-justify">Que tal a gente essa conversa mais interessante e continuarmos no privado?
      Você pode preencher o formulário abaixo ou mandar uma mensagem em uma das minhas redes sociais 
      (dá uma olhada nos ícones abaixo).
     </p>
     <hr />
  
-    <form method="POST" id="contactForm">
+    <form method="POST" id="contactForm" action="{{ route('contact.send') }}">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
     
         <div class="form-group">
@@ -35,8 +25,9 @@
             <label for="email">E-Mail</label>
             <input type="text" id="email" name="email" class="form-control" placeholder="E-Mail">
         </div>
- 
+
         <div class="form-group">
+            <label for="mensagem">Mensagem</label>
             <textarea id="mensagem" name="mensagem" class="form-control" placeholder="Digite sua mensagem"></textarea>
         </div>
     
