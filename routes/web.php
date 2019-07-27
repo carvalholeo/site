@@ -13,7 +13,10 @@
 
 Route::get('/', 'PortfolioController@index')->name('index');
 
-Route::resource('/contact', 'ContactController');
+Route::get('/contact', 'ContactController@index')->name('contact.index');
+Route::post('/contact', 'ContactController@send')->name('contact.send');
+Route::options('/contact', 'ContactController@validateCaptcha')->name('contact.captcha');
+
 Route::prefix('/resume')->group(function () {
     Route::get('/', 'ResumeController@index')->name('resume.index');
     Route::get('/professional', 'ResumeController@professional')->name('resume.professional');
