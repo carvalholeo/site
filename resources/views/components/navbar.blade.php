@@ -32,7 +32,7 @@
                     Currículo
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item disabled" href="{{ route('resume.bio') }}"  aria-disabled="true">Mini-bio</a>
+                    <a class="dropdown-item" href="{{ route('resume.bio') }}">Mini-bio</a>
                     <a class="dropdown-item" href="{{ route('resume.professional') }}" aria-disabled="true">Histórico Profissional</a>
                     <a class="dropdown-item" href="{{ route('resume.academic') }}">Formação Acadêmica</a>
                     <a class="dropdown-item disabled" href="{{ route('resume.hobbies') }}" aria-disabled="true">Projetos e hobbies</a>
