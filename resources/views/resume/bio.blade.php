@@ -32,11 +32,11 @@
         </p>
 
         <p class="text-wrap">
-            Já trabalhou no segmentos de Atacarejo, Equipamentos de segurança e salvatagem, Setor Público, Serviços Educacionais, Telemarketing e RH. Agora quer entrar de cabeça na área de tecnologia, como desenvolvedor ou suporte técnico.
+            Já trabalhou nos segmentos de Atacarejo, Equipamentos de segurança e salvatagem, Setor Público, Serviços Educacionais, Telemarketing e RH. Agora quer entrar de cabeça na área de tecnologia, como desenvolvedor ou suporte técnico.
         </p>
 
         <p class="text-wrap">
-            Na área de tecnologia, se interessa desde criança pelos computadores e por entender como eles funcionam. Ficou rapidamente fascinado em como é relativamente simples criar novos programas.
+            Na área de tecnologia, se interessa desde criança pelos computadores e por entender como eles funcionam. Ficou rapidamente fascinado em como é relativamente simples criar outros programas.
         </p>
 
         <p class="text-wrap">
