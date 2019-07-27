@@ -48,7 +48,7 @@
         </p>
 
         <p class="text-wrap">
-            Ficou interessado? Vamos bater um papo! Entre contato e vamos falar um pouco mais sobre essa história.
+            Ficou interessado? Vamos bater um papo! <a class="nav-item disabled" href="{{ route('contact.index') }}"  aria-disabled="true">Entre em contato</a> e vamos falar um pouco mais sobre essa história.
         </p>
 
     </div>
