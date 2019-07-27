@@ -43,7 +43,7 @@
         </ul>
         <ul class="navbar-nav">
             <li class="nav-item @if($current=='contact') active @endif ">
-                <a class="nav-link  disabled" href="{{ route('contact.index') }}"  aria-disabled="true">
+                <a class="nav-link" href="{{ route('contact.index') }}">
                     <i class="fa fa-envelope">
                     </i>
                     Contato
