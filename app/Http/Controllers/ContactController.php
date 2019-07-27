@@ -3,37 +3,39 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Contact;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\SendMailUser;
 
 class ContactController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         return view ('contact.index');
     }
 
-
     public function send(Request $request)
     {
+        self::validateFields($request);
         $recaptcha = self::validateRecaptcha($request->input('recaptcha_response'));
         
         if (self::validateIfExistsError($recaptcha)) {
-            return "Error";
+            return view('contact.index');
         } else {
             if (self::returnRecaptchaScore($recaptcha)) {
-                return "Completamente validado";
+
+                self::sendMailFromContactFormSite($request);
+                self::saveInDbContactFormData($request, $recaptcha->score);
+                return back()->with('success', 'Mensagem enviada com sucesso. Agora é só esperar, que em até 24h te dou um retorno');
             } else {
-                return "Não confiável";
+
+                self::saveInDbContactFormData($request, $recaptcha->score);
+                return back()->with('error', 'Atividade suspeita detectada pelo Google. Tente novamente.');
             }
         }
         
     }
 
-    
     public function validateRecaptcha($response)
     {
         $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
@@ -80,6 +82,41 @@ class ContactController extends Controller
             return false;
         }
 
+    }
+
+    public function sendMailFromContactFormSite($request)
+    {
+        
+    }
+
+    public function saveInDbContactFormData($request, $recaptcha)
+    {
+        $saveInDb = new Contact();
+        $saveInDb->nome = $request->input('nome');
+        $saveInDb->email = $request->input('email');
+        $saveInDb->mensagem = $request->input('mensagem');
+        $saveInDb->score = $recaptcha;
+
+        $saveInDb->save();
+    }
+
+    public function validateFields($request)
+    {
+        $rules = [
+            'nome' => 'required',
+            'email' => 'required|email',
+            'mensagem' => 'required',
+            'recaptcha_response' => 'required'
+        ];
+
+        $messages = [
+            'nome.required' => 'O campo "Nome" é de preenchimento origatório.',
+            'email.required' => 'O campo "E-mail" é de preenchimento obrigatório.',
+            'email.email' => 'O e-mail digitado não é válido. Tente novamente.',
+            'mensagem.required' => 'O campo "Mensagem" é de preenchimento obrigatório'
+        ];
+
+        return $request->validate($rules, $messages);
     }
     
 }
