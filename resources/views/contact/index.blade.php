@@ -29,7 +29,7 @@
                 </div>
                 <div class="form-group">
                     <label for="email">E-Mail</label>
-                    <input type="text" id="email" name="email" class="form-control" placeholder="Digite seu e-mail" required>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Digite seu e-mail" required>
                 </div>
                 <div class="form-group">
                     <label for="assunto">Assunto</label>
