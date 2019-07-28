@@ -3,9 +3,9 @@
 <br>
 Você recebeu uma mensagem. Segue os dados:  
 
-- Nome: {{ $contact->nome }}  
-- E-mail: {{ $contact->email }}  
-- Mensagem: {{ $contact->mensagem }}
+- Nome: {{ $nome }}  
+- E-mail: {{ $email }}  
+- Mensagem: {{ $mensagem }}
 
 Lembra que você tem até 24h pra responder esse e-mail!
 <br>

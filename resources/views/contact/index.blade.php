@@ -24,16 +24,26 @@
             <form method="POST" id="contactForm" action="{{ route('contact.send') }}">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="form-group">
-                    <label for="nome">Seu nome</label>
-                    <input type="text" id="nome" name="nome" class="form-control" placeholder="Nome">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite seu nome" required autofocus>
                 </div>
                 <div class="form-group">
                     <label for="email">E-Mail</label>
-                    <input type="text" id="email" name="email" class="form-control" placeholder="E-Mail">
+                    <input type="text" id="email" name="email" class="form-control" placeholder="Digite seu e-mail" required>
+                </div>
+                <div class="form-group">
+                    <label for="assunto">Assunto</label>
+                    <select id="assunto" name="assunto" class="form-control" required>
+                        <option disabled selected>Escolha uma opção</option>
+                        <option value="Bugs">Bugs (erros no site)</option>
+                        <option value="Ouvidoria">Críticas, elogios e sugestões</option>
+                        <option value="Empregos">Oportunidade de emprego</option>
+                        <option value="Amizade">Vamos fazer amizade</option>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="mensagem">Mensagem</label>
-                    <textarea id="mensagem" name="mensagem" class="form-control" placeholder="Digite sua mensagem"></textarea>
+                    <textarea id="mensagem" name="mensagem" class="form-control" placeholder="Digite sua mensagem" required></textarea>
                 </div>
                 <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
                 <button type="submit" class="btn btn-primary" id="submit" disabled>Enviar</button>

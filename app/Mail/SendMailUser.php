@@ -30,8 +30,12 @@ class SendMailUser extends Mailable
     public function build()
     {
         return $this->markdown('emails.contact-markdown')
+                    ->subject($this->contact->assunto . ' (Formulário de contato no site)')
                     ->with([
-                        'contact' => $this->contact,
+                        'nome' => $this->contact->nome,
+                        'email' => $this->contact->email,
+                        'score' => $this->contact->score,
+                        'mensagem' => $this->contact->mensagem
                     ]);
 
         

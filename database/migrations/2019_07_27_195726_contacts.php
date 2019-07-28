@@ -17,6 +17,7 @@ class Contacts extends Migration
             $table->bigIncrements('id');
             $table->string('nome');
             $table->string('email');
+            $table->string('assunto');
             $table->string('mensagem');
             $table->string('score');
             $table->timestamps();
