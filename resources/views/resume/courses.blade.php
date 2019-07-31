@@ -7,13 +7,13 @@
 @section('body')
 
 <div class="container">
-    <h4>Cursos extra-curriculares e workshops</h4>
+    <h4>Cursos extra-curriculares, workshops e certificados</h4>
     <div class="row">
         <div class="col-md-12">
             <div class="main-timeline3">
                 <div class="timeline">
                     <a href ="https://www.udemy.com/laravelcompleto/" class="timeline-content">
-                        <span class="year">2019</span>
+                        <span class="year"><em>2019</em></span>
                         <h3 class="title">Laravel 5.6 Completo</h3>
                         <h5>Udemy - 29h</h5>
                         <p class="description">
@@ -24,7 +24,7 @@
 
                 <div class="timeline">
                     <a href="https://www.udemy.com/git-e-github-ninja/learn/" class="timeline-content">
-                        <span class="year">2019</span>
+                        <span class="year"><em>2019</em></span>
                         <h3 class="title">Git e GitHub Ninja</h3>
                         <h5>Udemy - 9h</h5>
                         <p class="description">
@@ -56,6 +56,17 @@
                 </div>
 
                 <div class="timeline">
+                    <a href="https://www.certiprof.com/pt/registro-de-candidatos-aprovados-por-id/" class="timeline-content">
+                        <span class="year">2019</span>
+                        <h3 class="title">Scrum Foundation Professional Certificate (SFPC) - Portuguese</h3>
+                        <h5>CertiProf</h5>
+                        <p class="description">
+                            Certificação de Scrum Foundation, emitida pela instituição CertiProf em março de 2019 (Registro 31552431239275).
+                        </p>
+                    </a>
+                </div>
+
+                <div class="timeline">
                     <a href="https://www.udemy.com/seguranca-da-informacao-para-e-mails/learn" class="timeline-content">
                         <span class="year">2019</span>
                         <h3 class="title">Segurança da Informação para E-mails</h3>
@@ -72,7 +83,7 @@
                         <h3 class="title">Master the Mainframe 2018 - Part 2</h3>
                         <h5>IBM</h5>
                         <p class="description">
-                            Reconhecimento por concluir a 2ª fase do desafio "Master the Mainframe", da IBM. O desafio é composto por desafios de lógica e ensina os fundamentos do sistema operacional z/OS, Assembler, C, COBOL, DB2, Java, JCL e REXX, com foco na utilização diária do mainframe na atualidade.
+                            Reconhecimento por concluir a 2ª fase do desafio "Master the Mainframe", da IBM. A competição tem desafios de lógica e ensina os fundamentos do z/OS, COBOL, DB2, JCL e REXX, com foco na utilização de mainframes na atualidade.
                         </p>
                     </a>
                 </div>
