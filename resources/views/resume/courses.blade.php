@@ -1,13 +1,13 @@
 @extends('layout.app', ["current" => "resume"])
 
-@section('title', 'Cursos Extra-curriculares | Léo Carvalho')
+@section('title', 'Cursos extra-curriculares e workshops | Léo Carvalho')
 
 <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/timelines.css') }}" />
 
 @section('body')
 
 <div class="container">
-    <h4>Cursos Extra-curriculares</h4>
+    <h4>Cursos extra-curriculares e workshops</h4>
     <div class="row">
         <div class="col-md-12">
             <div class="main-timeline3">
@@ -105,7 +105,62 @@
                         <h3 class="title">Conceitos e Fundamentos: Lógica de Programação, Orientação a Objetos, SWIFT, JavaScript e RESTful APIs</h3>
                         <h5>Instituto Eldorado (Hack a Truck IBM) - 65h</h5>
                         <p class="description">
-                            O curso tem o objetivo de explicar os conceitos de Lógica de programação, Orientada a Objetos e apresentar a linguagem Swift (usada em dispositivos móveis da Apple), além de mostrar o funcionamento do JavaScript (back-end e front-end) e dar uma breve introdução à APIs RESFTful.
+                            O curso tem o objetivo de explicar e apresentar a linguagem Swift, além de mostrar o funcionamento do JavaScript (back-end) e dar uma breve introdução à APIs RESFTful.
+                        </p>
+                    </a>
+                </div>
+
+                <div class="timeline">
+                    <a href="https://software.intel.com/pt-br/ai/academy" class="timeline-content">
+                        <span class="year">2017</span>
+                        <h3 class="title">Workshop Inteligência Artificial - 4h</h3>
+                        <h5>Intel Software (Intel Nervana AI Academy)</h5>
+                        <p class="description">
+                            Workshop com foco em apresentar os principais conceitos de Inteligência Artificial, aplicações e materiais para estudo com conteúdos da Intel.
+                        </p>
+                    </a>
+                </div>
+
+                <div class="timeline">
+                    <a href="https://www.ev.org.br/curso/informatica/office-2010/microsoft-excel-2010-avancado" class="timeline-content">
+                        <span class="year">2017</span>
+                        <h3 class="title">Microsoft Excel 2010 – Avançado</h3>
+                        <h5>Escola Virtual (Fundação Bradesco) - 20h</h5>
+                        <p class="description">
+                            No curso, o aluno aprende a usar funções, trabalhar com proteção de planilhas, validar dados para padronizá-los, criar macros para executar comandos automaticamente e criar formulários para melhor visualização dos dados.
+                        </p>
+                    </a>
+                </div>
+
+                <div class="timeline">
+                    <a href="https://www.iped.com.br/animacoes-e-design/curso/identidade-visual" class="timeline-content">
+                        <span class="year">2017</span>
+                        <h3 class="title">Identidade Visual</h3>
+                        <h5>Instituto Politécnico de Educação à Distância - 100h</h5>
+                        <p class="description">
+                            O curso aborda desde os pontos mais básicos como a importância da logo, a preocupação com a escolha de cores e fontes, até a montagem completa de todas as partes de um manual de identidade visual completo
+                        </p>
+                    </a>
+                </div>
+
+                <div class="timeline">
+                    <a href="https://www.ev.org.br/curso/informatica/office-2010/microsoft-excel-2010-intermediario" class="timeline-content">
+                        <span class="year">2017</span>
+                        <h3 class="title">Microsoft Excel 2010 – Intermediário</h3>
+                        <h5>Escola Virtual (Fundação Bradesco) - 10h</h5>
+                        <p class="description">
+                            Este curso mostra como criar, usar e vincular pastas de trabalho. O aluno também aprenderá a criar fórmulas (nas quais o resultado dependerá de determinados argumentos), a inserir imagens, criar e editar regras de formatação condicional, entre outros recursos.
+                        </p>
+                    </a>
+                </div>
+
+                <div class="timeline">
+                    <a href="https://www.ev.org.br/curso/informatica/office-2010/microsoft-excel-2010-basico" class="timeline-content">
+                        <span class="year">2017</span>
+                        <h3 class="title">Microsoft Excel 2010 - Básico</h3>
+                        <h5>Escola Virtual (Fundação Bradesco) - 11h</h5>
+                        <p class="description">
+                            O curso tem o objetivo de apresentar suas principais características, além de ensinar comando básicos que mostram como criar uma planilha, editá-la, entre outros tópicos.
                         </p>
                     </a>
                 </div>
