@@ -14,8 +14,8 @@
                 <div class="timeline">
                     <a href ="https://www.udemy.com/laravelcompleto/" class="timeline-content">
                         <span class="year"><em>2019</em></span>
-                        <h3 class="title">Laravel 5.6 Completo</h3>
-                        <h5>Udemy - 29h</h5>
+                        <h3 class="title">Laravel 5.8 Completo</h3>
+                        <h5>Udemy - 33h</h5>
                         <p class="description">
                         O curso abordar os recursos que o Laravel oferece, para me tornar apto a agilizar o desenvolvimento de sites e sistemas.
                         </p>
