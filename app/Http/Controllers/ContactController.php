@@ -53,9 +53,8 @@ class ContactController extends Controller
 
         if ($score >= 0.5) {
             return true;
-        } else {
-            return false;
         }
+            return false;
 
     }
 
