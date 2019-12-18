@@ -16,49 +16,48 @@ class ContactController extends Controller
 
     public function send(Request $request)
     {
-        self::validateFields($request);
-        $recaptcha = self::validateRecaptcha($request->input('recaptcha_response'));
-        
-        if (self::returnRecaptchaScore($recaptcha)) {
+        $this->validateFields($request);
 
-            self::saveInDbContactFormData($request, $recaptcha->score);
-            $contact = self::saveInDbContactFormData($request, $recaptcha->score);
-            self::sendMailFromContactFormSite($request, $contact);
+        $recaptcha = $this->validateRecaptcha($request->input('g-recaptcha-response'));
+        //return var_dump($recaptcha);
+        if ($recaptcha["success"]) {
+
+            $this->saveInDbContactFormData($request);
+            $contact = $this->saveInDbContactFormData($request);
+            $this->sendMailFromContactFormSite($request, $contact);
 
             return back()->with('success', 'Mensagem enviada com sucesso. Agora é só esperar, que em até 24h te dou um retorno');
         }
 
-        self::saveInDbContactFormData($request, $recaptcha->score);
-
-        return back()->with('error', 'Ocorreu um erro inesperado.
-        Fique tranquilo: apesar dele (já fui notificado), sua mensagem foi enviada e vou te dar um retorno 
-        em até 72h.');
+        return back()->with('error', 'A validação do seu formulário expirou. Tente novamente e somente clique no botão 
+        "Não sou um robô" quando estiver prestes a clicar no botão "Enviar".');
     }
 
-    public function validateRecaptcha($response)
+    private static function validateRecaptcha($response) : array
     {
-        $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
-        $recaptcha_secret = getenv('GOOGLE_RECAPTCHA_SECRET_KEY');
-        $recaptcha_response = $response;
+        $secret = getenv('GOOGLE_RECAPTCHA_SECRET_KEY');
+        $content = http_build_query(array(
+            'secret' => $secret,
+            'response' => $response
+        ));
 
-        $recaptcha = file_get_contents($recaptcha_url . '?secret=' . $recaptcha_secret . '&response=' . $recaptcha_response);
-        $recaptcha = json_decode($recaptcha);
+        $url = "https://www.google.com/recaptcha/api/siteverify?" . $content;
+
+        $context = stream_context_create(array(
+            'http' => array(
+                'method' => 'POST',
+                'header' => 'Content-Type: application/json',
+                'content' => $content
+            )
+        ));
+
+        $verify = file_get_contents($url, null, $context);
+        $recaptcha = json_decode($verify, TRUE);
 
         return $recaptcha;
     }
 
-    public function returnRecaptchaScore($response)
-    {
-        $score = $response->score;
-
-        if ($score >= 0.5) {
-            return true;
-        }
-            return false;
-
-    }
-
-    public function sendMailFromContactFormSite($request, Contact $contact)
+    private static function sendMailFromContactFormSite($request, Contact $contact) : void
     {
         $recipient = getenv('MAIL_TO_ADDRESS');
         $bcc = getenv('MAIL_BCC_ADDRESS');
@@ -67,40 +66,42 @@ class ContactController extends Controller
             ->send(new SendMailUser($contact));
     }
 
-    public function saveInDbContactFormData($request, $recaptcha)
+    private static function saveInDbContactFormData($request) : Contact
     {
         $saveInDb = new Contact();
         $saveInDb->nome = $request->input('nome');
         $saveInDb->email = $request->input('email');
         $saveInDb->mensagem = $request->input('mensagem');
         $saveInDb->assunto = $request->input('assunto');
-        $saveInDb->score = $recaptcha;
 
         $saveInDb->save();
 
         return $saveInDb;
     }
 
-    public function validateFields($request)
+    private static function validateFields($request) : array
     {
         $rules = [
-            'nome' => 'required',
-            'email' => 'required|email',
-            'mensagem' => 'required',
-            'recaptcha_response' => 'required',
+            'nome' => 'required|max:255',
+            'email' => 'required|email|max:255',
+            'mensagem' => 'required|max:2048',
+            'g-recaptcha-response' => 'required',
             'assunto' => 'required'
         ];
 
         $messages = [
             'nome.required' => 'O campo "Nome" é de preenchimento origatório.',
+            'nome.max' => 'A quantidade máxima de caracteres do campo "Nome" é de 255.',
+            'email.max' => 'A quantidade máxima de caracteres do campo "E-mail" é de 255.',
             'email.required' => 'O campo "E-mail" é de preenchimento obrigatório.',
             'email.email' => 'O e-mail digitado não é válido. Tente novamente.',
             'mensagem.required' => 'O campo "Mensagem" é de preenchimento obrigatório',
+            'mensagem.max' => 'A quantidade máxima de caracteres do campo "Mensagem" é de 2048.',
             'assunto.required' => 'Você precisa escolher um assunto',
-            'recaptcha_response' => 'Sua sessão expirou. Tente novamente.'
+            'g-recaptcha-response.required' => 'O recaptcha não foi preenchido. Tente novamente.'
         ];
 
         return $request->validate($rules, $messages);
     }
-    
+
 }
