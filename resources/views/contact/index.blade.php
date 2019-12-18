@@ -6,7 +6,7 @@
 
 <div class="container">
     <div class="card border">
-        <div class="card-header">
+        <div class="card-header" id="card-header">
 
 @include('components.flash-messages')
 
@@ -16,12 +16,12 @@
         </div>
         <div class="card-body">
             <p class="text-justify">Que tal a gente essa conversa mais interessante e continuarmos no privado?
-            Você pode preencher o formulário abaixo ou mandar uma mensagem em uma das minhas redes sociais 
+            Você pode preencher o formulário abaixo ou mandar uma mensagem em uma das minhas redes sociais
             (dá uma olhada nos ícones abaixo).
             </p>
             <hr />
-        
-            <form method="POST" id="contactForm" action="{{ route('contact.send') }}">
+
+            <form method="POST" id="contactForm" action="{{ route('contact.send') }}" role="form">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="form-group">
                     <label for="nome">Nome</label>
@@ -45,15 +45,20 @@
                     <label for="mensagem">Mensagem</label>
                     <textarea id="mensagem" name="mensagem" class="form-control" placeholder="Digite sua mensagem" required></textarea>
                 </div>
-                <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+
+                <div class="form-group">
+                    <div class="g-recaptcha" data-sitekey="6LcEScgUAAAAAIxwvlfw5rbvAuVYdhbbPmChcept" data-callback="recaptchaSuccess" data-expired-callback="recaptchaError" id="recaptcha"></div>
+                    <div class="help-block with-errors"></div>
+                </div>
+
                 <button type="submit" class="btn btn-primary" id="submit" disabled>Enviar</button>
                 <button type="cancel" class="btn btn-danger" id="cancel">Apagar</button>
             </form>
-        </div>        
+        </div>
     </div>
 </div>
 
-<script src="https://www.google.com/recaptcha/api.js?render=6LdoxaYUAAAAAJx8MEuu-K5-AeStQBO9l8yBPpyq"></script>
-<script src="{{ asset('js/captcha.js') }}" type="text/javascript"></script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
+
 
 @endsection
