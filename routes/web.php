@@ -49,3 +49,5 @@ Route::get('/whatzap', 'SocialController@whatsapp')->name('social.whatsapp');
 Route::get('/whatsapp', 'SocialController@whatsapp')->name('social.whatsapp');
 
 Route::get('/portfolio', 'PortfolioController@index')->name('portfolio');
+
+Route::post('/repository/update', 'RepositoryUpdateController@update')->name('github.update');
