@@ -5,7 +5,7 @@ Redes sociais | Léo Carvalho
 @endsection
 
 @section('body')
-<p>Hmm... Parece que você tentou acessar uma rede social que eu não tenho. 😱</p>
+<p>Parece que você quer estar mais pertinho de mim hehehe. Então, vem! </p>
 <ul class="list-unstyled"> 
   <li>Abaixo, tem uma lista dos meus perfis oficiais nas redes sociais que eu tenho perfil:</li>
     <ul>
@@ -16,6 +16,7 @@ Redes sociais | Léo Carvalho
       <li><a href="/blog" target="_blank">Medium</a></li>
       <li><a href="/wordpress" target="_blank">WordPress</a> (Blog com conteúdo pessoal e religioso)</li>
       <li><a href="/pinterest" target="_blank">Pinterest</a></li>
+      <li><a href="/youtube" target="_blank">YouTube</a></li>
     </ul>
   </li>
 </ul>

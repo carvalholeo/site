@@ -16,6 +16,15 @@ class SocialController extends Controller
         return view('social.index');
     }
 
+    public function youtube() {
+        return view('social.youtube');
+    }
+
+    public function facebook()
+    {
+        return redirect('social', 301);
+    }
+
     public function blog()
     {
         return view('social.blog');

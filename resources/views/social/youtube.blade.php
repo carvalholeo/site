@@ -1,16 +1,16 @@
 @extends('layout.app', ["current" => "construction"])
 
 @section('title')
-    WhatsApp | Léo Carvalho
+    YouTube | Léo Carvalho
 @endsection
 
 @section('body')
-Aguarde um instante, você já está indo para o meu chat do WhatsApp!
+Aguarde um instante, você já está indo para o meu perfilcanal no YouTube!
 @endsection
 
 @section('javascript')
     <script type="text/javascript">
-        url = "http://wa.me/55139967375760?source=site&text=Vamos falar de negócios!";
+        url = "https://www.youtube.com/channel/UC8c7IUMpnczt9pmsHlXYxXw";
         redirect(url);
     </script>
 @endsection
