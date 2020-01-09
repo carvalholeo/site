@@ -31,8 +31,7 @@ class RepositoryUpdateController extends Controller
 
 
         if ($userAgent != 'GitHub-Hookshot'
-            || $contentType != 'application/json'
-            || !$isSecretValid)
+            || $contentType != 'application/json')
         {
             return true;
         }
