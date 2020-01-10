@@ -19,7 +19,8 @@ class RepositoryUpdateController extends Controller
     private function validateGithubHeaders(Request $request) : bool
     {
         return true;
-        /* $userAgent = $_SERVER['HTTP_USER_AGENT'];
+        /* $userAg
+        ent = $_SERVER['HTTP_USER_AGENT'];
         $contentType = $_SERVER['HTTP_CONTENT_TYPE'];
         $xHubSignature = $_SERVER['HTTP_X_HUB_SIGNATURE'];
 
@@ -51,9 +52,9 @@ class RepositoryUpdateController extends Controller
 
     private static function executeUpdate()
     {
-        $exec = shell_exec("git pull origin master 2>&1");
-		echo $exec;
-        if (!$exec) {
+        $process = new Process(['sudo', 'git', 'pull', 'origin', 'master', '2>&1']);
+        $process->run();
+        if (!$process->isSuccessful()) {
             return response('Erro interno. Não foi possível atualizar o site.', 503);
         }
         return response('Enviado com sucesso. Atualizará em breve.', 201);
