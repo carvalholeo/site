@@ -9,41 +9,38 @@ use Symfony\Component\Process\Process;
 class RepositoryUpdateController extends Controller
 {
     public function update(Request $request)
-    {
+    { 
         if ($this->validateGithubHeaders($request)) {
-            RepositoryUpdateController::executeUpdate();
+            return RepositoryUpdateController::executeUpdate();
         }
         return response('Requisição inválida.', 403);
     }
 
     private function validateGithubHeaders(Request $request) : bool
     {
-        $userAgent = $_SERVER['User-Agent'];
-        $contentType = $_SERVER['application/json'];
-        $xHubSignature = $_SERVER['X-Hub-Signature'];
+        $userAgent = $_SERVER['HTTP_USER_AGENT'];
+        $contentType = $_SERVER['HTTP_CONTENT_TYPE'];
+        $xHubSignature = $_SERVER['HTTP_X_HUB_SIGNATURE'];
 
         $isSecretValid = RepositoryUpdateController::isGithubSecretValid($request, $xHubSignature);
         
         $userAgent = explode('/', $userAgent);
-        $userAgent = substr($userAgent, 12);
-
-        $contentType = substr($contentType, 14);
-
+        $userAgent = $userAgent[0];
 
         if ($userAgent != 'GitHub-Hookshot'
             || $contentType != 'application/json')
         {
-            return true;
+            return false;
         }
         
-        return false;
+        return true;
     }
 
     private static function isGithubSecretValid(Request $request, $xHubSignature) : bool
     {
         $secret = getenv('GITHUB_SECRET_PASSWORD');
         $body = $request->getContent();
-        $secret = hash_mac('sha1', $body, $secret);
+        $secret = hash_hmac('sha1', $body, $secret);
 
         if (hash_equals($secret, $xHubSignature)) {
             return true;
