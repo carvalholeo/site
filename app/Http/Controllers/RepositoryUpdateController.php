@@ -51,9 +51,9 @@ class RepositoryUpdateController extends Controller
 
     private static function executeUpdate()
     {
-        $process = new Process(['git', 'pull', 'origin', 'master', '2>&1']);
-        $process->run();
-        if (!$process->isSuccessful()) {
+        $exec = shell_exec("git pull origin master 2>&1");
+		echo $exec;
+        if (!$exec) {
             return response('Erro interno. Não foi possível atualizar o site.', 503);
         }
         return response('Enviado com sucesso. Atualizará em breve.', 201);
