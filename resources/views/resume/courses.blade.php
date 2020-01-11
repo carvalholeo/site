@@ -1,5 +1,7 @@
 @extends('layout.app', ["current" => "resume"])
 
+@include('components.commom-css')
+
 @section('title', 'Cursos extra-curriculares e workshops | Léo Carvalho')
 
 <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/timelines.css') }}" />

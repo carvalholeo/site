@@ -1,5 +1,7 @@
 @extends('layout.app', ["current" => "resume"])
 
+@include('components.commom-css')
+
 @section('title', 'Formação Acadêmica | Léo Carvalho')
 
 <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/timelines.css') }}" />
@@ -17,7 +19,7 @@
                     <span class="year"><em>2020</em></span>
                     <div class="timeline-content">
                         <h5 class="title">Análise e Desenv. de Sistemas</h5>
-                        
+
                         <p class="description">
                             Graduação tecnológica iniciada em fevereiro/2018, estou no 4º semestre (4/5), pelo Centro Universitário Estácio de Ribeirão Preto, via EAD, no polo de Santos/SP.
                         </p>
