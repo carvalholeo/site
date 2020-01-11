@@ -6,11 +6,11 @@ use Illuminate\Http\Request;
 
 class ResumeController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function homePage()
+    {
+        return view('index');
+    }
+
     public function index()
     {
         return redirect()->route('resume.professional');

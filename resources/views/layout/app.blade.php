@@ -29,7 +29,7 @@
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
     <div class="container">
-        @component('components.navbar', ["current" => $current])
+        @component('components.navbar')
         @endcomponent
         <main role="main">
             @hasSection('body')

@@ -11,7 +11,7 @@
 |
  */
 
-Route::get('/', 'PortfolioController@index')->name('index');
+Route::get('/', 'ResumeController@homePage')->name('index');
 
 Route::get('/contact', 'ContactController@index')->name('contact.index');
 Route::post('/contact', 'ContactController@send')->name('contact.send');
