@@ -27,8 +27,8 @@ Route::prefix('/resume')->group(function () {
 });
 
 Route::get('/social', 'SocialController@index')->name('social.index');
-Route::get('/facebook', 'SocialController@facebook')->name('social.facebook');
 Route::get('/fb', 'SocialController@facebook')->name('social.facebook');
+Route::get('/facebook', 'SocialController@facebook')->name('social.facebook');
 Route::get('/youtube', 'SocialController@youtube')->name('social.youtube');
 Route::get('/yt', 'SocialController@youtube')->name('social.youtube');
 Route::get('/blog', 'SocialController@blog')->name('social.blog');
