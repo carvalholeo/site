@@ -13,7 +13,7 @@ class ResumeController extends Controller
 
     public function index()
     {
-        return redirect()->route('resume.professional');
+        return redirect()->route('resume.professional','',307);
     }
 
     public function professional()
