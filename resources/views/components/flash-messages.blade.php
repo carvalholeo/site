@@ -1,9 +1,8 @@
 @section('alert-messages')
 
+@if($errors->any())
 @include('components.alert-section')
 @yield('alert')
-
-@if($errors->any())
     @foreach($errors->all() as $error)
             <div class="alert alert-danger alert-dismissible fade show" role="alert" id="alert">
                 {{ $error }}
@@ -15,6 +14,8 @@
 @endif
 
 @if ($message = Session::get('success'))
+@include('components.alert-section')
+@yield('alert')
             <div class="alert alert-success alert-block" role="alert" id="alert">
                 <button type="button" class="close" data-dismiss="alert">×</button>
                     {{ $message }}
@@ -22,6 +23,8 @@
 @endif
 
 @if ($message = Session::get('error'))
+@include('components.alert-section')
+@yield('alert')
             <div class="alert alert-danger alert-block"role="alert" id="alert">
                 <button type="button" class="close" data-dismiss="alert">×</button>
                     {{ $message }}

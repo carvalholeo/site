@@ -8,12 +8,12 @@
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav nav ml-auto">
           <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
-          <li class="nav-item"><a href="#services-section" class="nav-link"><span>Services</span></a></li>
-          <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
-          <li class="nav-item"><a href="#blog-section" class="nav-link"><span>My Blog</span></a></li>
-          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+          <li class="nav-item"><a href="#about-section" class="nav-link"><span>Sobre</span></a></li>
+          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Currículo</span></a></li>
+          <li class="nav-item"><a href="#services-section" class="nav-link"><span>Serviços</span></a></li>
+          <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projetos</span></a></li>
+          <li class="nav-item"><a href="#blog-section" class="nav-link"><span>Blog</span></a></li>
+          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contato</span></a></li>
         </ul>
       </div>
     </div>
