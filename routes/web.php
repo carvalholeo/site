@@ -24,6 +24,7 @@ Route::prefix('/resume')->group(function () {
     Route::get('/courses', 'ResumeController@courses')->name('resume.courses');
     Route::get('/bio', 'ResumeController@bio')->name('resume.bio');
     Route::get('/skills', 'ResumeController@skills')->name('resume.skills');
+    Route::get('download', 'ResumeController@download')->name('resume.download');
 });
 
 Route::get('/social', 'SocialController@index')->name('social.index');

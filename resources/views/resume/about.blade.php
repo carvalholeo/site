@@ -17,8 +17,6 @@
                 <ul class="about-info mt-4 px-md-0 px-2">
                     <li class="d-flex"><span>Nome:</span> <span>Leonardo Carvalho</span></li>
                     <li class="d-flex"><span>Aniversário:</span> <span>28 de abril</span></li>
-                    <!--li class="d-flex"><span>Address:</span> <span>San Francisco CA 97987 USA</span></li>
-                    <li class="d-flex"><span>Zip code:</span> <span>1000</span></li-->
                     <li class="d-flex"><span>Email:</span> <a href="mailto:leonardo.cscarvalho@outlook.com.br" target="_blank"><span>leonardo.cscarvalho@outlook.com.br</span></a></li>
                     <li class="d-flex"><span>Phone: </span> <a href="tel://13997375760"><span>+55 (13) 99737-5760</span></a></li>
                 </ul>
@@ -26,10 +24,10 @@
             </div>
           <div class="counter-wrap ftco-animate d-flex mt-md-3">
           <div class="text">
-                <p class="mb-4">
+                <!--p class="mb-4">
                     <span class="number" data-number="120">0</span>
                     <span>Projetos completos</span>
-                </p>
+                </p-->
             <p><a href="{{ route('resume.download') }}" class="btn btn-primary py-3 px-3">Download do Currículo</a></p>
           </div>
           </div>
