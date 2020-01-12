@@ -10,7 +10,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<meta name="csrf-token" content="{{ csrf_token() }}" />
-	<meta name="p:domain_verify" content="0d6d3731c70b9bdcdde4e31b18925f9b"/>
+    <meta name="p:domain_verify" content="0d6d3731c70b9bdcdde4e31b18925f9b"/>
+
+    <script src="{{ asset('js/extended.js') }}"></script>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900">
     <link rel="stylesheet" href="{{ asset('css/open-iconic-bootstrap.min.css') }}">
