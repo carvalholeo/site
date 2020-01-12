@@ -4,13 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Professional;
+use App\Education;
 
 class ResumeController extends Controller
 {
     public function homePage()
     {
         $xps = Professional::all();
-        return view('index', compact('xps'));
+        $educations = Education::all();
+        return view('index', compact('xps',
+                                    'educations'));
     }
 
     public function index()
