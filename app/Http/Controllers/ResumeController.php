@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Professional;
 
 class ResumeController extends Controller
 {
     public function homePage()
     {
-        return view('index');
+        $xps = Professional::all();
+        return view('index', compact('xps'));
     }
 
     public function index()
