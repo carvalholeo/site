@@ -47,7 +47,7 @@
                     <div class="block-23 mb-3">
                         <ul>
                         <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-                        <li><a href="{{ route('social.whatsapp') }}"><span class="icon icon-whatsapp"></span><span class="text">+55 (13) 99737-5760</span></a></li>
+                        <li><a href="{{ route('social.whatsapp') }}"><span class="icon icon-whatsapp"></span><span class="text">(13) 99737-5760</span></a></li>
                         <li><a href="mailto:leonardo.cscarvalho@outlook.com.br"><span class="icon icon-envelope"></span><span class="text"> leonardo.cscarvalho@outlook.com.br</span></a></li>
                         </ul>
                     </div>
