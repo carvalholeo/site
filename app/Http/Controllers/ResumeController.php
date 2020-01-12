@@ -45,4 +45,13 @@ class ResumeController extends Controller
     {
         return view ('resume.bio');
     }
+
+    public function download()
+    {
+        $file = public_path() . "/storage/download/curriculo.pdf";
+        $headers = [
+            "Content-Type" => "application/pdf",
+        ];
+        return response()->download($file, 'CV Leonardo Carvalho.pdf', $headers);
+    }
 }
