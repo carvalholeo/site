@@ -13,12 +13,12 @@ class CreateEducationTable extends Migration
      */
     public function up()
     {
-        Schema::create('educations', function (Blueprint $table) {
+        Schema::create('education', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('degree', 50);
             $table->string('title', 50);
-            $table->string('instution', 50);
-            $table->string('instutionLink', 50);
+            $table->string('institution', 50);
+            $table->string('institutionLink', 50);
             $table->date('startDate');
             $table->date('endDate')->nullable();
             $table->boolean('isFinished');
@@ -33,6 +33,6 @@ class CreateEducationTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('educations');
+        Schema::dropIfExists('education');
     }
 }
