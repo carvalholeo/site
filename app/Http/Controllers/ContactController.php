@@ -29,7 +29,7 @@ class ContactController extends Controller
             return back()->with('success', 'Mensagem enviada com sucesso. Agora é só esperar, que em até 24h te dou um retorno');
         }
 
-        return back()->with('error', 'A validação do seu formulário expirou. Tente novamente e somente clique no botão 
+        return back()->with('error', 'A validação do seu formulário expirou. Tente novamente e somente clique no botão
         "Não sou um robô" quando estiver prestes a clicar no botão "Enviar".');
     }
 
@@ -57,16 +57,14 @@ class ContactController extends Controller
         return $recaptcha;
     }
 
-    private static function sendMailFromContactFormSite($request, Contact $contact) : void
+    private static function sendMailFromContactFormSite(Request $request, Contact $contact) : void
     {
         $recipient = getenv('MAIL_TO_ADDRESS');
-        $bcc = getenv('MAIL_BCC_ADDRESS');
         Mail::to($recipient)
-            ->bcc($bcc)
             ->send(new SendMailUser($contact));
     }
 
-    private static function saveInDbContactFormData($request) : Contact
+    private static function saveInDbContactFormData(Request $request) : Contact
     {
         $saveInDb = new Contact();
         $saveInDb->nome = $request->input('nome');
