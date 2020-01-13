@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Professional;
 use App\Models\Education;
+use App\Models\Courses;
 
 class ResumeController extends Controller
 {
@@ -12,13 +13,15 @@ class ResumeController extends Controller
     {
         $xps = Professional::all();
         $educations = Education::all();
+        $courses = Courses::all();
         return view('index', compact('xps',
-                                    'educations'));
+                                'educations',
+                                'courses'));
     }
 
     public function index()
     {
-        return redirect()->route('resume.professional','',307);
+        return redirect(route('resume.professional'),307);
     }
 
     public function professional()
