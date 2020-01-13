@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Professional;
-use App\Education;
+use App\Models\Professional;
+use App\Models\Education;
 
 class ResumeController extends Controller
 {
