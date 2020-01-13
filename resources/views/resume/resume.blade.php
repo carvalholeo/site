@@ -21,12 +21,18 @@
                         </div>
                         <div class="text pl-3">
                             <span class="date">{{ \Carbon\Carbon::parse($edu->startDate)->format('M/y')}} - {{ \Carbon\Carbon::parse($edu->endDate)->format('M/y')}}</span>
-
-                                <h2>{{ $edu->title }} - {{ $edu->isFinished ? 'Concluído' : 'Cursando' }}</h2>
+                            <h3 class="position">{{ $edu->degree }}
+                                @if($edu->workLoad != 0)
+                                 - {{ $edu->workLoad }}h
+                                @endIf
+                            </h3>
+                            <h2>{{ $edu->title }} - {{ $edu->isFinished ? 'Concluído' : 'Cursando' }}</h2>
 
                             <a href="{{ $edu->institutionLink }}" target="_blank">
                                 <span class="position">{{ $edu->institution }}</span>
                             </a>
+                            <p>{{ $edu->description }}</p>
+                            <p>Conceito médio: {{ $edu->globalGrade}}</p>
                         </div>
                     </div>
 @endforeach
@@ -236,7 +242,7 @@
                                  - {{ $course->workLoad }}h
                                 @endIf
                             </h3>
-                            
+
                             <a href="{{ $course->awardLink }}" target="_blank">
                                 <h2>{{ $course->awardName }} - {{ $course->isFinished ? 'Concluído' : 'Cursando' }}</h2>
                             </a>
