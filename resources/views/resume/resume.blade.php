@@ -33,6 +33,9 @@
                             </a>
                             <p>{{ $edu->description }}</p>
                             <p>Conceito médio: {{ $edu->globalGrade}}</p>
+                            @if ($edu->registerNumber != null)
+                                <p>Número do certificado: {{ $edu->registerNumber }}</p>
+                            @endif
                         </div>
                     </div>
 @endforeach
@@ -116,7 +119,7 @@
                         </div>
                         <div class="text pl-3">
                             <span class="date">{{ \Carbon\Carbon::parse($course->startDate)->format('d/M/y') }} -
-                                @if ($course->endDate != 0)
+                                @if ($course->isFinished != 0)
                                     {{ \Carbon\Carbon::parse($course->endDate)->format('d/M/y') }}
                                 @else
                                     Atualmente
@@ -130,12 +133,17 @@
                             </h3>
 
                             <a href="{{ $course->awardLink }}" target="_blank">
-                                <h2>{{ $course->awardName }} - {{ $course->isFinished ? 'Concluído' : 'Cursando' }}</h2>
+                                <h2>{{ $course->awardName }}</h2>
                             </a>
                             <a href="{{ $course->institutionLink }}" target="_blank">
                                 <span class="position">{{ $course->institutionName }}</span>
                             </a>
                             <p>{{ $course->description }}</p>
+
+                            @if ($course->awardNumber != null)
+                                <p>Número do certificado: {{ $course->awardNumber}}</p>
+                            @endif
+
                         </div>
                     </div>
 @endforeach
