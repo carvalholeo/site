@@ -2,10 +2,10 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-<link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/app.css') }}" />
-<link rel="stylesheet" type="text/css" href="{{ asset('css/error.css') }}" />
-<title>Erro 500 - Temporariamente indisponível | Léo Carvalho </title>
-
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/style.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/error.css') }}" />
+    @include('components.commom-css')
+    <title>Erro 500 - Erro interno do servidor | Léo Carvalho </title>
 </head>
 
 <body>
@@ -15,11 +15,10 @@
                 <div class="row">
                     <div class="col-lg-8 col-12 col-sm-10 offset-lg-2 offset-sm-1">
                         <h1 class="h1" id="errorTitle">Erro 500</h1>
-                        <h5 class="h5">Site temporariamente fora de serviço</h4>
+                        <h5 class="h5">Temporariamente fora de serviço</h4>
 
                             <div class="text-center">
-                                <img src="{{ asset('storage/images/errors/500.gif') }}" class="rounded img-fluid"
-                                    alt="...">
+                                <img src="{{ asset('storage/images/errors/500.gif') }}" class="rounded img-fluid">
                             </div>
 
                             <p class="text-muted">Alguém andou mexendo no que não devia e estragou as configurações do site.</p>

@@ -2,10 +2,10 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-<link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/app.css') }}" />
-<link rel="stylesheet" type="text/css" href="{{ asset('css/error.css') }}" />
-<title>Erro 503 - Temporariamente indisponível | Léo Carvalho</title>
-
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/style.css') }}" />
+    @include('components.commom-css')
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/error.css') }}" />
+    <title>Erro 503 - Serviço indisponível | Léo Carvalho</title>
 </head>
 
 <body>
@@ -18,14 +18,13 @@
                         <h5 class="h5">Site temporariamente fora de serviço</h4>
 
                             <div class="text-center">
-                                <img src="{{ asset('storage/images/errors/503.gif') }}" class="rounded img-fluid"
-                                    alt="...">
+                                <img src="{{ asset('storage/images/errors/503.gif') }}" class="rounded img-fluid">
                             </div>
 
                             <p class="text-muted">Parece que o site está passando por alguma instabilidade temporária ou
                                 uma manutenção programada neste momento.</p>
                             <p class="text-muted">Em breve, voltaremos com a nossa programação normal. Se esta
-                                instabilidade estiver ocorrendo há mais de 10 minutos, me manda um <a
+                                página estiver aparecendo por mais de 10 minutos, me manda um <a
                                     href="https://twitter.com/_carvalho_leo" target="_blank">DM no Twitter</a> sobre a
                                 falha! </p>
                     </div>
