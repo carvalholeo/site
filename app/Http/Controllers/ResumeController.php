@@ -6,14 +6,19 @@ use Illuminate\Http\Request;
 use App\Models\Professional;
 use App\Models\Education;
 use App\Models\Courses;
+use Illuminate\Support\Facades\DB;
 
 class ResumeController extends Controller
 {
     public function homePage()
     {
-        $xps = Professional::all();
-        $educations = Education::all();
-        $courses = Courses::all();
+        $xps = Professional::orderBy('endDate', 'desc')
+                            ->get();
+        $educations = Education::orderBy('endDate', 'desc')
+                            ->get();
+        $courses = Courses::orderBy('endDate', 'desc')
+                            ->get();
+
         return view('index', compact('xps',
                                 'educations',
                                 'courses'));
@@ -21,7 +26,7 @@ class ResumeController extends Controller
 
     public function index()
     {
-        return redirect(route('resume.professional'),307);
+        return redirect()->route('resume.professional', null, 307);
     }
 
     public function professional()
