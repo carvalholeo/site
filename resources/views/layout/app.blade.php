@@ -2,47 +2,36 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="p:domain_verify" content="0d6d3731c70b9bdcdde4e31b18925f9b"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="csrf-token" content="{{ csrf_token() }}" />
-    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/app.css') }}" />
-    <script src="https://kit.fontawesome.com/aff5b0769d.js" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/navbar.css') }}" />
-    <script src="{{ asset('js/app.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('js/extended.js') }}" type="text/javascript"></script>
-
-
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    <style>
-    body {
-        padding: 20px;
-    }
-
-    .navbar {
-        margin-bottom: 20px;
-    }
-    @media screen and (max-width: 575px) {
-        #rc-imageselect, .g-recaptcha
-        {
-            transform:scale(0.77);
-            -webkit-transform:scale(0.77);transform-origin:0 0;
-            -webkit-transform-origin:0 0;
-        }
-    }
-    </style>
-
     <title>
         @yield('title')
     </title>
 
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<meta name="csrf-token" content="{{ csrf_token() }}" />
+    <meta name="p:domain_verify" content="0d6d3731c70b9bdcdde4e31b18925f9b"/>
+
+    <script src="{{ asset('js/extended.js') }}"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900">
+    <link rel="stylesheet" href="{{ asset('css/open-iconic-bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/aos.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/ionicons.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/icomoon.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
     <div class="container">
-        @component('components.navbar', ["current" => $current])
+        @component('components.navbar')
         @endcomponent
         <main role="main">
             @hasSection('body')
@@ -52,7 +41,7 @@
         <hr />
     </div>
 
-    <footer class="container footer navbar-fixed-bottom">
+    <footer class="ftco-footer ftco-section" role="footer">
         @component('components.footer')
         @endcomponent
 
@@ -60,6 +49,39 @@
             @yield('javascript')
         @endif
     </footer>
+
+<script src="{{ asset('js/jquery.min.js') }}"></script>
+<script src="{{ asset('js/jquery-migrate-3.0.1.min.js') }}"></script>
+<script src="{{ asset('js/popper.min.js') }}"></script>
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('js/jquery.easing.1.3.js') }}"></script>
+<script src="{{ asset('js/jquery.waypoints.min.js') }}"></script>
+<script src="{{ asset('js/jquery.stellar.min.js') }}"></script>
+<script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+<script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
+<script src="{{ asset('js/aos.js') }}"></script>
+<script src="{{ asset('js/jquery.animateNumber.min.js') }}"></script>
+<script src="{{ asset('js/scrollax.min.js') }}"></script>
+
+<script src="{{ asset('js/main.js') }}"></script>
+
+@env('production')
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-139872605-1"></script>
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-139872605-1');
+</script>
+
+@endenv
+
 </body>
 
 </html>

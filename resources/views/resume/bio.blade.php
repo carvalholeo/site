@@ -1,5 +1,7 @@
 @extends('layout.app', ["current" => "resume"])
 
+@include('components.commom-css')
+
 @section('title', 'Mini-bio | Léo Carvalho')
 
 @section('body')
@@ -7,15 +9,15 @@
 <div class="container">
     <div class="text-justify">
         <h1 class="text-center">Vamos falar um pouco sobre mim?</h1>
-        
+
         <p class="text-wrap">
             Estudante e desenvolvedor de sites e sistemas. Prazer: Leonardo, 24 anos. Viciado em estudar, ler notícias e descobrir novos memes. Gerente de projetos voluntário em uma comunidade virtual.
         </p>
-        
+
         <p class="text-wrap">
             Nascido e criado no litoral de SP, diferente do que algumas pessoas pensam, não vai à praia todo fim de semana. Ama café (mas só pra beber mesmo, não conhece nada sobre) e dormir (atividade excelente, diga-se de passagem).
         </p>
-        
+
         <p class="text-wrap">
             Tem muita vontade de praticar exercícios físicos, mas sozinho é complicado, né!? Vira e mexe esquece o que é esquerda e direita.
         </p>
@@ -40,7 +42,7 @@
         </p>
 
         <p class="text-wrap">
-            É extremamente apaixonado por computação, tecnologia e, principalmente, programação. 
+            É extremamente apaixonado por computação, tecnologia e, principalmente, programação.
         </p>
 
         <p class="text-wrap">

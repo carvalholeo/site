@@ -6,7 +6,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use App\Contact;
+use App\Models\Contact;
 
 class SendMailUser extends Mailable
 {
@@ -38,6 +38,6 @@ class SendMailUser extends Mailable
                         'mensagem' => $this->contact->mensagem
                     ]);
 
-        
+
     }
 }

@@ -11,7 +11,7 @@
 |
  */
 
-Route::get('/', 'PortfolioController@index')->name('index');
+Route::get('/', 'ResumeController@homePage')->name('index');
 
 Route::get('/contact', 'ContactController@index')->name('contact.index');
 Route::post('/contact', 'ContactController@send')->name('contact.send');
@@ -24,11 +24,12 @@ Route::prefix('/resume')->group(function () {
     Route::get('/courses', 'ResumeController@courses')->name('resume.courses');
     Route::get('/bio', 'ResumeController@bio')->name('resume.bio');
     Route::get('/skills', 'ResumeController@skills')->name('resume.skills');
+    Route::get('download', 'ResumeController@download')->name('resume.download');
 });
 
 Route::get('/social', 'SocialController@index')->name('social.index');
-Route::get('/facebook', 'SocialController@facebook')->name('social.facebook');
 Route::get('/fb', 'SocialController@facebook')->name('social.facebook');
+Route::get('/facebook', 'SocialController@facebook')->name('social.facebook');
 Route::get('/youtube', 'SocialController@youtube')->name('social.youtube');
 Route::get('/yt', 'SocialController@youtube')->name('social.youtube');
 Route::get('/blog', 'SocialController@blog')->name('social.blog');

@@ -32,3 +32,6 @@ let onloadCallback = function() {
     });
 };
 
+function redirectToSection(sectionId) {
+    window.location.href = sectionId;
+}

@@ -1,10 +1,10 @@
-@extends('layout.app', ["current" => "construction"])
+@extends('layout.app')
+
+@include('components.commom-css')
 
 @section('title', 'Em construção | Léo Carvalho')
 
 @section('body')
-<body>
-    <div class="container">
         <div class="row text-center">
             <div class="col-lg-6 offset-lg-3 col-sm-6 offset-sm-3 col-12 p-3 error-main">
                 <div class="row">
@@ -22,6 +22,5 @@
                 </div>
             </div>
         </div>
-    </div>
-</body>
+
 @endsection
