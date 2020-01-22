@@ -35,10 +35,10 @@
         @endcomponent
         <main role="main">
             @hasSection('body')
-            @yield('body')
+                @yield('body')
             @endif
         </main>
-        <hr />
+        <br>
     </div>
 
     <footer class="ftco-footer ftco-section" role="footer">

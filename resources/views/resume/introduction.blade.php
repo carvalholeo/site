@@ -10,16 +10,12 @@
                         <span
                             class="txt-rotate"
                             data-period="2000"
-                            data-rotate='[ "Desenvolvedor Web.", "Desenvolvedor Back-end.", "Suporte Técnico.", "Líder de Comunidade.", "Blogueiro" ]'></span>
+                            data-rotate='[ "Desenvolvedor Web", "Desenvolvedor Back-end", "Líder de Comunidade", "Blogueiro" ]'>
+                        </span>
                     </h2>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="mouse">
-        <a href="#" class="mouse-icon">
-            <div class="mouse-wheel"><span class="ion-ios-arrow-round-down"></span></div>
-        </a>
-    </div>
+
   </section>
