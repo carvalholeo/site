@@ -3,24 +3,34 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Facades\Artisan;
 
 class InternalController extends Controller
 {
-    public function update(Request $request)
+    public function updateRepository(Request $request)
     {
-        return RepositoryUpdateController::executeUpdate();
+        return InternalController::executeUpdate();
     }
 
     private static function executeUpdate()
     {
-        $exec = shell_exec('sudo git pull origin master 2>&1');
-		echo $exec;
-        if (!$exec) {
-            return response('Erro interno. Não foi possível atualizar o site.', 503);
+        $code = 0;
+        $response = '';
+
+        try {
+            $response = Artisan::call('update:repository');
+            $code = 201;
+
+        } catch (\Exception $th) {
+            $response = $th->getMessage();
+            $code = 503;
+            
+        } finally {
+            Artisan::call('up');
+            return response($response, $code);
         }
-        return response('Enviado com sucesso. Atualizará em breve.', 201);
     }
 
     public function sitemap()
