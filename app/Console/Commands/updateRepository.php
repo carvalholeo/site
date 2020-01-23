@@ -64,7 +64,9 @@ class updateRepository extends Command
     }
 
     protected function gitUpdater() {
-        $process = Process::fromShellCommandline('git pull origin master');
+        $process =Process::fromShellCommandline('cd ..');
+        $process->fromShellCommandline('git pull origin master');
+
         $process->mustRun();
 
         return $process->getOutput();
