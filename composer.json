@@ -12,9 +12,10 @@
         "artesaos/seotools": "^0.16.0",
         "doctrine/dbal": "^2.10",
         "fideloper/proxy": "^4.0",
+        "fsasvari/laravel-trailing-slash": "0.3.*",
         "laravel/framework": "5.8.*",
         "laravel/tinker": "^1.0",
-        "fsasvari/laravel-trailing-slash": "0.3.*"
+        "laravelium/sitemap": "3.1.*"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
