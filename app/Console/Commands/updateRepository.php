@@ -40,20 +40,27 @@ class updateRepository extends Command
      */
     public function handle()
     {
+        $execs = Array();
         Artisan::call('down');
-        $this->composerInstaller();
-        $exec = $this->gitUpdater();
+        $execs[] = $this->composerInstaller();
+        $execs[] = $this->gitUpdater();
 
         Artisan::call('cache:clear');
         Artisan::call('route:cache');
         Artisan::call('view:cache');
         Artisan::call('up');
-        return $exec;
+        
+        foreach ($execs as $exec) {
+            $this->info($exec);
+        }
+
     }
     protected function composerInstaller()
     {
         $process = new Process(['composer', 'install']);
         $process->mustRun();
+
+        return $process->getOutput();
     }
 
     protected function gitUpdater() {
