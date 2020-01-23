@@ -176,6 +176,7 @@ return [
         App\Providers\TelescopeServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
+        LaravelTrailingSlash\RoutingServiceProvider::class,
 
     ],
 
