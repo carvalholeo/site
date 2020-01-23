@@ -22,7 +22,7 @@ class SocialController extends Controller
 
     public function facebook()
     {
-        return redirect()->route('social.index','',301);
+        return redirect()->route('social.index', null, 301);
     }
 
     public function blog()
