@@ -18,11 +18,13 @@ Route::prefix('resume/')->group(function () {
     Route::get('download/', 'ResumeController@download')->name('resume.download');
 });
 
+Route::post('contact/', 'ContactController@send')->name('contact.send');
+
 Route::get('social/', 'SocialController@index')->name('social.index');
 Route::get('fb/', 'SocialController@facebook')->name('social.facebook');
 Route::get('facebook/', 'SocialController@facebook')->name('social.facebook');
-Route::get('youtube/', 'SocialController@youtube')->name('social.youtube');
 Route::get('yt/', 'SocialController@youtube')->name('social.youtube');
+Route::get('youtube/', 'SocialController@youtube')->name('social.youtube');
 Route::get('blog/', 'SocialController@blog')->name('social.blog');
 Route::get('twitter/', 'SocialController@twitter')->name('social.twitter');
 Route::get('instagram/', 'SocialController@instagram')->name('social.instagram');
@@ -41,3 +43,5 @@ Route::get('whatzap/', 'SocialController@whatsapp')->name('social.whatsapp');
 Route::get('whatsapp/', 'SocialController@whatsapp')->name('social.whatsapp');
 
 Route::post('repository/update/', 'RepositoryUpdateController@update')->name('github.update');
+
+Route::get('sitemap/', 'InternalController@sitemap')->name('sitemap');
