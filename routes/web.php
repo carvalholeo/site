@@ -42,6 +42,6 @@ Route::get('wpp/', 'SocialController@whatsapp')->name('social.whatsapp');
 Route::get('whatzap/', 'SocialController@whatsapp')->name('social.whatsapp');
 Route::get('whatsapp/', 'SocialController@whatsapp')->name('social.whatsapp');
 
-Route::post('repository/update/', 'RepositoryUpdateController@update')->name('github.update');
+Route::post('repository/update/', 'InternalController@updateRepository')->name('github.update');
 
 Route::get('sitemap/', 'InternalController@sitemap')->name('sitemap');
