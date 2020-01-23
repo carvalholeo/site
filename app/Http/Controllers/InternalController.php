@@ -6,5 +6,18 @@ use Illuminate\Http\Request;
 
 class InternalController extends Controller
 {
-    //
+    public function update(Request $request)
+    {
+        return RepositoryUpdateController::executeUpdate();
+    }
+
+    private static function executeUpdate()
+    {
+        $exec = shell_exec('sudo git pull origin master 2>&1');
+		echo $exec;
+        if (!$exec) {
+            return response('Erro interno. Não foi possível atualizar o site.', 503);
+        }
+        return response('Enviado com sucesso. Atualizará em breve.', 201);
+    }
 }
