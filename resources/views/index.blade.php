@@ -1,7 +1,5 @@
 @extends('layout.app')
 
-@section('title', 'Léo Carvalho')
-
 @section('body')
 
 @include('components.flash-messages')
