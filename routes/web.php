@@ -13,17 +13,8 @@
 
 Route::get('/', 'ResumeController@homePage')->name('index');
 
-Route::get('contact/', 'ContactController@index')->name('contact.index');
-Route::post('contact/', 'ContactController@send')->name('contact.send');
-
 Route::prefix('resume/')->group(function () {
     Route::get('/', 'ResumeController@index')->name('resume.index');
-    Route::get('professional/', 'ResumeController@professional')->name('resume.professional');
-    Route::get('academic/', 'ResumeController@academic')->name('resume.academic');
-    Route::get('hobbies/', 'ResumeController@hobbies')->name('resume.hobbies');
-    Route::get('courses/', 'ResumeController@courses')->name('resume.courses');
-    Route::get('bio/', 'ResumeController@bio')->name('resume.bio');
-    Route::get('skills/', 'ResumeController@skills')->name('resume.skills');
     Route::get('download/', 'ResumeController@download')->name('resume.download');
 });
 
@@ -48,7 +39,5 @@ Route::get('whats/', 'SocialController@whatsapp')->name('social.whatsapp');
 Route::get('wpp/', 'SocialController@whatsapp')->name('social.whatsapp');
 Route::get('whatzap/', 'SocialController@whatsapp')->name('social.whatsapp');
 Route::get('whatsapp/', 'SocialController@whatsapp')->name('social.whatsapp');
-
-Route::get('portfolio/', 'PortfolioController@index')->name('portfolio');
 
 Route::post('repository/update/', 'RepositoryUpdateController@update')->name('github.update');
