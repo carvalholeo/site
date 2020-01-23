@@ -2,6 +2,11 @@
 /**
  * @see https://github.com/artesaos/seotools
  */
+$seoTitle = 'Léo Carvalho';
+$seoDescription = 'Desenvolvedor de sistemas';
+$seoCanonical = null;
+
+$seoPinterest = '0d6d3731c70b9bdcdde4e31b18925f9b';
 
 return [
     'meta' => [
@@ -9,13 +14,25 @@ return [
          * The default configurations to be used by the meta generator.
          */
         'defaults'       => [
-            'title'        => "It's Over 9000!", // set false to total remove
-            'titleBefore'  => false, // Put defaults.title before page title, like 'It's Over 9000! - Dashboard'
-            'description'  => 'For those who helped create the Genki Dama', // set false to total remove
+            'title'        => $seoTitle, // set false to total remove
+            'titleBefore'  => true, // Put defaults.title before page title, like 'It's Over 9000! - Dashboard'
+            'description'  => $seoDescription, // set false to total remove
             'separator'    => ' - ',
-            'keywords'     => [],
-            'canonical'    => false, // Set null for using Url::current(), set false to total remove
-            'robots'       => false, // Set to 'all', 'none' or any combination of index/noindex and follow/nofollow
+            'keywords'     => [
+                'desenvolvedor',
+                'léo carvalho',
+                'dev c#',
+                'dev php',
+                'php',
+                'c#',
+                '.net',
+                'javascript',
+                'js',
+                'web',
+                'desktop'
+            ],
+            'canonical'    => $seoCanonical, // Set null for using Url::current(), set false to total remove
+            'robots'       => 'all', // Set to 'all', 'none' or any combination of index/noindex and follow/nofollow
         ],
         /*
          * Webmaster tags are always added.
@@ -24,8 +41,9 @@ return [
             'google'    => null,
             'bing'      => null,
             'alexa'     => null,
-            'pinterest' => null,
+            'pinterest' => $seoPinterest,
             'yandex'    => null,
+            'p:domain_verify' => $seoPinterest
         ],
 
         'add_notranslate_class' => false,
@@ -35,9 +53,9 @@ return [
          * The default configurations to be used by the opengraph generator.
          */
         'defaults' => [
-            'title'       => 'Over 9000 Thousand!', // set false to total remove
-            'description' => 'For those who helped create the Genki Dama', // set false to total remove
-            'url'         => false, // Set null for using Url::current(), set false to total remove
+            'title'       => $seoTitle, // set false to total remove
+            'description' => $seoDescription, // set false to total remove
+            'url'         => $seoCanonical, // Set null for using Url::current(), set false to total remove
             'type'        => false,
             'site_name'   => false,
             'images'      => [],
@@ -48,8 +66,10 @@ return [
          * The default values to be used by the twitter cards generator.
          */
         'defaults' => [
-            //'card'        => 'summary',
-            //'site'        => '@LuizVinicius73',
+            'card'        => 'summary',
+            'site'        => '@_carvalho_leo',
+            'title'       => $seoTitle,
+            'description' => $seoDescription,
         ],
     ],
     'json-ld' => [
@@ -57,9 +77,9 @@ return [
          * The default configurations to be used by the json-ld generator.
          */
         'defaults' => [
-            'title'       => 'Over 9000 Thousand!', // set false to total remove
-            'description' => 'For those who helped create the Genki Dama', // set false to total remove
-            'url'         => false, // Set null for using Url::current(), set false to total remove
+            'title'       => $seoTitle, // set false to total remove
+            'description' => $seoDescription, // set false to total remove
+            'url'         => $seoCanonical, // Set null for using Url::current(), set false to total remove
             'type'        => 'WebPage',
             'images'      => [],
         ],
