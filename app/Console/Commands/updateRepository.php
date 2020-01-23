@@ -49,7 +49,7 @@ class updateRepository extends Command
         Artisan::call('route:cache');
         Artisan::call('view:cache');
         Artisan::call('up');
-        
+
         foreach ($execs as $exec) {
             $this->info($exec);
         }
@@ -57,14 +57,14 @@ class updateRepository extends Command
     }
     protected function composerInstaller()
     {
-        $process = new Process(['composer', 'install']);
+        $process = Process::fromShellCommandline('composer install');
         $process->mustRun();
 
         return $process->getOutput();
     }
 
     protected function gitUpdater() {
-        $process = new Process(['git', 'pull', 'origin', 'master']);
+        $process = Process::fromShellCommandline('git pull origin master');
         $process->mustRun();
 
         return $process->getOutput();
