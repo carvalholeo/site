@@ -58,7 +58,7 @@ class updateRepository extends Command
     protected function composerInstaller()
     {
         $process = Process::fromShellCommandline('composer install');
-        $process->mustRun();
+        $process->mustRun(null, ['COMPOSER_HOME' => '/home/carvalho_csleo_gmail_com/.config/composer']);
 
         return $process->getOutput();
     }
