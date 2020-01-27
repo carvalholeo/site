@@ -11,8 +11,8 @@
           <li class="nav-item"><a href="{{ route('index')}}/#about-section" class="nav-link"><span>Sobre</span></a></li>
           <li class="nav-item"><a href="{{ route('index')}}/#resume-section" class="nav-link"><span>Currículo</span></a></li>
           <!--li class="nav-item"><a href="{{ route('index')}}/#services-section" class="nav-link"><span>Serviços</span></a></li>
-          <li class="nav-item"><a href="{{ route('index')}}/#projects-section" class="nav-link"><span>Projetos</span></a></li>
-          <li class="nav-item"><a href="{{ route('index')}}/#blog-section" class="nav-link"><span>Blog</span></a></li-->
+          <li class="nav-item"><a href="{{ route('index')}}/#projects-section" class="nav-link"><span>Projetos</span></a></li-->
+          <li class="nav-item"><a href="{{ route('index')}}/#blog-section" class="nav-link"><span>Blog</span></a></li>
           <li class="nav-item"><a href="{{ route('index')}}/#contact-section" class="nav-link"><span>Contato</span></a></li>
         </ul>
       </div>
