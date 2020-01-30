@@ -8,57 +8,32 @@
         </div>
       </div>
       <div class="row d-flex">
+@foreach ($posts as $post)
         <div class="col-md-4 d-flex ftco-animate">
             <div class="blog-entry justify-content-end">
-            <a href="single.html" class="block-20" style="background-image: url({{ asset('storage/images/image_1.jpg') }});">
+            <a href="{{ $post->link }}" class="block-20" style="background-image: url({{ $post->thumbnail }});">
             </a>
             <div class="text mt-3 float-right d-block">
-              <h3 class="heading"><a href="single.html">Why Lead Generation is Key for Business Growth</a></h3>
+              <h3 class="heading"><a href="{{ $post->link }}">{{ $post->title }}</a></h3>
               <div class="d-flex align-items-center mb-3 meta">
                   <p class="mb-0">
-                      <span class="mr-2">Sept. 12, 2019</span>
-                      <a href="#" class="mr-2">Admin</a>
-                      <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+                      <span class="mr-2">{{ \Carbon\Carbon::parse($post->pubDate)->format('d M y')}}</span>
+                      <a href="#" class="mr-2">{{ $post->author }}</a>
                   </p>
               </div>
-              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+              <p> {{ $post->description }}</p>
+
+              <p class="text-muted">Tags:
+                @foreach ($post->categories as $category)
+                  {{ $category }}
+                @endforeach
+              </p>
+
             </div>
           </div>
         </div>
-        <div class="col-md-4 d-flex ftco-animate">
-            <div class="blog-entry justify-content-end">
-            <a href="single.html" class="block-20" style="background-image: url({{ asset('storage/images/image_2.jpg') }});">
-            </a>
-            <div class="text mt-3 float-right d-block">
-              <h3 class="heading"><a href="single.html">Why Lead Generation is Key for Business Growth</a></h3>
-              <div class="d-flex align-items-center mb-3 meta">
-                  <p class="mb-0">
-                      <span class="mr-2">Sept. 12, 2019</span>
-                      <a href="#" class="mr-2">Admin</a>
-                      <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-                  </p>
-              </div>
-              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 d-flex ftco-animate">
-            <div class="blog-entry">
-            <a href="single.html" class="block-20" style="background-image: url({{ asset('storage/images/image_3.jpg') }});">
-            </a>
-            <div class="text mt-3 float-right d-block">
-              <h3 class="heading"><a href="single.html">Why Lead Generation is Key for Business Growth</a></h3>
-              <div class="d-flex align-items-center mb-3 meta">
-                  <p class="mb-0">
-                      <span class="mr-2">Sept. 12, 2019</span>
-                      <a href="#" class="mr-2">Admin</a>
-                      <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-                  </p>
-              </div>
-              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-            </div>
-          </div>
-        </div>
+@endforeach
+
       </div>
     </div>
   </section>

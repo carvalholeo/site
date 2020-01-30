@@ -6,13 +6,14 @@ use Illuminate\Http\Request;
 use App\Models\Professional;
 use App\Models\Education;
 use App\Models\Courses;
+use App\Models\Blog;
 use Illuminate\Support\Facades\DB;
 use Artesaos\SEOTools\Traits\SEOTools as SEOToolsTrait;
 
 class ResumeController extends Controller
 {
     use SEOToolsTrait;
-    
+
     public function homePage()
     {
         $this->seo();
@@ -23,10 +24,12 @@ class ResumeController extends Controller
                             ->get();
         $courses = Courses::orderBy('endDate', 'desc')
                             ->get();
+        $posts = Blog::getContent(3);
 
         return view('index', compact('xps',
                                 'educations',
-                                'courses'));
+                                'courses',
+                                'posts'));
     }
 
     public function index()
