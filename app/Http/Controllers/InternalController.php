@@ -26,7 +26,7 @@ class InternalController extends Controller
         } catch (\Exception $th) {
             $response = $th->getMessage();
             $code = 503;
-            
+
         } finally {
             Artisan::call('up');
             return response($response, $code);
@@ -40,8 +40,7 @@ class InternalController extends Controller
         $sitemap->setCache('laravel.sitemap', 60);
 
         if (!$sitemap->isCached()) {
-            $sitemap->add(URL::to(route('index'), [], true), '2020-01-14T17:10:00-03:00', '1.0', 'weekly');
-            $sitemap->add(URL::to(route('resume.index'), [], true), '2020-01-14T17:10:00-03:00', '0.8', 'monthly');
+            $sitemap->add(URL::to(route('index'), [], true), '2020-01-30T20:58:00-03:00', '1.0', 'weekly');
 
             $sitemap->add(URL::to(route('social.index'), [], true), '2020-01-14T17:10:00-03:00', '0.5', 'yearly');
             $sitemap->add(URL::to(route('social.facebook'), [], true), '2020-01-14T17:10:00-03:00', '0.5', 'yearly');
