@@ -10,8 +10,8 @@
 @include('resume.resume')
 <!--include('resume.services')
 include('resume.projects')
-include('resume.counter')
-include('resume.blog') -->
+include('resume.counter')-->
+@include('resume.blog')
 @include('resume.hire')
 @include('contact.contact')
 
