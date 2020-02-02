@@ -1,16 +1,16 @@
 @extends('layout.app', ["current" => "construction"])
 
 @section('title')
-    Medium | Léo Carvalho
+    Blog | Léo Carvalho
 @endsection
 
 @section('body')
-Aguarde um instante, você já está indo para o meu blog no Medium!
+Aguarde um instante, você já está indo para o meu blog!
 @endsection
 
 @section('javascript')
     <script type="text/javascript">
-        url = "https://medium.com/@carvalho_leo";
+        url = "https://blog.leocarvalho.dev";
         redirect(url);
     </script>
 @endsection
