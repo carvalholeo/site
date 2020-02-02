@@ -27,7 +27,7 @@
               <a role="button" class="btn btn-primary btn-sm" href="{{ $post->link }}">Continue lendo...</a>
               <p class="text-muted">Tags:
                 @foreach ($post->categories as $category)
-                  {{ $category }}
+                  {{ $category }},
                 @endforeach
               </p>
 
