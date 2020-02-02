@@ -3,7 +3,7 @@
             <div class="col-md">
                 <div class="ftco-footer-widget mb-4">
                     <h2 class="ftco-heading-2">Sobre</h2>
-                    <p>Desenvolvedor de sites e sistemas, estudante de Análise e Desenvolvimento de Sistemas, freelancer em suporte técnico e doutor em piadas e memes ruins.</p>
+                    <p>Desenvolvedor PHP e C#, estudante de Análise e Desenvolvimento de Sistemas e doutor em piadas e memes ruins.</p>
                     <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                     <li class="ftco-animate"><a href="{{ route('social.github') }}"><span class="icon-github"></span></a></li>
                     <li class="ftco-animate"><a href="{{ route('social.twitter') }}"><span class="icon-twitter"></span></a></li>
@@ -11,7 +11,6 @@
                     <li class="ftco-animate"><a href="{{ route('social.telegram') }}"><span class="icon-telegram"></span></a></li>
                     <li class="ftco-animate"><a href="{{ route('social.instagram') }}"><span class="icon-instagram"></span></a></li>
                     <li class="ftco-animate"><a href="{{ route('social.youtube') }}"><span class="icon-youtube"></span></a></li>
-                    <li class="ftco-animate"><a href="{{ route('social.blog') }}"><span class="icon-medium"></span></a></li>
                     <li class="ftco-animate"><a href="{{ route('social.wordpress') }}"><span class="icon-wordpress"></span></a></li>
                     </ul>
                 </div>
@@ -45,7 +44,6 @@
                     <h2 class="ftco-heading-2">Vamos conversar?</h2>
                     <div class="block-23 mb-3">
                         <ul>
-                        <!--li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li-->
                         <li><a href="{{ route('social.whatsapp') }}"><span class="icon icon-whatsapp"></span><span class="text">(13) 99737-5760 (WhatsApp)</span></a></li>
                         <li><a href="mailto:leonardo.cscarvalho@outlook.com.br"><span class="icon icon-envelope"></span><span class="text"> leonardo.cscarvalho@outlook.com.br</span></a></li>
                         </ul>
