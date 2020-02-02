@@ -60,9 +60,10 @@
 $date = new DateTime();
 @endphp
 
-        <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-    Copyright &copy;{{ \Carbon\Carbon::parse($date->getTimestamp())->format('Y')}} Todos os direitos reservados | Este template é feito com <i class="icon-heart color-danger" aria-hidden="true"></i> por <a href="https://colorlib.com" target="_blank">Colorlib</a>
-    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+        <p>
+    Copyright &copy;{{ \Carbon\Carbon::parse($date->getTimestamp())->format('Y')}} Todos os direitos reservados |
+    <a role="link" href="https://blog.leocarvalho.dev/termos.html">Termos de uso</a> | <a role="link" href="https://blog.leocarvalho.dev/privacy-policy.html">Política de Privacidade</a>
+    </p>
         </div>
     </div>
 </div>
