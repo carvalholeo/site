@@ -13,12 +13,12 @@
               <div class="col-md-12 heading-section ftco-animate">
                   <h1 class="big">Sobre</h1>
                 <h2 class="mb-4">Sobre mim</h2>
-                <p>Sou desenvolvedor de sites e sistemas, faço freelances de suporte técnico e de vez em quando brinco com fotografia e web design.</p>
+                <p>Sou desenvolvedor de sites e sistemas, com foco em PHP e C# e de vez em quando brinco com fotografia e web design.</p>
                 <ul class="about-info mt-4 px-md-0 px-2">
                     <li class="d-flex"><span>Nome:</span> <span>Leonardo Carvalho</span></li>
                     <li class="d-flex"><span>Aniversário:</span> <span>28 de abril</span></li>
                     <li class="d-flex"><span>Email:</span> <a href="mailto:leonardo.cscarvalho@outlook.com.br" target="_blank"><span>leonardo.cscarvalho@outlook.com.br</span></a></li>
-                    <li class="d-flex"><span>Phone: </span> <a href="tel://13997375760"><span>(13) 99737-5760</span></a></li>
+                    <li class="d-flex"><span>Telefone: </span> <a href="tel://13997375760"><span>(13) 99737-5760</span></a></li>
                 </ul>
               </div>
             </div>
