@@ -35,7 +35,7 @@ class ResumeController extends Controller
     public function index()
     {
         $this->seo();
-        return redirect()->route('resume.professional', null, 307);
+        return redirect()->route('index', null, 307);
     }
 
     public function download()
