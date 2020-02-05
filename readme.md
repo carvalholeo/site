@@ -1,71 +1,125 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+# Sobre o repositório
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+Este repositório contém os dados para implementar o meu site. É, basicamente, uma página que pode levar para outras telas com mais detalhes do meu currículo.
 
-## About Laravel
+Feito em [Laravel 5.8][https://laravel.com/] no back-end e com o template [Colorlib][https://colorlib.com/] no front-end, o site do domínio principal tem como objetivo ser um currículo, com projetos e portifólio, demonstrando projetos já executados e deixando um formulário de contato.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Assim como a maioria dos meus projetos, o código-fonte do site é aberto e está sob a licença GNU Affero General Public License v3.0, e, portanto, pode receber atualizações via PR de qualquer pessoa interessada em contribuir.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Requerimentos
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Por utilizar o Laravel, o repositório tem como requisitos mínimos para funcionar: 
 
-## Learning Laravel
+* PHP >= 7.1.3
+* BCMath PHP Extension
+* Ctype PHP Extension
+* JSON PHP Extension
+* Mbstring PHP Extension
+* OpenSSL PHP Extension
+* PDO PHP Extension
+* Tokenizer PHP Extension
+* XML PHP Extension
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+É preciso, também, ter o [Composer][https://getcomposer.org/] instalado na máquina, para fazer a instalação das dependências necessárias do repositório.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1100 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost you and your team's skills by digging into our comprehensive video library.
+Não se esqueça que, por causa da natureza de repositório, é obrigatório ter o [Git][https://git-scm.com/] no servidor destino.
 
-## Laravel Sponsors
+## Como instalar
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Entre no terminal da máquina, navegue até a pasta que vai ficar o repositório e faça o clone do repositório:
+```
+git clone https://github.com/carvalholeo/site.git
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
+Isso vai criar uma pasta chamada ```site``` dentro da pasta que vc fez o clone. Digite ```cd site```, para entrar nessa pasta.
 
-## Contributing
+Em seguida, precisamos realizar a instalação dos pacotes. Isso é feito com o comando:
+```
+composer install
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Logo após, dê um comando para copiar o arquivo ```.env.example``` para ```.env```. Isso é feito para que a aplicação funcione. Sem ela, simplesmente nada funcionará.
 
-## Security Vulnerabilities
+```
+cp .env.example .env
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Mais abaixo, vou explicar quais diretivas são obrigatórias e como fazer a configuração.
 
-## License
+Garanta que a pasta ```storage``` esteja com as permissões corretas, pois é nela que ficam os caches, logs e arquivos que podem ser usados como assets da aplicação.
 
-The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Para que os recursos públicos de ```storage``` estejam disponíveis dentro de public, você precisa dar o seguinte comando:
+
+```
+php artisan storage:link
+```
+
+Se apresentar um erro de pasta já criada, navegue até o diretório ```public``` e remova a pasta/arquivo ```storage``` e execute o comando acima novamente.
+
+Ele cria um link simbólico/atalho dentro de public, para ser utilizado pelo front-end.
+
+Crie um arquivo vazio chamado ```database.sqlite``` dentro do diretório ```database```. Tenha certeza que o arquivo possui as mesmas permissões do resto da pasta.
+
+Lembre-se de configurar o seu servidor para que acesse a pasta ```public```, pois a pasta ```site``` NÃO DEVE estar acessível publicamente.
+
+## Configurar arquivo ```.env```
+
+O arquivo ```.env``` é o coração das configurações e deve ter suas informações incluídas manualmente, visto que tem informações sensíveis em si mesmo. O arquivo ```.env.example``` contém somente as diretivas e exemplos.
+
+Antes de mais nada, vamos criar a chave criptográfica.
+
+```
+php artisan key:generate
+```
+---
+Depois, vamos fazer as configurações:
+
+```
+APP_NAME=Laravel
+```
+Nome da aplicação. Atualmente configurado como 'Léo Carvalho'
+
+```
+APP_ENV=local
+```
+Ambiente que a aplicação está rodando. Em produção, utilizar ```production```. Em ambiente de desenvolvimento, usar ```development``` ou ```local```
+
+```
+APP_KEY=
+```
+Chave criptográfica. Gerada automaticamente anteriormente.
+
+```
+APP_DEBUG=true
+```
+Define se a aplicação vai mostrar abertamente os erros e exceções. Aceita somente ```true``` (mostrar as exceções) e ```false``` (não mostrar as exceções, lançando erro 500 para o usuário).
+
+```
+APP_URL=http://localhost
+```
+Aqui é definida a URL da aplicação. No momento está configurado como ```https://leocarvalho.dev```.
+
+---
+```
+DB_CONNECTION=sqlite
+```
+Aqui configurado qual o driver de conexão e qual o banco de dados a ser utilizado. Basta manter desta forma.
+
+```
+MAIL_DRIVER=smtp
+MAIL_HOST=smtp.mailtrap.io
+MAIL_PORT=2525
+MAIL_USERNAME=null
+MAIL_PASSWORD=null
+MAIL_ENCRYPTION=null
+MAIL_FROM_ADDRESS=null
+MAIL_FROM_NAME='My name'
+MAIL_TO_ADDRESS=null
+MAIL_BCC_ADDRESS=null
+```
+Aqui, você faz a configuração do SMTP, para envio de e-mails a partir do sistema.
+
+```
+GOOGLE_RECAPTCHA_SECRET_KEY=
+```
+Por fim, aqui fica a configuração de chave privada do Google Recaptcha. Ele é necessário para que, nas telas onde há formulários, o usuário consiga enviar informações ao back-end.
