@@ -37,6 +37,8 @@
         @component('components.navbar')
         @endcomponent
         <main role="main">
+            @component('components.flash-messages')
+            @endcomponent
             @hasSection('body')
                 @yield('body')
             @endif
