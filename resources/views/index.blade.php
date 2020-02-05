@@ -2,8 +2,6 @@
 
 @section('body')
 
-@include('components.flash-messages')
-
 @include('resume.about')
 @include('resume.resume')
 <!--include('resume.services')
