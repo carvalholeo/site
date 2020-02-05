@@ -38,6 +38,15 @@ class ResumeController extends Controller
         return view('resume.detailed.professional', compact(('xps')));
     }
 
+    public function education() {
+        $this->seo();
+        $this->seo()->setTitle('Histórico Acadêmico');
+
+        $educations = Education::orderBy('endDate', 'desc')->get();
+
+        return view('resume.detailed.education', compact(('educations')));
+    }
+
     public function download()
     {
         $file = public_path() . "/storage/download/curriculo.pdf";
