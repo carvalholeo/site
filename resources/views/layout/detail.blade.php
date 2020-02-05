@@ -39,9 +39,11 @@
         <main role="main">
             @component('components.flash-messages')
             @endcomponent
+
             @hasSection('body')
                 @yield('body')
             @endif
+            @include('contact.contact')
         </main>
         <br>
     </div>
