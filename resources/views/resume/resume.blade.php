@@ -4,15 +4,15 @@
             <div class="col-md-3">
                 <nav id="navi">
                     <ul>
-                      <li><a href="#page-1">Educação</a></li>
-                      <li><a href="#page-2">Experiência</a></li>
-                      <li><a href="#page-3">Habilidades</a></li>
-                      <li><a href="#page-4">Informações adicionais</a></li>
+                      <li><a href="#education">Educação</a></li>
+                      <li><a href="#experience">Experiência</a></li>
+                      <li><a href="#skills">Habilidades</a></li>
+                      <li><a href="#others">Informações adicionais</a></li>
                     </ul>
                   </nav>
                 </div>
                 <div class="col-md-9">
-                  <div id="page-1" class= "page one">
+                  <div id="education" class= "page one">
                       <h2 class="heading">Educação</h2>
 @foreach ($educations as $edu)
                     <div class="resume-wrap d-flex ftco-animate">
@@ -40,7 +40,7 @@
                     </div>
 @endforeach
 
-                  <div id="page-2" class= "page two">
+                  <div id="experience" class= "page two">
                       <h2 class="heading">Experiência</h2>
 @foreach ($xps as $xp)
                     <div class="resume-wrap d-flex ftco-animate">
@@ -58,7 +58,7 @@
                     </div>
 @endforeach
                   </div>
-                  <div id="page-3" class= "page three">
+                  <div id="skills" class= "page three">
                       <h2 class="heading">Habilidades</h2>
 
 
@@ -109,7 +109,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="page-4" class= "page four">
+                    <div id="others" class= "page four">
                         <h2 class="heading">Informações Adicionais</h2>
                         <h3 class="heading-2 mb-4">Cursos, Certificações e Atividades Extra-curriculares</h3>
 @foreach ($courses as $course)
