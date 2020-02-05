@@ -2,7 +2,7 @@
 
 Este repositório contém os dados para implementar o meu site. É, basicamente, uma página que pode levar para outras telas com mais detalhes do meu currículo.
 
-Feito em [Laravel 5.8][https://laravel.com/] no back-end e com o template [Colorlib][https://colorlib.com/] no front-end, o site do domínio principal tem como objetivo ser um currículo, com projetos e portifólio, demonstrando projetos já executados e deixando um formulário de contato.
+Feito em [Laravel 5.8](https://laravel.com/) no back-end e com o template [Colorlib](https://colorlib.com/) no front-end, o site do domínio principal tem como objetivo ser um currículo, com projetos e portifólio, demonstrando projetos já executados e deixando um formulário de contato.
 
 Assim como a maioria dos meus projetos, o código-fonte do site é aberto e está sob a licença GNU Affero General Public License v3.0, e, portanto, pode receber atualizações via PR de qualquer pessoa interessada em contribuir.
 
@@ -20,9 +20,9 @@ Por utilizar o Laravel, o repositório tem como requisitos mínimos para funcion
 * Tokenizer PHP Extension
 * XML PHP Extension
 
-É preciso, também, ter o [Composer][https://getcomposer.org/] instalado na máquina, para fazer a instalação das dependências necessárias do repositório.
+É preciso, também, ter o [Composer](https://getcomposer.org/) instalado na máquina, para fazer a instalação das dependências necessárias do repositório.
 
-Não se esqueça que, por causa da natureza de repositório, é obrigatório ter o [Git][https://git-scm.com/] no servidor destino.
+Não se esqueça que, por causa da natureza de repositório, é obrigatório ter o [Git](https://git-scm.com/) no servidor destino.
 
 ## Como instalar
 
