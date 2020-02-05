@@ -7,7 +7,6 @@ use App\Models\Professional;
 use App\Models\Education;
 use App\Models\Courses;
 use App\Models\Blog;
-use Illuminate\Support\Facades\DB;
 use Artesaos\SEOTools\Traits\SEOTools as SEOToolsTrait;
 
 class ResumeController extends Controller
@@ -18,24 +17,25 @@ class ResumeController extends Controller
     {
         $this->seo();
 
-        $xps = Professional::orderBy('endDate', 'desc')
-                            ->get();
-        $educations = Education::orderBy('endDate', 'desc')
-                            ->get();
-        $courses = Courses::orderBy('endDate', 'desc')
-                            ->get();
+        $xps = Professional::orderBy('endDate', 'desc')->get();
+        $educations = Education::orderBy('endDate', 'desc')->get();
+        $courses = Courses::orderBy('endDate', 'desc')->get();
         $posts = Blog::getContent(3);
 
         return view('index', compact('xps',
-                                'educations',
-                                'courses',
-                                'posts'));
+                'educations', 'courses',
+                'posts')
+        );
     }
 
-    public function index()
+    public function professional()
     {
         $this->seo();
-        return redirect()->route('index', null, 307);
+        $this->seo()->setTitle('Experiência Profissional');
+
+        $xps = Professional::orderBy('endDate', 'desc')->get();
+
+        return view('resume.detailed.professional', compact(('xps')));
     }
 
     public function download()
