@@ -14,32 +14,35 @@
                 <div class="col-md-9">
                   <div id="education" class= "page one">
                       <h2 class="heading">Educação</h2>
-@foreach ($educations as $edu)
+@for ($i = 0; $i < 1; $i++)
                     <div class="resume-wrap d-flex ftco-animate">
                         <div class="icon d-flex align-items-center justify-content-center">
                             <span class="flaticon-ideas"></span>
                         </div>
                         <div class="text pl-3">
-                            <span class="date">{{ \Carbon\Carbon::parse($edu->startDate)->format('M/y')}} - {{ \Carbon\Carbon::parse($edu->endDate)->format('M/y')}}</span>
-                            <h3 class="position">{{ $edu->degree }}
-                                @if($edu->workLoad != 0)
-                                 - {{ $edu->workLoad }}h
+                            <span class="date">{{ \Carbon\Carbon::parse($educations[0]->startDate)->format('M/y')}} - {{ \Carbon\Carbon::parse($educations[0]->endDate)->format('M/y')}}</span>
+                            <h3 class="position">{{ $educations[0]->degree }}
+                                @if($educations[0]->workLoad != 0)
+                                 - {{ $educations[0]->workLoad }}h
                                 @endIf
                             </h3>
-                            <h2>{{ $edu->title }} - {{ $edu->isFinished ? 'Concluído' : 'Cursando' }}</h2>
+                            <h2>{{ $educations[0]->title }} - {{ $educations[0]->isFinished ? 'Concluído' : 'Cursando' }}</h2>
 
-                            <a href="{{ $edu->institutionLink }}" target="_blank">
-                                <span class="position">{{ $edu->institution }}</span>
+                            <a href="{{ $educations[0]->institutionLink }}" target="_blank">
+                                <span class="position">{{ $educations[0]->institution }}</span>
                             </a>
-                            <p>{{ $edu->description }}</p>
-                            <p>Conceito médio: {{ $edu->globalGrade}}</p>
-                            @if ($edu->registerNumber != null)
-                                <p>Número do certificado: {{ $edu->registerNumber }}</p>
+                            <p>{{ $educations[0]->description }}</p>
+                            <p>Conceito médio: {{ $educations[0]->globalGrade}}</p>
+                            @if ($educations[0]->registerNumber != null)
+                                <p>Número do certificado: {{ $educations[0]->registerNumber }}</p>
                             @endif
                         </div>
                     </div>
-@endforeach
-
+@endfor
+                    <div class="justify-content-center text-center">
+                        <a role="button" type="button" class="btn btn-primary btn-lg" href="{{ route('resume.education') }}">Ver mais experiências acadêmicas</a>
+                    </div>
+                </div>
                   <div id="experience" class= "page two">
                       <h2 class="heading">Experiência</h2>
 @for ($i = 0; $i < 1; $i++)
@@ -58,7 +61,7 @@
                     </div>
 @endfor
                     <div class="justify-content-center text-center">
-                        <a role="button" type="button" class="btn btn-primary btn-lg" href="{{ route('resume.professional') }}">Ver mais experiências</a>
+                        <a role="button" type="button" class="btn btn-primary btn-lg" href="{{ route('resume.professional') }}">Ver mais experiências profissionais</a>
                     </div>
                   </div>
                   <div id="skills" class= "page three">
