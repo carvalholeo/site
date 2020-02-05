@@ -10,7 +10,6 @@
 include('resume.projects')
 include('resume.counter')-->
 @include('resume.blog')
-@include('resume.hire')
 @include('contact.contact')
 
 @endsection
