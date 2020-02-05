@@ -2,7 +2,13 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
+    @env('production')
+    {!! SEO::generate(true) !!}
+    @endenv
+
+    @env('local')
     {!! SEO::generate() !!}
+    @endenv
 
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
