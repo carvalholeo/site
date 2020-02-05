@@ -4,8 +4,6 @@
 
 @include('components.flash-messages')
 
-
-@include('resume.introduction')
 @include('resume.about')
 @include('resume.resume')
 <!--include('resume.services')

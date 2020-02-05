@@ -31,6 +31,7 @@
         @component('components.navbar')
         @endcomponent
         <main role="main">
+            @include('resume.introduction')
             @hasSection('body')
                 @yield('body')
             @endif
