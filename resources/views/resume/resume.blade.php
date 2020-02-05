@@ -42,21 +42,24 @@
 
                   <div id="experience" class= "page two">
                       <h2 class="heading">Experiência</h2>
-@foreach ($xps as $xp)
+@for ($i = 0; $i < 1; $i++)
                     <div class="resume-wrap d-flex ftco-animate">
                         <div class="icon d-flex align-items-center justify-content-center">
                             <span class="flaticon-ideas"></span>
                         </div>
                         <div class="text pl-3">
-                            <span class="date">{{ \Carbon\Carbon::parse($xp->startDate)->format('M/y')}} - {{ \Carbon\Carbon::parse($xp->endDate)->format('M/y')}}</span>
-                            <h2>{{ $xp->role }}</h2>
-                            <a href="{{ $xp->companyLink }}" target="_blank">
-                                <span class="position">{{ $xp->company }}</span>
+                            <span class="date">{{ \Carbon\Carbon::parse($xps[0]->startDate)->format('M/y')}} - {{ \Carbon\Carbon::parse($xps[0]->endDate)->format('M/y')}}</span>
+                            <h2>{{ $xps[0]->role }}</h2>
+                            <a href="{{ $xps[0]->companyLink }}" target="_blank">
+                                <span class="position">{{ $xps[0]->company }}</span>
                             </a>
-                        <p>{{ $xp->description }}</p>
+                        <p>{{ $xps[0]->description }}</p>
                         </div>
                     </div>
-@endforeach
+@endfor
+                    <div class="justify-content-center text-center">
+                        <a role="button" type="button" class="btn btn-primary btn-lg" href="{{ route('resume.professional') }}">Ver mais experiências</a>
+                    </div>
                   </div>
                   <div id="skills" class= "page three">
                       <h2 class="heading">Habilidades</h2>
