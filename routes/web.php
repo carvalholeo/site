@@ -18,7 +18,8 @@ Route::prefix('resume/')->group(function () {
     Route::get('download/', 'ResumeController@download')->name('resume.download');
 });
 
-Route::get('education', 'ResumeController@education')->name('resume.education');
+Route::get('education/', 'ResumeController@education')->name('resume.education');
+Route::get('volunteer/', 'ResumeController@volunteer')->name('resume.volunteer');
 
 Route::post('contact/', 'ContactController@send')->name('contact.send');
 
