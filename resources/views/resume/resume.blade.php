@@ -7,7 +7,7 @@
                       <li><a href="#education">Educação</a></li>
                       <li><a href="#experience">Experiência</a></li>
                       <li><a href="#skills">Habilidades</a></li>
-                      <li><a href="#courses">Cursos e bootcamps</a></li>
+                      <li><a href="#courses">Cursos extras</a></li>
                       <li><a href="#volunteer">Trabalhos voluntários</a></li>
                       <li><a href="#certifications">Certificações</a></li>
                     </ul>
@@ -118,7 +118,7 @@
                 </div>
 
                 <div id="courses" class="page five">
-                    <h2 class="heading">Cursos e Bootcamps</h2>
+                    <h2 class="heading">Cursos, Bootcamps e Workshops</h2>
 @for ($i = 0; $i < 3; $i++)
                     <div class="resume-wrap d-flex ftco-animate">
                         <div class="icon d-flex align-items-center justify-content-center">
@@ -154,6 +154,9 @@
                         </div>
                     </div>
 @endfor
+                <div class="justify-content-center text-center">
+                    <a role="button" type="button" class="btn btn-primary btn-lg" href="{{ route('resume.courses') }}">Ver mais cursos</a>
+                </div>
                 </div>
 
                 <div id="volunteer" class= "page five">

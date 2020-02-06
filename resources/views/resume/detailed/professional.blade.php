@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-9">
-                <div id="page-1" class="page one">
+                <div id="professional" class="page one">
                     <h1 class="heading">Experiência</h1>
 @foreach ($xps as $xp)
                     <div class="resume-wrap d-flex ftco-animate">
