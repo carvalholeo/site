@@ -216,6 +216,9 @@
                         </div>
                     </div>
 @endfor
+                <div class="justify-content-center text-center">
+                    <a role="button" type="button" class="btn btn-primary btn-lg" href="{{ route('resume.certifications') }}">Ver mais certificações e reconhecimentos</a>
+                </div>
                 </div>
             </div>
         </div>
