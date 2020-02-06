@@ -14,9 +14,14 @@
 Route::get('/', 'ResumeController@homePage')->name('index');
 
 Route::prefix('resume/')->group(function () {
-    Route::get('/', 'ResumeController@index')->name('resume.index');
+    Route::get('', 'ResumeController@professional')->name('resume.professional');
     Route::get('download/', 'ResumeController@download')->name('resume.download');
 });
+
+Route::get('education/', 'ResumeController@education')->name('resume.education');
+Route::get('volunteer/', 'ResumeController@volunteer')->name('resume.volunteer');
+Route::get('certifications/', 'ResumeController@certifications')->name('resume.certifications');
+Route::get('courses/', 'ResumeController@courses')->name('resume.courses');
 
 Route::post('contact/', 'ContactController@send')->name('contact.send');
 

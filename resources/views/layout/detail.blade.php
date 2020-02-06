@@ -37,15 +37,13 @@
         @component('components.navbar')
         @endcomponent
         <main role="main">
-            @component('components.introduction')
-            @endcomponent
-
             @component('components.flash-messages')
             @endcomponent
 
             @hasSection('body')
                 @yield('body')
             @endif
+            @include('contact.contact')
         </main>
         <br>
     </div>
