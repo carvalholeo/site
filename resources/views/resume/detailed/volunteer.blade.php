@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-9">
-                <div id="education" class="page one">
+                <div id="volunteer" class="page one">
                     <h2 class="heading">Trabalhos voluntários</h2>
 @foreach($volunteers as $volunteer)
                     <div class="resume-wrap d-flex ftco-animate">
