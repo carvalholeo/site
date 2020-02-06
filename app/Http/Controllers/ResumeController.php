@@ -73,6 +73,16 @@ class ResumeController extends Controller
         return view('resume.detailed.certifications', compact(('certifications')));
     }
 
+    public function courses()
+    {
+        $this->seo();
+        $this->seo()->setTitle('Cursos e Bootcamps');
+
+        $courses = Courses::orderBy('endDate', 'desc')->get();
+
+        return view('resume.detailed.courses', compact(('courses')));
+    }
+
     public function download()
     {
         $file = public_path() . "/storage/download/curriculo.pdf";

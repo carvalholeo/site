@@ -21,6 +21,7 @@ Route::prefix('resume/')->group(function () {
 Route::get('education/', 'ResumeController@education')->name('resume.education');
 Route::get('volunteer/', 'ResumeController@volunteer')->name('resume.volunteer');
 Route::get('certifications/', 'ResumeController@certifications')->name('resume.certifications');
+Route::get('courses/', 'ResumeController@courses')->name('resume.courses');
 
 Route::post('contact/', 'ContactController@send')->name('contact.send');
 
