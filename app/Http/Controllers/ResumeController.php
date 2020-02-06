@@ -7,6 +7,7 @@ use App\Models\Professional;
 use App\Models\Education;
 use App\Models\Courses;
 use App\Models\Blog;
+use App\Models\Volunteer;
 use Artesaos\SEOTools\Traits\SEOTools as SEOToolsTrait;
 
 class ResumeController extends Controller
@@ -21,10 +22,11 @@ class ResumeController extends Controller
         $educations = Education::orderBy('endDate', 'desc')->get();
         $courses = Courses::orderBy('endDate', 'desc')->get();
         $posts = Blog::getContent(3);
+        $volunteers = Volunteer::orderby('endDate', 'desc')->get();
 
         return view('index', compact('xps',
                 'educations', 'courses',
-                'posts')
+                'posts', 'volunteers')
         );
     }
 

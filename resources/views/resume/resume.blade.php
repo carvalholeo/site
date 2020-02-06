@@ -7,7 +7,9 @@
                       <li><a href="#education">Educação</a></li>
                       <li><a href="#experience">Experiência</a></li>
                       <li><a href="#skills">Habilidades</a></li>
-                      <li><a href="#others">Informações adicionais</a></li>
+                      <li><a href="#courses">Cursos e bootcamps</a></li>
+                      <li><a href="#volunteer">Trabalhos voluntários</a></li>
+                      <li><a href="#certifications">Certificações</a></li>
                     </ul>
                   </nav>
                 </div>
@@ -20,21 +22,21 @@
                             <span class="flaticon-ideas"></span>
                         </div>
                         <div class="text pl-3">
-                            <span class="date">{{ \Carbon\Carbon::parse($educations[0]->startDate)->format('M/y')}} - {{ \Carbon\Carbon::parse($educations[0]->endDate)->format('M/y')}}</span>
-                            <h3 class="position">{{ $educations[0]->degree }}
-                                @if($educations[0]->workLoad != 0)
-                                 - {{ $educations[0]->workLoad }}h
+                            <span class="date">{{ \Carbon\Carbon::parse($educations[$i]->startDate)->format('M/y')}} - {{ \Carbon\Carbon::parse($educations[$i]->endDate)->format('M/y')}}</span>
+                            <h3 class="position">{{ $educations[$i]->degree }}
+                                @if($educations[$i]->workLoad != 0)
+                                 - {{ $educations[$i]->workLoad }}h
                                 @endIf
                             </h3>
-                            <h2>{{ $educations[0]->title }} - {{ $educations[0]->isFinished ? 'Concluído' : 'Cursando' }}</h2>
+                            <h2>{{ $educations[$i]->title }} - {{ $educations[$i]->isFinished ? 'Concluído' : 'Cursando' }}</h2>
 
-                            <a href="{{ $educations[0]->institutionLink }}" target="_blank">
-                                <span class="position">{{ $educations[0]->institution }}</span>
+                            <a href="{{ $educations[$i]->institutionLink }}" target="_blank">
+                                <span class="position">{{ $educations[$i]->institution }}</span>
                             </a>
-                            <p>{{ $educations[0]->description }}</p>
-                            <p>Conceito médio: {{ $educations[0]->globalGrade}}</p>
-                            @if ($educations[0]->registerNumber != null)
-                                <p>Número do certificado: {{ $educations[0]->registerNumber }}</p>
+                            <p>{{ $educations[$i]->description }}</p>
+                            <p>Conceito médio: {{ $educations[$i]->globalGrade}}</p>
+                            @if ($educations[$i]->registerNumber != null)
+                                <p>Número do certificado: {{ $educations[$i]->registerNumber }}</p>
                             @endif
                         </div>
                     </div>
@@ -51,12 +53,12 @@
                             <span class="flaticon-ideas"></span>
                         </div>
                         <div class="text pl-3">
-                            <span class="date">{{ \Carbon\Carbon::parse($xps[0]->startDate)->format('M/y')}} - {{ \Carbon\Carbon::parse($xps[0]->endDate)->format('M/y')}}</span>
-                            <h2>{{ $xps[0]->role }}</h2>
-                            <a href="{{ $xps[0]->companyLink }}" target="_blank">
-                                <span class="position">{{ $xps[0]->company }}</span>
+                            <span class="date">{{ \Carbon\Carbon::parse($xps[$i]->startDate)->format('M/y')}} - {{ \Carbon\Carbon::parse($xps[$i]->endDate)->format('M/y')}}</span>
+                            <h2>{{ $xps[$i]->role }}</h2>
+                            <a href="{{ $xps[$i]->companyLink }}" target="_blank">
+                                <span class="position">{{ $xps[$i]->company }}</span>
                             </a>
-                        <p>{{ $xps[0]->description }}</p>
+                        <p>{{ $xps[$i]->description }}</p>
                         </div>
                     </div>
 @endfor
@@ -115,9 +117,8 @@
                             </div>
                         </div>
                     </div>
-                    <div id="others" class= "page four">
-                        <h2 class="heading">Informações Adicionais</h2>
-                        <h3 class="heading-2 mb-4">Cursos, Certificações e Atividades Extra-curriculares</h3>
+                    <div id="courses" class= "page four">
+                        <h2 class="heading">Cursos e Bootcamps</h2>
 @foreach ($courses as $course)
                     <div class="resume-wrap d-flex ftco-animate">
                         <div class="icon d-flex align-items-center justify-content-center">
@@ -154,6 +155,71 @@
                     </div>
 @endforeach
                   </div>
+
+                  <div id="volunteer" class= "page five">
+                    <h2 class="heading">Trabalhos voluntários</h2>
+@for ($i = 0; $i < 2; $i++)
+                <div class="resume-wrap d-flex ftco-animate">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="flaticon-ideas"></span>
+                    </div>
+                    <div class="text pl-3">
+                        <span class="date">{{ \Carbon\Carbon::parse($volunteers[$i]->startDate)->format('d/M/y') }} -
+                            @if ($volunteers[$i]->isFinished != 0)
+                                {{ \Carbon\Carbon::parse($volunteers[$i]->endDate)->format('d/M/y') }}
+                            @else
+                                Atualmente
+                            @endif
+                        </span>
+
+                        <h2>{{ $volunteers[$i]->position }}</h2>
+                        <a href="{{ $volunteers[$i]->institutionLink }}" target="_blank">
+                            <span class="position">{{ $volunteers[$i]->institutionName }}</span>
+                        </a>
+                        <p>{{ $volunteers[$i]->description }}</p>
+                    </div>
+                </div>
+@endfor
+              </div>
+
+              <div id="certifications" class= "page six">
+                <h2 class="heading">Certificações</h2>
+@foreach ($courses as $course)
+            <div class="resume-wrap d-flex ftco-animate">
+                <div class="icon d-flex align-items-center justify-content-center">
+                    <span class="flaticon-ideas"></span>
+                </div>
+                <div class="text pl-3">
+                    <span class="date">{{ \Carbon\Carbon::parse($course->startDate)->format('d/M/y') }} -
+                        @if ($course->isFinished != 0)
+                            {{ \Carbon\Carbon::parse($course->endDate)->format('d/M/y') }}
+                        @else
+                            Atualmente
+                        @endif
+                    </span>
+
+                    <h3 class="position">{{ $course->typeOfAward }}
+                        @if($course->workLoad != 0)
+                         - {{ $course->workLoad }}h
+                        @endIf
+                    </h3>
+
+                    <a href="{{ $course->awardLink }}" target="_blank">
+                        <h2>{{ $course->awardName }}</h2>
+                    </a>
+                    <a href="{{ $course->institutionLink }}" target="_blank">
+                        <span class="position">{{ $course->institutionName }}</span>
+                    </a>
+                    <p>{{ $course->description }}</p>
+
+                    @if ($course->awardNumber != null)
+                        <p>Número do certificado: {{ $course->awardNumber}}</p>
+                    @endif
+
+                </div>
+            </div>
+@endforeach
+          </div>
                 </div>
           </div>
     </div>
