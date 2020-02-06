@@ -14,7 +14,7 @@
 Route::get('/', 'ResumeController@homePage')->name('index');
 
 Route::prefix('resume/')->group(function () {
-    Route::get('/', 'ResumeController@professional')->name('resume.professional');
+    Route::get('', 'ResumeController@professional')->name('resume.professional');
     Route::get('download/', 'ResumeController@download')->name('resume.download');
 });
 
