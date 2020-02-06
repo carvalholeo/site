@@ -180,6 +180,9 @@
                         </div>
                     </div>
 @endfor
+                <div class="justify-content-center text-center">
+                    <a role="button" type="button" class="btn btn-primary btn-lg" href="{{ route('resume.volunteer') }}">Ver mais trabalhos voluntários</a>
+                </div>
                 </div>
                 <div id="certifications" class= "page six">
                     <h2 class="heading">Certificações</h2>
