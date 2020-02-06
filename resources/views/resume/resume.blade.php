@@ -184,41 +184,36 @@
 
               <div id="certifications" class= "page six">
                 <h2 class="heading">Certificações</h2>
-@foreach ($courses as $course)
+@for ($i = 0; $i < 2; $i++)
             <div class="resume-wrap d-flex ftco-animate">
                 <div class="icon d-flex align-items-center justify-content-center">
                     <span class="flaticon-ideas"></span>
                 </div>
                 <div class="text pl-3">
-                    <span class="date">{{ \Carbon\Carbon::parse($course->startDate)->format('d/M/y') }} -
-                        @if ($course->isFinished != 0)
-                            {{ \Carbon\Carbon::parse($course->endDate)->format('d/M/y') }}
-                        @else
-                            Atualmente
-                        @endif
+                    <span class="date">{{ \Carbon\Carbon::parse($certifications[$i]->startDate)->format('d/M/y') }} - {{ \Carbon\Carbon::parse($certifications[$i]->endDate)->format('d/M/y') }}
                     </span>
 
-                    <h3 class="position">{{ $course->typeOfAward }}
-                        @if($course->workLoad != 0)
-                         - {{ $course->workLoad }}h
+                    <h3 class="position">{{ $certifications[$i]->certType }}
+                        @if($certifications[$i]->workLoad != 0)
+                         - {{ $certifications[$i]->workLoad }}h
                         @endIf
                     </h3>
 
-                    <a href="{{ $course->awardLink }}" target="_blank">
-                        <h2>{{ $course->awardName }}</h2>
+                    <a href="{{ $certifications[$i]->certLink }}" target="_blank">
+                        <h2>{{ $certifications[$i]->certName }}</h2>
                     </a>
-                    <a href="{{ $course->institutionLink }}" target="_blank">
-                        <span class="position">{{ $course->institutionName }}</span>
+                    <a href="{{ $certifications[$i]->issuerLink }}" target="_blank">
+                        <span class="position">{{ $certifications[$i]->issuerName }}</span>
                     </a>
-                    <p>{{ $course->description }}</p>
+                    <p>{{ $certifications[$i]->description }}</p>
 
-                    @if ($course->awardNumber != null)
-                        <p>Número do certificado: {{ $course->awardNumber}}</p>
+                    @if ($certifications[$i]->certNumber != null)
+                        <p>Número do certificado: {{ $certifications[$i]->certNumber}}</p>
                     @endif
 
                 </div>
             </div>
-@endforeach
+@endfor
           </div>
                 </div>
           </div>
