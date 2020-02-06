@@ -1,3 +1,4 @@
+@include('resume.hire')
 <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
     <div class="container">
         <div class="row justify-content-center mb-5 pb-3">

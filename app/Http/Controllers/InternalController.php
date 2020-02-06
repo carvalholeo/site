@@ -40,7 +40,7 @@ class InternalController extends Controller
         $sitemap->setCache('laravel.sitemap', 60);
 
         if (!$sitemap->isCached()) {
-            $sitemap->add(URL::to(route('index'), [], true), '2020-01-30T20:58:00-03:00', '1.0', 'weekly');
+            $sitemap->add(URL::to(route('index'), [], true), '2020-02-05T21:28:00-03:00', '1.0', 'weekly');
 
             $sitemap->add(URL::to(route('social.index'), [], true), '2020-01-14T17:10:00-03:00', '0.5', 'yearly');
             $sitemap->add(URL::to(route('social.facebook'), [], true), '2020-01-14T17:10:00-03:00', '0.5', 'yearly');
@@ -54,6 +54,12 @@ class InternalController extends Controller
             $sitemap->add(URL::to(route('social.telegram'), [], true), '2020-01-14T17:10:00-03:00', '0.5', 'yearly');
             $sitemap->add(URL::to(route('social.stackoverflow'), [], true), '2020-01-14T17:10:00-03:00', '0.5', 'yearly');
             $sitemap->add(URL::to(route('social.whatsapp'), [], true), '2020-01-14T17:10:00-03:00', '0.5', 'yearly');
+
+            $sitemap->add(URL::to(route('resume.professional'), [], true), '2020-02-05T21:28:00-03:00', '0.8', 'weekly');
+            $sitemap->add(URL::to(route('resume.education'), [], true), '2020-02-05T21:28:00-03:00', '0.8', 'weekly');
+            $sitemap->add(URL::to(route('resume.volunteer'), [], true), '2020-02-05T21:28:00-03:00', '0.8', 'weekly');
+            $sitemap->add(URL::to(route('resume.certifications'), [], true), '2020-02-05T21:28:00-03:00', '0.8', 'weekly');
+            $sitemap->add(URL::to(route('resume.courses'), [], true), '2020-02-05T21:28:00-03:00', '0.8', 'weekly');
 
         }
 
