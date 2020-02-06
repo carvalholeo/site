@@ -63,6 +63,16 @@ class ResumeController extends Controller
         return view('resume.detailed.volunteer', compact(('volunteers')));
     }
 
+    public function certifications()
+    {
+        $this->seo();
+        $this->seo()->setTitle('Certificações e Reconhecimentos');
+
+        $certifications = Certifications::orderby('endDate', 'desc')->get();
+
+        return view('resume.detailed.certifications', compact(('certifications')));
+    }
+
     public function download()
     {
         $file = public_path() . "/storage/download/curriculo.pdf";
