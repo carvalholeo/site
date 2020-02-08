@@ -1,3 +1,5 @@
 User-agent: *
 Disallow: /storage/download
 Disalow: /vendor
+
+Sitemap: https://leocarvalho.dev/sitemap
