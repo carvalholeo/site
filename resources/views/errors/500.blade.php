@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/style.css') }}" />
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/all.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('css/error.css') }}" />
     @include('components.commom-css')
     <title>Erro 500 - Erro interno do servidor | Léo Carvalho </title>
