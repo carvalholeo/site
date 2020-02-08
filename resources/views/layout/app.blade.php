@@ -11,7 +11,7 @@
     @endenv
 
     <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
 
 	<meta name="csrf-token" content="{{ csrf_token() }}" />
 
@@ -19,7 +19,7 @@
 
     <link rel="stylesheet" href="{{ mix('css/all.css') }}">
 
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/favicon.ico') }}">
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
