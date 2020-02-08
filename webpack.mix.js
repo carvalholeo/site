@@ -11,32 +11,32 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.sass('resources/sass/style.scss', 'public/css');
+mix.sass('resources/sass/style.scss', 'resources/css');
 
 mix.styles([
-    'public/css/open-iconic-bootstrap.min.css',
-    'public/css/animate.css',
-    'public/css/owl.carousel.min.css',
-    'public/css/owl.theme.default.min.css',
-    'public/css/magnific-popup.css',
-    'public/css/aos.css',
-    'public/css/ionicons.min.css',
-    'public/css/flaticon.css',
-    'public/css/icomoon.css',
-    'public/css/style.css'], 'public/css/all.css');
+    'resources/css/open-iconic-bootstrap.min.css',
+    'resources/css/animate.css',
+    'resources/css/owl.carousel.min.css',
+    'resources/css/owl.theme.default.min.css',
+    'resources/css/magnific-popup.css',
+    'resources/css/aos.css',
+    'resources/css/ionicons.min.css',
+    'resources/css/flaticon.css',
+    'resources/css/icomoon.css',
+    'resources/css/style.css'], 'public/css/all.css');
 
 mix.scripts([
-    'public/js/extended.js',
-    'public/js/jquery.min.js',
-    'public/js/jquery-migrate-3.0.1.min.js',
-    'public/js/popper.min.js',
-    'public/js/bootstrap.min.js',
-    'public/js/jquery.easing.1.3.js',
-    'public/js/jquery.waypoints.min.js',
-    'public/js/jquery.stellar.min.js',
-    'public/js/owl.carousel.min.js',
-    'public/js/jquery.magnific-popup.min.js',
-    'public/js/aos.js',
-    'public/js/jquery.animateNumber.min.js',
-    'public/js/scrollax.min.js',
-    'public/js/main.js'], 'public/js/all.js');
+    'resources/js/custom/extended.js',
+    'resources/js/custom/jquery.min.js',
+    'resources/js/custom/jquery-migrate-3.0.1.min.js',
+    'resources/js/custom/popper.min.js',
+    'resources/js/custom/bootstrap.min.js',
+    'resources/js/custom/jquery.easing.1.3.js',
+    'resources/js/custom/jquery.waypoints.min.js',
+    'resources/js/custom/jquery.stellar.min.js',
+    'resources/js/custom/owl.carousel.min.js',
+    'resources/js/custom/jquery.magnific-popup.min.js',
+    'resources/js/custom/aos.js',
+    'resources/js/custom/jquery.animateNumber.min.js',
+    'resources/js/custom/scrollax.min.js',
+    'resources/js/custom/main.js'], 'public/js/all.js');
