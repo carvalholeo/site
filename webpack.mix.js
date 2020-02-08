@@ -11,8 +11,7 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-   .sass('resources/sass/app.scss', 'public/css');
+mix.sass('resources/sass/style.scss', 'public/css');
 
 mix.styles([
     'public/css/open-iconic-bootstrap.min.css',
@@ -24,7 +23,7 @@ mix.styles([
     'public/css/ionicons.min.css',
     'public/css/flaticon.css',
     'public/css/icomoon.css',
-    'public/css/app.css'], 'public/css/all.css');
+    'public/css/style.css'], 'public/css/all.css');
 
 mix.scripts([
     'public/js/extended.js',
