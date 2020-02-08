@@ -40,3 +40,7 @@ mix.scripts([
     'resources/js/custom/jquery.animateNumber.min.js',
     'resources/js/custom/scrollax.min.js',
     'resources/js/custom/main.js'], 'public/js/all.js');
+
+if (mix.inProduction()) {
+    mix.version();
+}
