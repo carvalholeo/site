@@ -2,7 +2,7 @@
 <html lang="pt">
 
 <head>
-    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/all.css') }}" />
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ mix('css/all.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('css/error.css') }}" />
     @include('components.commom-css')
     <title>Erro 502 - Bad Gateway | Léo Carvalho </title>

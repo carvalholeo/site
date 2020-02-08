@@ -17,7 +17,7 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" media="none" onload="if(media!='all')media='all'">
 
-    <link rel="stylesheet" href="{{ asset('css/all.css') }}">
+    <link rel="stylesheet" href="{{ mix('css/all.css') }}">
 
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 </head>
@@ -47,7 +47,7 @@
         @endif
     </footer>
 
-<script async src="{{ asset('js/all.js') }}"></script>
+<script async src="{{ mix('js/all.js') }}"></script>
 
 @env('production')
 
