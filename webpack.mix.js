@@ -25,7 +25,7 @@ mix.styles([
     'resources/css/icomoon.css',
     'resources/css/style.css'], 'public/css/all.css');
 
-mix.scripts([
+mix.babel([
     'resources/js/custom/extended.js',
     'resources/js/custom/jquery.min.js',
     'resources/js/custom/jquery-migrate-3.0.1.min.js',
