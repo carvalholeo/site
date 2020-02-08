@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="pt">
 
 <head>
-    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/style.css') }}" />
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/all.css') }}" />
     @include('components.commom-css')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/error.css') }}" />
     <title>Erro 503 - Serviço indisponível | Léo Carvalho</title>
