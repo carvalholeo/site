@@ -2,7 +2,7 @@
 
 Este repositório contém os dados para implementar o meu site. É, basicamente, uma página que pode levar para outras telas com mais detalhes do meu currículo.
 
-Feito em [Laravel 5.8](https://laravel.com/) no back-end e com o template [Colorlib](https://colorlib.com/) no front-end, o site do domínio principal tem como objetivo ser um currículo, com projetos e portifólio, demonstrando projetos já executados e deixando um formulário de contato.
+Feito em [Laravel 6.0](https://laravel.com/) no back-end e com o template [Colorlib](https://colorlib.com/) no front-end, o site do domínio principal tem como objetivo ser um currículo, com projetos e portifólio, demonstrando projetos já executados e deixando um formulário de contato.
 
 Assim como a maioria dos meus projetos, o código-fonte do site é aberto e está sob a licença GNU Affero General Public License v3.0, e, portanto, pode receber atualizações via PR de qualquer pessoa interessada em contribuir.
 
@@ -10,7 +10,7 @@ Assim como a maioria dos meus projetos, o código-fonte do site é aberto e est�
 
 Por utilizar o Laravel, o repositório tem como requisitos mínimos para funcionar: 
 
-* PHP >= 7.1.3
+* PHP >= 7.2
 * BCMath PHP Extension
 * Ctype PHP Extension
 * JSON PHP Extension
