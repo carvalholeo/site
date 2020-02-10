@@ -1,6 +1,6 @@
 @section('alert-messages')
 
-@if($errors->any())
+@if(isset($errors))
 @include('components.alert-section')
 @yield('alert')
     @foreach($errors->all() as $error)
