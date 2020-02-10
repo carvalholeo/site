@@ -26,7 +26,6 @@ mix.styles([
     'resources/css/style.css'], 'public/css/all.css');
 
 mix.babel([
-    'resources/js/custom/extended.js',
     'resources/js/custom/jquery.min.js',
     'resources/js/custom/jquery-migrate-3.0.1.min.js',
     'resources/js/custom/popper.min.js',
@@ -40,6 +39,9 @@ mix.babel([
     'resources/js/custom/jquery.animateNumber.min.js',
     'resources/js/custom/scrollax.min.js',
     'resources/js/custom/main.js'], 'public/js/all.js');
+
+mix.babel([
+    'resources/js/custom/extended.js'], 'public/js/custom.js');
 
 if (mix.inProduction()) {
     mix.version();

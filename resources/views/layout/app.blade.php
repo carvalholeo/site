@@ -2,6 +2,7 @@
 <html lang="pt">
 
 <head>
+    <script async src="{{ mix('js/custom.js') }}"></script>
     @env('production')
     {!! SEO::generate(true) !!}
     @endenv
@@ -27,9 +28,6 @@
         @component('components.navbar')
         @endcomponent
         <main role="main">
-            @component('components.introduction')
-            @endcomponent
-
             @component('components.flash-messages')
             @endcomponent
 
