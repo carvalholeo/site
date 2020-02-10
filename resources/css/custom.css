@@ -1,5 +1,9 @@
-#redirect-social, #error-view {
+#redirect-social {
     padding-top: 100px;
+}
+
+#error-view {
+    padding-top: 50px;
 }
 
 @media (max-width:575px) {
