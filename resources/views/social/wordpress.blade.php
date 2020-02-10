@@ -1,11 +1,13 @@
-@extends('layout.app', ["current" => "construction"])
+@extends('layout.app')
 
 @section('title')
     WordPress | Léo Carvalho
 @endsection
 
 @section('body')
-Aguarde um instante, você já está indo para o meu blog no WordPress!
+<div id="redirect-social">
+    Aguarde um instante, você já está indo para o meu blog no WordPress!
+</div>
 @endsection
 
 @section('javascript')

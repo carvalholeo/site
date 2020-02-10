@@ -1,11 +1,13 @@
-@extends('layout.app', ["current" => "construction"])
+@extends('layout.app')
 
 @section('title')
     Stack Overflow | Léo Carvalho
 @endsection
 
 @section('body')
-Aguarde um instante, você já está indo para o meu perfil no Stack Overflow!
+<div id="redirect-social">
+    Aguarde um instante, você já está indo para o meu perfil no Stack Overflow!
+</div>
 @endsection
 
 @section('javascript')

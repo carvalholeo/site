@@ -1,11 +1,13 @@
-@extends('layout.app', ["current" => "construction"])
+@extends('layout.app')
 
 @section('title')
     Blog | Léo Carvalho
 @endsection
 
 @section('body')
-Aguarde um instante, você já está indo para o meu blog!
+<div id="redirect-social">
+    Aguarde um instante, você já está indo para o meu blog!
+</div>
 @endsection
 
 @section('javascript')

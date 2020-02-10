@@ -1,11 +1,13 @@
-@extends('layout.app', ["current" => "construction"])
+@extends('layout.app')
 
 @section('title')
     WhatsApp | Léo Carvalho
 @endsection
 
 @section('body')
-Aguarde um instante, você já está indo para o meu chat do WhatsApp!
+<div id="redirect-social">
+    Aguarde um instante, você já está indo para o meu chat do WhatsApp!
+</div>
 @endsection
 
 @section('javascript')
