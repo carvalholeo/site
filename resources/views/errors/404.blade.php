@@ -3,7 +3,7 @@
 @section('title', 'Erro 404 - Não encontrado | Léo Carvalho')
 @section('body')
 
-<body>
+<div id="error-view">
     <div class="container">
         <div class="row text-center">
             <div class="col-lg-6 offset-lg-3 col-sm-6 offset-sm-3 col-12 p-3 error-main">
@@ -24,5 +24,5 @@
             </div>
         </div>
     </div>
-</body>
+</div>
 @endsection
