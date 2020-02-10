@@ -23,7 +23,11 @@ mix.styles([
     'resources/css/ionicons.min.css',
     'resources/css/flaticon.css',
     'resources/css/icomoon.css',
+    'resources/css/custom.css',
     'resources/css/style.css'], 'public/css/all.css');
+
+mix.styles([
+    'resources/css/error.css'], 'public/css/error.css');
 
 mix.babel([
     'resources/js/custom/jquery.min.js',
