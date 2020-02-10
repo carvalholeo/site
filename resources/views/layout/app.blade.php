@@ -2,6 +2,7 @@
 <html lang="pt">
 
 <head>
+    <script async src="{{ mix('js/custom.js') }}"></script>
     @env('production')
     {!! SEO::generate(true) !!}
     @endenv
