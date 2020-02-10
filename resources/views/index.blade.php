@@ -2,6 +2,7 @@
 
 @section('body')
 
+@include('about.introduction')
 @include('resume.about')
 @include('resume.resume')
 <!--include('resume.services')

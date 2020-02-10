@@ -28,9 +28,6 @@
         @component('components.navbar')
         @endcomponent
         <main role="main">
-            @component('components.introduction')
-            @endcomponent
-
             @component('components.flash-messages')
             @endcomponent
 
