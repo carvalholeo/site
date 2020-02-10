@@ -1,11 +1,13 @@
-@extends('layout.app', ["current" => "construction"])
+@extends('layout.app')
 
 @section('title')
     YouTube | Léo Carvalho
 @endsection
 
 @section('body')
-Aguarde um instante, você já está indo para o meu perfilcanal no YouTube!
+<div id="redirect-social">
+    Aguarde um instante, você já está indo para o meu perfilcanal no YouTube!
+</div>
 @endsection
 
 @section('javascript')
