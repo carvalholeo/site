@@ -1,1 +1,29 @@
-body{background-color:#c4ccd9}.error-main{background-color:#fff;box-shadow:10px 10px 10px -10px #5d6572}.error-main #errorTitle{font-weight:700;color:#444;font-size:100px;text-shadow:2px 4px 5px #6e6e6e}.error-main h1{font-weight:700;color:#444;text-shadow:2px 4px 5px #6e6e6e}.error-main h6{color:#42494f}.error-main p{color:#9897a0}
+body {
+    background-color:#c4ccd9
+}
+
+.error-main {
+    background-color:#fff;
+    box-shadow:10px 10px 10px -10px #5d6572
+}
+
+.error-main #errorTitle{
+    font-weight:700;
+    color:#444;
+    font-size:100px;
+    text-shadow:2px 4px 5px #6e6e6e
+}
+
+.error-main h1{
+    font-weight:700;
+    color:#444;
+    text-shadow:2px 4px 5px #6e6e6e
+}
+
+.error-main h6{
+    color:#42494f
+}
+
+.error-main p{
+    color:#9897a0
+}
