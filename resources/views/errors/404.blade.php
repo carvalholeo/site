@@ -1,7 +1,5 @@
 @extends('layout.app')
 
-@include('components.commom-css')
-
 @section('title', 'Erro 404 - Não encontrado | Léo Carvalho')
 @section('body')
 

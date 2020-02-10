@@ -3,8 +3,7 @@
 
 <head>
     <link rel="stylesheet" type="text/css" media="screen" href="{{ mix('css/all.css') }}" />
-    @include('components.commom-css')
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/error.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ mix('css/error.css') }}" />
     <title>Erro 503 - Serviço indisponível | Léo Carvalho</title>
 </head>
 

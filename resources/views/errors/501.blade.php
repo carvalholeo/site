@@ -3,8 +3,7 @@
 
 <head>
     <link rel="stylesheet" type="text/css" media="screen" href="{{ mix('css/all.css') }}" />
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/error.css') }}" />
-    @include('components.commom-css')
+    <link rel="stylesheet" type="text/css" href="{{ mix('css/error.css') }}" />
     <title>Erro 501 - Não implementado | Léo Carvalho </title>
 </head>
 
