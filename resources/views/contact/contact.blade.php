@@ -86,7 +86,9 @@
                 <textarea id="mensagem" name="mensagem" cols="30" rows="7" class="form-control" placeholder="Messagem" required></textarea>
             </div>
             <div class="form-group">
-                <div class="g-recaptcha" data-sitekey="6LcEScgUAAAAAIxwvlfw5rbvAuVYdhbbPmChcept" data-callback="recaptchaSuccess" data-expired-callback="recaptchaError" id="recaptcha"></div>
+                <div class="row justify-content-center" id="custom-recaptcha">
+                    <div class="g-recaptcha" data-sitekey="6LcEScgUAAAAAIxwvlfw5rbvAuVYdhbbPmChcept" data-callback="recaptchaSuccess" data-expired-callback="recaptchaError" id="recaptcha"></div>
+                </div>
                 <div class="help-block with-errors"></div>
             </div>
             <div class="form-group">
