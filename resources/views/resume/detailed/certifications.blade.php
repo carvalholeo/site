@@ -22,10 +22,10 @@
                                 @endIf
                             </h3>
 
-                            <a href="{{ $cert->certLink }}" target="_blank">
+                            <a href="{{ $cert->certLink }}" target="_blank" rel="noreferrer">
                                 <h2>{{ $cert->certName }}</h2>
                             </a>
-                            <a href="{{ $cert->issuerLink }}" target="_blank">
+                            <a href="{{ $cert->issuerLink }}" target="_blank" rel="noreferrer">
                                 <span class="position">{{ $cert->issuerName }}</span>
                             </a>
                             <p>{{ $cert->description }}</p>
