@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="{{ mix('css/all.css') }}">
 
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="{{ asset('/icon.png') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ asset('/icon.png') }}">
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
