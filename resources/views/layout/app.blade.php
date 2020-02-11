@@ -3,6 +3,7 @@
 
 <head>
     <script async src="{{ mix('js/custom.js') }}"></script>
+    <script async src="{{ mix('js/lazysize.js') }}"></script>
     @env('production')
     {!! SEO::generate(true) !!}
     @endenv

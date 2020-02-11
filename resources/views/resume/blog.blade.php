@@ -12,7 +12,7 @@
 @foreach ($posts as $post)
         <div class="col-md-4 d-flex ftco-animate">
             <div class="blog-entry justify-content-end">
-            <a href="{{ $post->link }}" class="block-20" style="background-image: url({{ $post->thumbnail }});">
+            <img href="{{ $post->link }}" class="block-20 lazyload" data-src="{{ $post->thumbnail }}">
             </a>
             <div class="text mt-3 float-right d-block">
               <h3 class="heading"><a href="{{ $post->link }}">{{ $post->title }}</a></h3>
