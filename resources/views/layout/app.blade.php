@@ -11,6 +11,24 @@
     @env('local')
     {!! SEO::generate() !!}
     @endenv
+    <link rel="preload" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://www.gstatic.com">
+    <link rel="preload" href="https://www.google.com">
+    <link rel="preload" href="https://browser-update.org">
+    <link rel="preload" href="https://www.googletagmanager.com">
+    <link rel="preload" href="https://wakatime.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://www.gstatic.com">
+    <link rel="preconnect" href="https://www.google.com">
+    <link rel="preconnect" href="https://browser-update.org">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://wakatime.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://www.gstatic.com">
+    <link rel="dns-prefetch" href="https://www.google.com">
+    <link rel="dns-prefetch" href="https://browser-update.org">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://wakatime.com">
 
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
