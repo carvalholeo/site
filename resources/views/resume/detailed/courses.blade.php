@@ -27,10 +27,10 @@
                                 @endIf
                             </h3>
 
-                            <a href="{{ $course->awardLink }}" target="_blank">
+                            <a href="{{ $course->awardLink }}" target="_blank" rel="noreferrer">
                                 <h2>{{ $course->awardName }}</h2>
                             </a>
-                            <a href="{{ $course->institutionLink }}" target="_blank">
+                            <a href="{{ $course->institutionLink }}" target="_blank" rel="noreferrer">
                                 <span class="position">{{ $course->institutionName }}</span>
                             </a>
                             <p>{{ $course->description }}</p>

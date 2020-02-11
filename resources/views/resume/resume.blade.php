@@ -30,7 +30,7 @@
                             </h3>
                             <h2>{{ $educations[$i]->title }} - {{ $educations[$i]->isFinished ? 'Concluído' : 'Cursando' }}</h2>
 
-                            <a href="{{ $educations[$i]->institutionLink }}" target="_blank">
+                            <a href="{{ $educations[$i]->institutionLink }}" target="_blank" rel="noreferrer">
                                 <span class="position">{{ $educations[$i]->institution }}</span>
                             </a>
                             <p>{{ $educations[$i]->description }}</p>
@@ -56,7 +56,7 @@
                         <div class="text pl-3">
                             <span class="date">{{ \Carbon\Carbon::parse($xps[$i]->startDate)->format('M/y')}} - {{ \Carbon\Carbon::parse($xps[$i]->endDate)->format('M/y')}}</span>
                             <h2>{{ $xps[$i]->role }}</h2>
-                            <a href="{{ $xps[$i]->companyLink }}" target="_blank">
+                            <a href="{{ $xps[$i]->companyLink }}" target="_blank" rel="noreferrer">
                                 <span class="position">{{ $xps[$i]->company }}</span>
                             </a>
                             <p>{{ $xps[$i]->description }}</p>
@@ -139,10 +139,10 @@
                                 @endIf
                             </h3>
 
-                            <a href="{{ $courses[$i]->awardLink }}" target="_blank">
+                            <a href="{{ $courses[$i]->awardLink }}" target="_blank" rel="noreferrer">
                                 <h2>{{ $courses[$i]->awardName }}</h2>
                             </a>
-                            <a href="{{ $courses[$i]->institutionLink }}" target="_blank">
+                            <a href="{{ $courses[$i]->institutionLink }}" target="_blank" rel="noreferrer">
                                 <span class="position">{{ $courses[$i]->institutionName }}</span>
                             </a>
                             <p>{{ $courses[$i]->description }}</p>
@@ -176,7 +176,7 @@
                             </span>
 
                             <h2>{{ $volunteers[$i]->position }}</h2>
-                            <a href="{{ $volunteers[$i]->institutionLink }}" target="_blank">
+                            <a href="{{ $volunteers[$i]->institutionLink }}" target="_blank" rel="noreferrer">
                                 <span class="position">{{ $volunteers[$i]->institutionName }}</span>
                             </a>
                             <p>{{ $volunteers[$i]->description }}</p>
@@ -204,10 +204,10 @@
                                 @endIf
                             </h3>
 
-                            <a href="{{ $certifications[$i]->certLink }}" target="_blank">
+                            <a href="{{ $certifications[$i]->certLink }}" target="_blank" rel="noreferrer">
                                 <h2>{{ $certifications[$i]->certName }}</h2>
                             </a>
-                            <a href="{{ $certifications[$i]->issuerLink }}" target="_blank">
+                            <a href="{{ $certifications[$i]->issuerLink }}" target="_blank" rel="noreferrer">
                                 <span class="position">{{ $certifications[$i]->issuerName }}</span>
                             </a>
                             <p>{{ $certifications[$i]->description }}</p>

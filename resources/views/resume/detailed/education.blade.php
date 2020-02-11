@@ -22,7 +22,7 @@
                         </h3>
                         <h2>{{ $edu->title }} - {{ $edu->isFinished ? 'Concluído' : 'Cursando' }}</h2>
 
-                        <a href="{{ $edu->institutionLink }}" target="_blank">
+                        <a href="{{ $edu->institutionLink }}" target="_blank" rel="noreferrer">
                             <span class="position">{{ $edu->institution }}</span>
                         </a>
                         <p>{{ $edu->description }}</p>

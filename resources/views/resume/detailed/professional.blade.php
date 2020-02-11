@@ -15,7 +15,7 @@
                         <div class="text pl-3">
                             <span class="date">{{ \Carbon\Carbon::parse($xp->startDate)->format('M/y')}} - {{ \Carbon\Carbon::parse($xp->endDate)->format('M/y')}}</span>
                             <h2>{{ $xp->role }}</h2>
-                            <a href="{{ $xp->companyLink }}" target="_blank">
+                            <a href="{{ $xp->companyLink }}" target="_blank" rel="noreferrer">
                                 <span class="position">{{ $xp->company }}</span>
                             </a>
                         <p>{{ $xp->description }}</p>

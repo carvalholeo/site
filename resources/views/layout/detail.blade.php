@@ -10,17 +10,37 @@
     @env('local')
     {!! SEO::generate() !!}
     @endenv
+    <link rel="preload" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://www.gstatic.com">
+    <link rel="preload" href="https://www.google.com">
+    <link rel="preload" href="https://browser-update.org">
+    <link rel="preload" href="https://www.googletagmanager.com">
+    <link rel="preload" href="https://wakatime.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://www.gstatic.com">
+    <link rel="preconnect" href="https://www.google.com">
+    <link rel="preconnect" href="https://browser-update.org">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://wakatime.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://www.gstatic.com">
+    <link rel="dns-prefetch" href="https://www.google.com">
+    <link rel="dns-prefetch" href="https://browser-update.org">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://wakatime.com">
 
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<meta name="csrf-token" content="{{ csrf_token() }}" />
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" media="none" onload="if(media!='all')media='all'">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" media="none" onload="if(media!='all')media='all'">
 
     <link rel="stylesheet" href="{{ mix('css/all.css') }}">
 
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="{{ asset('/icon.png') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ asset('/icon.png') }}">
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -39,7 +59,7 @@
         <br>
     </div>
 
-    <footer class="ftco-footer ftco-section" role="footer">
+    <footer class="ftco-footer ftco-section" role="complementary">
         @component('components.footer')
         @endcomponent
 

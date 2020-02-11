@@ -22,7 +22,7 @@
                             </span>
 
                             <h2>{{ $volunteer->position }}</h2>
-                            <a href="{{ $volunteer->institutionLink }}" target="_blank">
+                            <a href="{{ $volunteer->institutionLink }}" target="_blank" rel="noreferrer">
                                 <span class="position">{{ $volunteer->institutionName }}</span>
                             </a>
                             <p>{{ $volunteer->description }}</p>
