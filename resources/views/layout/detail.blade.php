@@ -41,7 +41,7 @@
         <br>
     </div>
 
-    <footer class="ftco-footer ftco-section" role="footer">
+    <footer class="ftco-footer ftco-section" role="complementary">
         @component('components.footer')
         @endcomponent
 
