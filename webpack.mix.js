@@ -47,6 +47,9 @@ mix.babel([
 mix.babel([
     'resources/js/custom/extended.js'], 'public/js/custom.js');
 
+mix.babel([
+        'resources/js/custom/lazysize.js'], 'public/js/lazysize.js');
+
 if (mix.inProduction()) {
     mix.version();
 }

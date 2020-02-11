@@ -2,6 +2,7 @@
     "/resources/css/style.css": "/resources/css/style.css?id=90ffb830f5acd11ac853",
     "/css/all.css": "/css/all.css?id=4d1650848a78d577afb1",
     "/css/error.css": "/css/error.css?id=09610525b3bde8604733",
-    "/js/all.js": "/js/all.js?id=9b0f9f978b7446dc5360",
-    "/js/custom.js": "/js/custom.js?id=ea4677e68f6e33154499"
+    "/js/all.js": "/js/all.js?id=60a1fe5458d92fbccf6b",
+    "/js/custom.js": "/js/custom.js?id=ea4677e68f6e33154499",
+    "/js/lazysize.js": "/js/lazysize.js?id=96c58d41b4ee746fc209"
 }
