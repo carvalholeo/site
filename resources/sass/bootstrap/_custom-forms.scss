@@ -215,6 +215,7 @@
   height: $custom-select-height;
   padding: $custom-select-padding-y ($custom-select-padding-x + $custom-select-indicator-padding) $custom-select-padding-y $custom-select-padding-x;
   font-family: $custom-select-font-family;
+  font-display: swap;
   @include font-size($custom-select-font-size);
   font-weight: $custom-select-font-weight;
   line-height: $custom-select-line-height;
@@ -331,6 +332,7 @@
   height: $custom-file-height;
   padding: $custom-file-padding-y $custom-file-padding-x;
   font-family: $custom-file-font-family;
+  font-display: swap;
   font-weight: $custom-file-font-weight;
   line-height: $custom-file-line-height;
   color: $custom-file-color;
