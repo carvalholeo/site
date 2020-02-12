@@ -19,7 +19,7 @@ return [
             'title'        => $seoTitle, // set false to total remove
             'titleBefore'  => true, // Put defaults.title before page title, like 'It's Over 9000! - Dashboard'
             'description'  => $seoDescription, // set false to total remove
-            'separator'    => ' - ',
+            'separator'    => ' | ',
             'keywords'     => [
                 'desenvolvedor', 'léo carvalho', 'dev c#', 'dev php',
                 'php', 'c#', '.net', 'javascript', 'js', 'web',
