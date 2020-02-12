@@ -9,11 +9,6 @@ use App\Mail\SendMailUser;
 
 class ContactController extends Controller
 {
-    public function index()
-    {
-        return view ('contact.index');
-    }
-
     public function send(Request $request)
     {
         $this->validateFields($request);
