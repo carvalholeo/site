@@ -1,9 +1,5 @@
 @extends('layout.app')
 
-@section('title')
-Redes sociais | Léo Carvalho
-@endsection
-
 @section('body')
 <div id="redirect-social">
     <p>Parece que você quer estar mais pertinho de mim hehehe. Então, vem! </p>
@@ -14,7 +10,7 @@ Redes sociais | Léo Carvalho
         <li><a href="/twitter" target="_blank">Twitter</a></li>
         <li><a href="/linkedin" target="_blank">LinkedIn</a></li>
         <li><a href="/instagram" target="_blank">Instagram</a></li>
-        <li><a href="/blog" target="_blank">Medium</a></li>
+        <li><a href="/blog" target="_blank">Blog</a> (Conteúdo mais voltado para o mercado de TI e área profissional)</li>
         <li><a href="/wordpress" target="_blank">WordPress</a> (Blog com conteúdo pessoal e religioso)</li>
         <li><a href="/pinterest" target="_blank">Pinterest</a></li>
         <li><a href="/youtube" target="_blank">YouTube</a></li>
