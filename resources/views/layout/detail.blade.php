@@ -2,7 +2,14 @@
 <html lang="pt">
 
 <head>
+    <link rel="preconnect" href="//fonts.gstatic.com">
+    <link rel="preconnect" href="//www.gstatic.com">
+    <link rel="preconnect" href="//www.google.com">
+    <link rel="preconnect" href="//browser-update.org">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <link rel="preconnect" href="//wakatime.com">
     <script async src="{{ mix('js/custom.js') }}"></script>
+    <script async src="{{ mix('js/lazysize.js') }}"></script>
     @env('production')
     {!! SEO::generate(true) !!}
     @endenv
@@ -10,18 +17,6 @@
     @env('local')
     {!! SEO::generate() !!}
     @endenv
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://www.gstatic.com">
-    <link rel="preconnect" href="https://www.google.com">
-    <link rel="preconnect" href="https://browser-update.org">
-    <link rel="preconnect" href="https://www.googletagmanager.com">
-    <link rel="preconnect" href="https://wakatime.com">
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link rel="dns-prefetch" href="https://www.gstatic.com">
-    <link rel="dns-prefetch" href="https://www.google.com">
-    <link rel="dns-prefetch" href="https://browser-update.org">
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    <link rel="dns-prefetch" href="https://wakatime.com">
 
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -35,6 +30,8 @@
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="{{ asset('/icon.png') }}">
     <link rel="apple-touch-icon-precomposed" href="{{ asset('/icon.png') }}">
+    <meta name="msapplication-TileImage" href="{{ asset('/icon.png') }}">
+    <link rel="icon" href="{{ asset('/icon.png') }}"  sizes="192x192" />
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
