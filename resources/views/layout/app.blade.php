@@ -3,13 +3,13 @@
 
 <head>
     <link rel="preconnect" href="//fonts.gstatic.com">
-    <link rel="preconnect" href="//www.gstatic.com">
-    <link rel="preconnect" href="//www.google.com">
+    <link rel="preconnect" href="https://www.gstatic.com">
+    <link rel="preconnect" href="https://www.google.com">
     <link rel="preconnect" href="//browser-update.org">
     <link rel="preconnect" href="//www.googletagmanager.com">
     <link rel="preconnect" href="//wakatime.com">
     <script async src="{{ mix('js/custom.js') }}"></script>
-    <script async src="{{ mix('js/lazysize.js') }}"></script>
+    <script asyn src="{{ mix('js/lazysize.js') }}"></script>
     @env('production')
     {!! SEO::generate(true) !!}
     @endenv
@@ -31,7 +31,6 @@
     <link rel="apple-touch-icon" href="{{ asset('/icon.png') }}">
     <link rel="apple-touch-icon-precomposed" href="{{ asset('/icon.png') }}">
     <meta name="msapplication-TileImage" href="{{ asset('/icon.png') }}">
-    <link rel="icon" href="{{ asset('/icon.png') }}"  sizes="192x192" />
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
