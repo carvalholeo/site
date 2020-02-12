@@ -18,6 +18,7 @@ class ResumeController extends Controller
     public function homePage()
     {
         $this->seo();
+        $this->seo()->setTitle('Página Inicial');
 
         $xps = Professional::orderBy('endDate', 'desc')->get();
         $educations = Education::orderBy('endDate', 'desc')->get();
@@ -35,8 +36,17 @@ class ResumeController extends Controller
 
     public function professional()
     {
+        $description = 'Veja no detalhe cada uma das experiências profissionais que eu tive, minhas atribuições e o período que trabalhei em cada lugar.';
+        $title = 'Experiência Profissional';
         $this->seo();
-        $this->seo()->setTitle('Experiência Profissional');
+        $this->seo()->setTitle($title);
+        $this->seo()->setDescription($description);
+        $this->seo()->twitter()->setTitle($title);
+        $this->seo()->twitter()->setDescription($description);
+        $this->seo()->opengraph()->setTitle($title);
+        $this->seo()->opengraph()->setDescription($description);
+        $this->seo()->jsonLd()->setTitle($title);
+        $this->seo()->jsonLd()->setDescription($description);
 
         $xps = Professional::orderBy('endDate', 'desc')->get();
 
@@ -45,8 +55,17 @@ class ResumeController extends Controller
 
     public function education()
     {
+        $description = 'Entre aqui e compreenda melhor cada uma das formações que eu já tive, períodos, instituições e lições tiradas.';
+        $title = 'Histórico Acadêmico';
         $this->seo();
-        $this->seo()->setTitle('Histórico Acadêmico');
+        $this->seo()->setTitle($title);
+        $this->seo()->setDescription($description);
+        $this->seo()->twitter()->setTitle($title);
+        $this->seo()->twitter()->setDescription($description);
+        $this->seo()->opengraph()->setTitle($title);
+        $this->seo()->opengraph()->setDescription($description);
+        $this->seo()->jsonLd()->setTitle($title);
+        $this->seo()->jsonLd()->setDescription($description);
 
         $educations = Education::orderBy('endDate', 'desc')->get();
 
@@ -55,8 +74,17 @@ class ResumeController extends Controller
 
     public function volunteer()
     {
+        $description = 'Para entender melhor o ser humano, é preciso compreender como são as relações humanas. Trabalho voluntário é sobre servir, mas também é sobre desenvolver-se enquanto humano.';
+        $title = 'Trabalhos Voluntários';
         $this->seo();
-        $this->seo()->setTitle('Trabalhos Voluntários');
+        $this->seo()->setTitle($title);
+        $this->seo()->setDescription($description);
+        $this->seo()->twitter()->setTitle($title);
+        $this->seo()->twitter()->setDescription($description);
+        $this->seo()->opengraph()->setTitle($title);
+        $this->seo()->opengraph()->setDescription($description);
+        $this->seo()->jsonLd()->setTitle($title);
+        $this->seo()->jsonLd()->setDescription($description);
 
         $volunteers = Volunteer::orderby('endDate', 'desc')->get();
 
@@ -65,8 +93,17 @@ class ResumeController extends Controller
 
     public function certifications()
     {
+        $description = 'Nesta página, você verá algumas informações relativas a certificações obtidas fora do ambiente acadêmico, que validam um determinado conhecimento adquirido.';
+        $title = 'Certificações e Reconhecimentos';
         $this->seo();
-        $this->seo()->setTitle('Certificações e Reconhecimentos');
+        $this->seo()->setTitle($title);
+        $this->seo()->setDescription($description);
+        $this->seo()->twitter()->setTitle($title);
+        $this->seo()->twitter()->setDescription($description);
+        $this->seo()->opengraph()->setTitle($title);
+        $this->seo()->opengraph()->setDescription($description);
+        $this->seo()->jsonLd()->setTitle($title);
+        $this->seo()->jsonLd()->setDescription($description);
 
         $certifications = Certifications::orderby('endDate', 'desc')->get();
 
@@ -75,8 +112,17 @@ class ResumeController extends Controller
 
     public function courses()
     {
+        $description = 'O conhecimento é algo maravilhoso, e adquirir esse conhecimento é melhor ainda. Aqui, você tem acesso à lista de cursos e bootcamps, junto do aprendizado obtido.';
+        $title = 'Cursos e Bootcamps';
         $this->seo();
-        $this->seo()->setTitle('Cursos e Bootcamps');
+        $this->seo()->setTitle($title);
+        $this->seo()->setDescription($description);
+        $this->seo()->twitter()->setTitle($title);
+        $this->seo()->twitter()->setDescription($description);
+        $this->seo()->opengraph()->setTitle($title);
+        $this->seo()->opengraph()->setDescription($description);
+        $this->seo()->jsonLd()->setTitle($title);
+        $this->seo()->jsonLd()->setDescription($description);
 
         $courses = Courses::orderBy('endDate', 'desc')->get();
 
