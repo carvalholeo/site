@@ -2,7 +2,7 @@
 /**
  * @see https://github.com/artesaos/seotools
  */
-$seoTitle = 'Léo Carvalho - Desenvolvedor PHP/C#';
+$seoTitle = 'Léo Carvalho';
 $seoDescription = 'Léo Carvalho é desenvolvedor PHP/C#, com experiência acadêmica e em freelas. Acredita que a empatia é o maior exerício de relacionamento interpessoal.';
 $seoCanonical = null;
 
