@@ -2,11 +2,13 @@
 /**
  * @see https://github.com/artesaos/seotools
  */
-$seoTitle = 'Léo Carvalho';
-$seoDescription = 'Desenvolvedor de sistemas';
+$seoTitle = 'Léo Carvalho - Desenvolvedor PHP/C#';
+$seoDescription = 'Léo Carvalho é desenvolvedor PHP/C#, com experiência acadêmica e em freelas. Acredita que a empatia é o maior exerício de relacionamento interpessoal.';
 $seoCanonical = null;
 
 $seoPinterest = '0d6d3731c70b9bdcdde4e31b18925f9b';
+$url = getenv('APP_URL');
+$images = [$url.'/storage/images/perfil.jpg'];
 
 return [
     'meta' => [
@@ -19,17 +21,11 @@ return [
             'description'  => $seoDescription, // set false to total remove
             'separator'    => ' - ',
             'keywords'     => [
-                'desenvolvedor',
-                'léo carvalho',
-                'dev c#',
-                'dev php',
-                'php',
-                'c#',
-                '.net',
-                'javascript',
-                'js',
-                'web',
-                'desktop'
+                'desenvolvedor', 'léo carvalho', 'dev c#', 'dev php',
+                'php', 'c#', '.net', 'javascript', 'js', 'web',
+                'desktop', 'desenvolvedor full stack', 'full stack developer',
+                'coder', '.net core', '.net framework', 'laravel', 'vue.js',
+                'bootstrap', 'css', 'git', 'github'
             ],
             'canonical'    => $seoCanonical, // Set null for using Url::current(), set false to total remove
             'robots'       => 'all', // Set to 'all', 'none' or any combination of index/noindex and follow/nofollow
@@ -58,7 +54,7 @@ return [
             'url'         => $seoCanonical, // Set null for using Url::current(), set false to total remove
             'type'        => false,
             'site_name'   => false,
-            'images'      => [],
+            'images'      => $images,
         ],
     ],
     'twitter' => [
@@ -70,6 +66,7 @@ return [
             'site'        => '@_carvalho_leo',
             'title'       => $seoTitle,
             'description' => $seoDescription,
+            'image'       => $images[0],
         ],
     ],
     'json-ld' => [
@@ -81,7 +78,14 @@ return [
             'description' => $seoDescription, // set false to total remove
             'url'         => $seoCanonical, // Set null for using Url::current(), set false to total remove
             'type'        => 'WebPage',
-            'images'      => [],
+            'images'      => $images,
+            'sameAs'      => [
+                'https://twitter.com/_carvalho_leo',
+                'https://instagram.com/carvalho_leo',
+                'https://pinterest.com/carvalho_leo',
+                'https://github.com/carvalholeo',
+                'https://linkedin.com/in/carvalholeo'
+            ]
         ],
     ],
 ];
