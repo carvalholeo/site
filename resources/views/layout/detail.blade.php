@@ -59,6 +59,7 @@
     </footer>
 
 <script async src="{{ mix('js/all.js') }}"></script>
+<script data-ad-client="ca-pub-1577931231143329" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 @env('production')
 
