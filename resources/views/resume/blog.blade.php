@@ -12,6 +12,7 @@
 @foreach ($posts as $post)
 @php
     $categories = join(', ', $post->categories);
+    $categories = ucwords($categories);
     $post->author = ucfirst($post->author);
 @endphp
         <div class="col-md-4 d-flex ftco-animate">
