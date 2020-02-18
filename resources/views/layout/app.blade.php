@@ -3,11 +3,16 @@
 
 <head>
     <link rel="preconnect" href="//fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://www.gstatic.com">
     <link rel="preconnect" href="https://www.google.com">
     <link rel="preconnect" href="//browser-update.org">
     <link rel="preconnect" href="//www.googletagmanager.com">
     <link rel="preconnect" href="//wakatime.com">
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+    <link rel="preconnect" href="https://tpc.googlesyndication.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="preconnect" href="https://stats.g.doubleclick.net">
     <script async src="{{ mix('js/custom.js') }}"></script>
     <script async src="{{ mix('js/lazysize.js') }}"></script>
     @env('production')
