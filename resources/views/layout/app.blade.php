@@ -2,6 +2,12 @@
 <html lang="pt">
 
 <head>
+    <link rel="preconnect" href="//fonts.gstatic.com">
+    <link rel="preconnect" href="https://www.gstatic.com">
+    <link rel="preconnect" href="https://www.google.com">
+    <link rel="preconnect" href="//browser-update.org">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <link rel="preconnect" href="//wakatime.com">
     <script async src="{{ mix('js/custom.js') }}"></script>
     <script async src="{{ mix('js/lazysize.js') }}"></script>
     @env('production')
@@ -11,24 +17,6 @@
     @env('local')
     {!! SEO::generate() !!}
     @endenv
-    <link rel="preload" href="https://fonts.gstatic.com">
-    <link rel="preload" href="https://www.gstatic.com">
-    <link rel="preload" href="https://www.google.com">
-    <link rel="preload" href="https://browser-update.org">
-    <link rel="preload" href="https://www.googletagmanager.com">
-    <link rel="preload" href="https://wakatime.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://www.gstatic.com">
-    <link rel="preconnect" href="https://www.google.com">
-    <link rel="preconnect" href="https://browser-update.org">
-    <link rel="preconnect" href="https://www.googletagmanager.com">
-    <link rel="preconnect" href="https://wakatime.com">
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link rel="dns-prefetch" href="https://www.gstatic.com">
-    <link rel="dns-prefetch" href="https://www.google.com">
-    <link rel="dns-prefetch" href="https://browser-update.org">
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    <link rel="dns-prefetch" href="https://wakatime.com">
 
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -42,6 +30,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/favicon.ico') }}">
     <link rel="apple-touch-icon" href="{{ asset('/icon.png') }}">
     <link rel="apple-touch-icon-precomposed" href="{{ asset('/icon.png') }}">
+    <meta name="msapplication-TileImage" href="{{ asset('/icon.png') }}">
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -69,6 +58,7 @@
     </footer>
 
 <script async src="{{ mix('js/all.js') }}"></script>
+<script data-ad-client="ca-pub-1577931231143329" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 @env('production')
 

@@ -1,9 +1,5 @@
 @extends('layout.app')
 
-@section('title')
-    YouTube | Léo Carvalho
-@endsection
-
 @section('body')
 <div id="redirect-social">
     Aguarde um instante, você já está indo para o meu perfilcanal no YouTube!
