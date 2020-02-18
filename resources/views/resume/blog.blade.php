@@ -12,6 +12,7 @@
 @foreach ($posts as $post)
 @php
     $categories = join(', ', $post->categories);
+    $post->author = ucfirst($post->author);
 @endphp
         <div class="col-md-4 d-flex ftco-animate">
             <div class="blog-entry justify-content-end">
@@ -22,7 +23,7 @@
               <div class="d-flex align-items-center mb-3 meta">
                   <p class="mb-0">
                       <span class="mr-2">{{ \Carbon\Carbon::parse($post->pubDate)->format('d M y')}}</span>
-                      <span class="mr-2">Autor: </span><a href="#" class="mr-2">{{ $post->author }}</a>
+                      <span class="mr-2">Autor: </span><a href="{{ route('index')}}#about-section" class="mr-2">{{ $post->author }}</a>
                   </p>
               </div>
               <p> {{ $post->description }}</p>
