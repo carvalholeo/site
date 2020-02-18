@@ -1,4 +1,4 @@
-<section class="ftco-section ftco-hireme img" style="background-image: url({{ asset('storage/images/bg_1.jpg') }})">
+<section class="ftco-section ftco-hireme img" style="background-image: url({{ asset('storage/images/bg_1.webp') }})">
     <div class="overlay"></div>
     <div class="container">
         <div class="row justify-content-center">

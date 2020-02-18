@@ -8,7 +8,7 @@ $seoCanonical = null;
 
 $seoPinterest = '0d6d3731c70b9bdcdde4e31b18925f9b';
 $url = getenv('APP_URL');
-$images = [$url.'/storage/images/perfil.jpg'];
+$images = [$url.'/storage/images/perfil.webp'];
 
 return [
     'meta' => [

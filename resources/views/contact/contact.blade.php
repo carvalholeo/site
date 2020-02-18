@@ -99,7 +99,7 @@
         </div>
 
         <div class="col-md-6 d-flex">
-            <div class="img" style="background-image: url({{ asset('storage/images/leonardo.jpg') }});"></div>
+            <div class="img" style="background-image: url({{ asset('storage/images/leonardo.webp') }});"></div>
         </div>
       </div>
     </div>
