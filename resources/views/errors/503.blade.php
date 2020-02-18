@@ -18,7 +18,7 @@
                             <h5 class="h5">Site temporariamente fora de serviço</h4>
 
                                 <div class="text-center">
-                                    <img src="{{ asset('storage/images/errors/503.gif') }}" class="rounded img-fluid">
+                                    <img src="{{ asset('storage/images/errors/503.webp') }}" class="rounded img-fluid">
                                 </div>
 
                                 <p class="text-muted">Parece que o site está passando por alguma instabilidade temporária ou
