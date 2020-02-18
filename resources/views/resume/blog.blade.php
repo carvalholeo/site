@@ -11,9 +11,7 @@
       <div class="row d-flex">
 @foreach ($posts as $post)
 @php
-    $categories = join(', ', $post->categories);
-    $categories = ucwords($categories);
-    $post->author = ucfirst($post->author);
+    $categories = ucwords(join(', ', $post->categories));
 @endphp
         <div class="col-md-4 d-flex ftco-animate">
             <div class="blog-entry justify-content-end">
@@ -23,8 +21,7 @@
               <h3 class="heading"><a href="{{ $post->link }}">{{ $post->title }}</a></h3>
               <div class="d-flex align-items-center mb-3 meta">
                   <p class="mb-0">
-                      <span class="mr-2">{{ \Carbon\Carbon::parse($post->pubDate)->format('d M y')}}</span>
-                      <span class="mr-2">Autor: </span><a href="{{ route('index')}}#about-section" class="mr-2">{{ $post->author }}</a>
+                      <span class="mr-2">Publicado em {{ \Carbon\Carbon::parse($post->pubDate)->format('d M y')}}</span>
                   </p>
               </div>
               <p> {{ $post->description }}</p>
