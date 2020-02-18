@@ -10,6 +10,9 @@
       </div>
       <div class="row d-flex">
 @foreach ($posts as $post)
+@php
+    $categories = join(', ', $post->categories);
+@endphp
         <div class="col-md-4 d-flex ftco-animate">
             <div class="blog-entry justify-content-end">
             <img href="{{ $post->link }}" class="block-20 lazyload" data-src="{{ $post->thumbnail }}">
@@ -25,11 +28,7 @@
               <p> {{ $post->description }}</p>
 
               <a role="button" class="btn btn-primary btn-sm" href="{{ $post->link }}">Continue lendo...</a>
-              <p class="text-muted">Tags:
-                @foreach ($post->categories as $category)
-                  {{ $category }},
-                @endforeach
-              </p>
+              <p class="text-muted">Tags: {{ $categories }}</p>
 
             </div>
           </div>
