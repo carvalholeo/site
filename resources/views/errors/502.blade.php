@@ -18,7 +18,7 @@
                             <h5 class="h5">Servidor principal com erro</h4>
 
                                 <div class="text-center">
-                                    <img src="{{ asset('storage/images/errors/500.gif') }}" class="rounded img-fluid">
+                                    <img src="{{ asset('storage/images/errors/500.webp') }}" class="rounded img-fluid">
                                 </div>
 
                                 <p class="text-muted">O servidor que você está conectado recebeu um pedido inválido do servidor principal.</p>

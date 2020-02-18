@@ -18,7 +18,7 @@
                             <h5 class="h5">Tempo esgotado para resposta</h4>
 
                                 <div class="text-center">
-                                    <img src="{{ asset('storage/images/errors/500.gif') }}" class="rounded img-fluid">
+                                    <img src="{{ asset('storage/images/errors/500.webp') }}" class="rounded img-fluid">
                                 </div>
 
                                 <p class="text-muted">Parece que estamos recebendo muitos acessos e o servidor não está dando conta de responder rapidamente!</p>

@@ -18,7 +18,7 @@
                             <h5 class="h5">Temporariamente fora de serviço</h4>
 
                                 <div class="text-center">
-                                    <img src="{{ asset('storage/images/errors/500.gif') }}" class="rounded img-fluid">
+                                    <img src="{{ asset('storage/images/errors/500.webp') }}" class="rounded img-fluid">
                                 </div>
 
                                 <p class="text-muted">Alguém andou mexendo no que não devia e estragou as configurações do site.</p>

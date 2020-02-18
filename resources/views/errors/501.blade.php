@@ -18,7 +18,7 @@
                             <h5 class="h5">Isso não vai funcionar</h4>
 
                                 <div class="text-center">
-                                    <img src="{{ asset('storage/images/errors/500.gif') }}" class="rounded img-fluid">
+                                    <img src="{{ asset('storage/images/errors/500.webp') }}" class="rounded img-fluid">
                                 </div>
 
                                 <p class="text-muted">Questões internas de progrmação... Significa que as coisas foram feitas internamente do jeito errado.</p>
