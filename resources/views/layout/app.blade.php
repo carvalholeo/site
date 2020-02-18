@@ -2,7 +2,7 @@
 <html lang="pt">
 
 <head>
-    
+
     <link rel="preconnect" href="//fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://www.gstatic.com">
@@ -79,7 +79,27 @@
         dataLayer.push(arguments);
     }
     gtag('js', new Date());
-    gtag('config', 'UA-139872605-1');
+    gtag('config', 'UA-139872605-1', {
+        'link_attribution': {
+            'cookie_name': '_main',
+            'cookie_domain': 'leocarvalho.dev',
+            'cookie_expires': 0,
+            'levels': 15
+        },
+        'anonymize_ip': true
+    );
+    if (window.performance) {
+        // Gets the number of milliseconds since page load
+        // (and rounds the result since the value must be an integer).
+        let timeSincePageLoad = Math.round(performance.now());
+
+        // Sends the timing event to Google Analytics.
+        gtag('event', 'timing_complete', {
+            'name': 'load',
+            'value': timeSincePageLoad,
+            'event_category': 'JS Dependencies'
+        });
+    }
 </script>
 
 <script>
