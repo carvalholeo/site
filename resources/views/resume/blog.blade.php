@@ -38,7 +38,7 @@
 
       </div>
       <div class="row justify-content-center text-center">
-          <a role="button" class="btn btn-primary " href="https://blog.leocarvalho.dev">Leia outros artigos no blog</a>
+          <a role="button" class="btn btn-primary " href="https://blog.leocarvalho.dev" id="gtm-transfer-blog">Leia outros artigos no blog</a>
       </div>
     </div>
   </section>
