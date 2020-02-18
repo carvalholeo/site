@@ -19,11 +19,11 @@
                 <div class="ftco-footer-widget mb-4 ml-md-4">
                     <h2 class="ftco-heading-2">Links</h2>
                     <ul class="list-unstyled">
-                    <li><a href="{{ route('index')}}/#home-section"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
-                    <li><a href="{{ route('index')}}/#about-section"><span class="icon-long-arrow-right mr-2"></span>Sobre</a></li>
-                    <!--li><a href="{{ route('index')}}/#services-section"><span class="icon-long-arrow-right mr-2"></span>Serviços</a></li>
-                    <li><a href="{{ route('index')}}/#projects-section"><span class="icon-long-arrow-right mr-2"></span>Projetos</a></li-->
-                    <li><a href="{{ route('index')}}/#contact-section"><span class="icon-long-arrow-right mr-2"></span>Contato</a></li>
+                    <li><a href="{{ route('index')}}#home-section" id="gtm-navbar-home"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
+                    <li><a href="{{ route('index')}}#about-section" id="gtm-navbar-about"><span class="icon-long-arrow-right mr-2"></span>Sobre</a></li>
+                    <!--li><a href="{{ route('index')}}#services-section" id="gtm-navbar-services"><span class="icon-long-arrow-right mr-2"></span>Serviços</a></li>
+                    <li><a href="{{ route('index')}}#projects-section" id="gtm-navbar-projects"><span class="icon-long-arrow-right mr-2"></span>Projetos</a></li-->
+                    <li><a href="{{ route('index')}}#contact-section" id="gtm-navbar-contact"><span class="icon-long-arrow-right mr-2"></span>Contato</a></li>
                     </ul>
                 </div>
             </div>
