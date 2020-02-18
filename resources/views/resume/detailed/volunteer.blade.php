@@ -30,7 +30,7 @@
                     </div>
 @endforeach
                     <div class="justify-content-center text-center">
-                        <a role="button" type="button" class="btn btn-primary btn-lg" href="{{ route('index') }}#volunteer">Voltar para o currículo</a>
+                        <a role="button" type="button" class="btn btn-primary btn-lg" href="{{ route('index') }}#volunteer" id="gtm-back-volunteer">Voltar para o currículo</a>
                     </div>
                 </div>
             </div>

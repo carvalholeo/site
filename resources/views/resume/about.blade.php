@@ -4,7 +4,7 @@
             <div class="col-md-6 col-lg-6 d-flex">
                 <div class="img-about img d-flex align-items-stretch">
                     <div class="overlay"></div>
-                    <div class="img d-flex align-self-stretch align-items-center" style="background-image:url({{ asset('storage/images/leonardo.jpg') }});">
+                    <div class="img d-flex align-self-stretch align-items-center" style="background-image:url({{ asset('storage/images/leonardo.webp') }});">
                     </div>
                 </div>
             </div>
@@ -17,8 +17,8 @@
                 <ul class="about-info mt-4 px-md-0 px-2">
                     <li class="d-flex"><span>Nome:</span> <span>Leonardo Carvalho</span></li>
                     <li class="d-flex"><span>Aniversário:</span> <span>28 de abril</span></li>
-                    <li class="d-flex"><span>Email:</span> <a href="mailto:leonardo.cscarvalho@outlook.com.br" target="_blank"><span>leonardo.cscarvalho@outlook.com.br</span></a></li>
-                    <li class="d-flex"><span>Telefone: </span> <a href="tel://13997375760"><span>(13) 99737-5760</span></a></li>
+                    <li class="d-flex"><span>Email:</span> <a href="mailto:leonardo.cscarvalho@outlook.com.br" target="_blank" id="gtm-email-link"><span>leonardo.cscarvalho@outlook.com.br</span></a></li>
+                    <li class="d-flex"><span>Telefone: </span> <a href="tel://13997375760" id="gtm-telephone-link"><span>(13) 99737-5760</span></a></li>
                 </ul>
               </div>
             </div>
@@ -28,7 +28,7 @@
                     <span class="number" data-number="120">0</span>
                     <span>Projetos completos</span>
                 </p-->
-            <p><a href="{{ route('resume.download') }}" class="btn btn-primary py-3 px-3">Download do Currículo</a></p>
+            <p><a href="{{ route('resume.download') }}" class="btn btn-primary py-3 px-3" id="gtm-resume-download">Download do Currículo</a></p>
           </div>
           </div>
         </div>

@@ -4,12 +4,12 @@
             <div class="col-md-3">
                 <nav id="navi">
                     <ul>
-                      <li><a href="#education">Educação</a></li>
-                      <li><a href="#experience">Experiência</a></li>
-                      <li><a href="#skills">Habilidades</a></li>
-                      <li><a href="#courses">Cursos extras</a></li>
-                      <li><a href="#volunteer">Trabalhos voluntários</a></li>
-                      <li><a href="#certifications">Certificações</a></li>
+                      <li><a href="#education" id="gtm-resume-menu-education">Educação</a></li>
+                      <li><a href="#experience" id="gtm-resume-menu-experience">Experiência</a></li>
+                      <li><a href="#skills" id="gtm-resume-menu-skills">Habilidades</a></li>
+                      <li><a href="#courses" id="gtm-resume-menu-courses">Cursos extras</a></li>
+                      <li><a href="#volunteer" id="gtm-resume-menu-volunteer">Trabalhos voluntários</a></li>
+                      <li><a href="#certifications" id="gtm-resume-menu-certifications">Certificações</a></li>
                     </ul>
                 </nav>
             </div>
@@ -42,7 +42,7 @@
                     </div>
 @endfor
                     <div class="justify-content-center text-center">
-                        <a role="button" type="button" class="btn btn-primary btn-lg" href="{{ route('resume.education') }}">Ver mais experiências acadêmicas</a>
+                        <a role="button" type="button" class="btn btn-primary btn-lg" href="{{ route('resume.education') }}" id="gtm-resume-more-education">Ver mais experiências acadêmicas</a>
                     </div>
                 </div>
 
@@ -64,7 +64,7 @@
                     </div>
 @endfor
                     <div class="justify-content-center text-center">
-                        <a role="button" type="button" class="btn btn-primary btn-lg" href="{{ route('resume.professional') }}">Ver mais experiências profissionais</a>
+                        <a role="button" type="button" class="btn btn-primary btn-lg" href="{{ route('resume.professional') }}" id="gtm-resume-more-experience">Ver mais experiências profissionais</a>
                     </div>
                 </div>
 
@@ -155,7 +155,7 @@
                     </div>
 @endfor
                 <div class="justify-content-center text-center">
-                    <a role="button" type="button" class="btn btn-primary btn-lg" href="{{ route('resume.courses') }}">Ver mais cursos</a>
+                    <a role="button" type="button" class="btn btn-primary btn-lg" href="{{ route('resume.courses') }}" id="gtm-resume-more-courses">Ver mais cursos</a>
                 </div>
                 </div>
 
@@ -184,7 +184,7 @@
                     </div>
 @endfor
                 <div class="justify-content-center text-center">
-                    <a role="button" type="button" class="btn btn-primary btn-lg" href="{{ route('resume.volunteer') }}">Ver mais trabalhos voluntários</a>
+                    <a role="button" type="button" class="btn btn-primary btn-lg" href="{{ route('resume.volunteer') }}" id="gtm-resume-more-volunteers">Ver mais trabalhos voluntários</a>
                 </div>
                 </div>
                 <div id="certifications" class= "page six">
@@ -220,7 +220,7 @@
                     </div>
 @endfor
                 <div class="justify-content-center text-center">
-                    <a role="button" type="button" class="btn btn-primary btn-lg" href="{{ route('resume.certifications') }}">Ver mais certificações e reconhecimentos</a>
+                    <a role="button" type="button" class="btn btn-primary btn-lg" href="{{ route('resume.certifications') }}" id="gtm-resume-more-certifications">Ver mais certificações e reconhecimentos</a>
                 </div>
                 </div>
             </div>

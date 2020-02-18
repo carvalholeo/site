@@ -28,7 +28,7 @@
                 </div>
                 <div>
                     <h3 class="mb-4">Telefone</h3>
-                  <p><a href="tel://13997375760">(13) 99737-5760</a></p>
+                  <p><a href="tel://13997375760" id="gtm-telephone-link">(13) 99737-5760</a></p>
               </div>
             </div>
         </div>
@@ -39,7 +39,7 @@
                 </div>
                 <div>
                     <h3 class="mb-4">Email</h3>
-                  <p class="text-break"><a href="mailto:leonardo.cscarvalho@outlook.com.br">leonardo.cscarvalho@outlook.com.br</a></p>
+                  <p class="text-break"><a href="mailto:leonardo.cscarvalho@outlook.com.br" id="gtm-email-link">leonardo.cscarvalho@outlook.com.br</a></p>
                 </div>
             </div>
         </div>
@@ -50,7 +50,7 @@
                 </div>
                 <div>
                     <h3 class="mb-4">Portifólio</h3>
-                <p><a href="{{ route('social.github') }}">github.com/carvalholeo</a></p>
+                <p><a href="{{ route('social.github') }}" id="gtm-enter-github">github.com/carvalholeo</a></p>
               </div>
             </div>
         </div>
@@ -99,7 +99,7 @@
         </div>
 
         <div class="col-md-6 d-flex">
-            <div class="img" style="background-image: url({{ asset('storage/images/leonardo.jpg') }});"></div>
+            <div class="img" style="background-image: url({{ asset('storage/images/leonardo.webp') }});"></div>
         </div>
       </div>
     </div>
