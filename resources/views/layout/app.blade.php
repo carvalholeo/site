@@ -9,7 +9,7 @@
     <link rel="preconnect" href="//www.googletagmanager.com">
     <link rel="preconnect" href="//wakatime.com">
     <script async src="{{ mix('js/custom.js') }}"></script>
-    <script asyn src="{{ mix('js/lazysize.js') }}"></script>
+    <script async src="{{ mix('js/lazysize.js') }}"></script>
     @env('production')
     {!! SEO::generate(true) !!}
     @endenv
