@@ -21,7 +21,7 @@
             'levels': 15
         },
         'anonymize_ip': true
-    );
+    });
     if (window.performance) {
         // Gets the number of milliseconds since page load
         // (and rounds the result since the value must be an integer).
