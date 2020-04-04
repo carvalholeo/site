@@ -13,7 +13,7 @@
                         <h5 class="h5">Algo de errado não está certo - Esta página não existe no site :'(</h4>
 
                         <div class="text-center">
-                            <img src="{{ asset('storage/images/errors/404.webp') }}" class="rounded img-fluid">
+                            <img data-src="{{ asset('storage/images/errors/404.webp') }}" class="rounded img-fluid lazyload">
                         </div>
 
                         <p class="text-muted">Infelizmente não tenho como te ajudar com isso.</p>

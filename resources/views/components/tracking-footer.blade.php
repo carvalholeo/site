@@ -1,6 +1,16 @@
 <script async src="{{ mix('js/all.js') }}"></script>
 <script data-ad-client="ca-pub-1577931231143329" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
+<script async>
+    let bgImg = document.querySelectorAll('#bg-img');
+    bgImg.forEach(el => {
+        el.addEventListener('lazybeforeunveil', function(e){
+            var bg = e.target.getAttribute('data-bg');
+            if(bg){
+                e.target.style.backgroundImage = 'url(' + bg + ')';
+            }
+        });
+    });
+</script>
 @env('production')
 
 <!-- Global site tag (gtag.js) - Google Analytics -->

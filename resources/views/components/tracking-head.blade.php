@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://www.google-analytics.com">
 <link rel="preconnect" href="https://stats.g.doubleclick.net">
 <script async src="{{ mix('js/custom.js') }}"></script>
-<script async src="{{ mix('js/lazysize.js') }}"></script>
+<script defer src="{{ mix('js/lazysize.js') }}"></script>
 @env('production')
 {!! SEO::generate(true) !!}
 @endenv
