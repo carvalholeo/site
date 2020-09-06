@@ -22,7 +22,7 @@
                         </h3>
                         <h2>{{ $edu->title }} - {{ $edu->isFinished ? 'Concluído' : 'Cursando' }}</h2>
 
-                        <a href="{{ $edu->institutionLink }}" target="_blank" rel="noreferrer">
+                        <a href="{{ $edu->institutionLink }}" target="_blank" rel="noopener noreferrer">
                             <span class="position">{{ $edu->institution }}</span>
                         </a>
                         <p>{{ $edu->description }}</p>
@@ -35,7 +35,7 @@
 @endforeach
 
                 <div class="justify-content-center text-center">
-                    <a role="button" type="button" class="btn btn-primary btn-lg" href="{{ route('index') }}#education" id="gtm-back-education">Voltar para o currículo</a>
+                    <a role="button" type="button" class="btn btn-primary btn-lg" rel="noopener noreferrer" href="{{ route('index') }}#education" id="gtm-back-education">Voltar para o currículo</a>
                 </div>
                 </div>
             </div>

@@ -29,26 +29,23 @@ mix.styles([
 mix.styles([
     'resources/css/error.css'], 'public/css/error.css');
 
-mix.babel([
-    'resources/js/custom/jquery.min.js',
-    'resources/js/custom/jquery-migrate-3.1.0.min.js',
-    'resources/js/custom/popper.min.js',
-    'resources/js/custom/bootstrap.min.js',
-    'resources/js/custom/jquery.easing.1.3.js',
-    'resources/js/custom/jquery.waypoints.min.js',
-    'resources/js/custom/jquery.stellar.min.js',
-    'resources/js/custom/owl.carousel.min.js',
-    'resources/js/custom/jquery.magnific-popup.min.js',
-    'resources/js/custom/aos.js',
-    'resources/js/custom/jquery.animateNumber.min.js',
-    'resources/js/custom/scrollax.min.js',
-    'resources/js/custom/main.js'], 'public/js/all.js');
+mix.babel('resources/js/custom/jquery.min.js', 'public/js/jquery.min.js');
+mix.babel('resources/js/custom/jquery-migrate-3.1.0.min.js', 'public/js/jquery-migrate-3.1.0.min.js');
+mix.babel('resources/js/custom/popper.min.js', 'public/js/popper.min.js');
+mix.babel('resources/js/custom/bootstrap.min.js', 'public/js/bootstrap.min.js');
+mix.babel('resources/js/custom/jquery.easing.1.3.js', 'public/js/jquery.easing.1.3.js');
+mix.babel('resources/js/custom/jquery.waypoints.min.js', 'public/js/jquery.waypoints.min.js');
+mix.babel('resources/js/custom/jquery.stellar.min.js', 'public/js/jquery.stellar.min.js');
+mix.babel('resources/js/custom/owl.carousel.min.js', 'public/js/owl.carousel.min.js');
+mix.babel('resources/js/custom/jquery.magnific-popup.min.js', 'public/js/jquery.magnific-popup.min.js');
+mix.babel('resources/js/custom/aos.js', 'public/js/aos.js');
+mix.babel('resources/js/custom/jquery.animateNumber.min.js', 'public/js/jquery.animateNumber.min.js');
+mix.babel('resources/js/custom/scrollax.min.js', 'public/js/scrollax.min.js');
+mix.babel('resources/js/custom/main.js', 'public/js/main.js');
 
-mix.babel([
-    'resources/js/custom/extended.js'], 'public/js/custom.js');
+mix.babel('resources/js/custom/extended.js', 'public/js/extended.js');
 
-mix.babel([
-        'resources/js/custom/lazysize.js'], 'public/js/lazysize.js');
+mix.babel('resources/js/custom/lazysize.js', 'public/js/lazysize.js');
 
 if (mix.inProduction()) {
     mix.version();

@@ -15,7 +15,7 @@
                         <div class="text pl-3">
                             <span class="date">{{ \Carbon\Carbon::parse($xp->startDate)->format('M/y')}} - {{ \Carbon\Carbon::parse($xp->endDate)->format('M/y')}}</span>
                             <h2>{{ $xp->role }}</h2>
-                            <a href="{{ $xp->companyLink }}" target="_blank" rel="noreferrer">
+                            <a href="{{ $xp->companyLink }}" target="_blank" rel="noopener noreferrer">
                                 <span class="position">{{ $xp->company }}</span>
                             </a>
                         <p>{{ $xp->description }}</p>
@@ -23,7 +23,7 @@
                     </div>
 @endforeach
                 <div class="justify-content-center text-center">
-                    <a role="button" type="button" class="btn btn-primary btn-lg" href="{{ route('index') }}#experience" id="gtm-back-experience">Voltar para o currículo</a>
+                    <a role="button" type="button" class="btn btn-primary btn-lg" rel="noopener noreferrer" href="{{ route('index') }}#experience" id="gtm-back-experience">Voltar para o currículo</a>
                 </div>
                 </div>
             </div>

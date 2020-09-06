@@ -27,10 +27,10 @@
                                 @endIf
                             </h3>
 
-                            <a href="{{ $course->awardLink }}" target="_blank" rel="noreferrer">
+                            <a href="{{ $course->awardLink }}" target="_blank" rel="noopener noreferrer">
                                 <h2>{{ $course->awardName }}</h2>
                             </a>
-                            <a href="{{ $course->institutionLink }}" target="_blank" rel="noreferrer">
+                            <a href="{{ $course->institutionLink }}" target="_blank" rel="noopener noreferrer">
                                 <span class="position">{{ $course->institutionName }}</span>
                             </a>
                             <p>{{ $course->description }}</p>
@@ -43,7 +43,7 @@
                     </div>
 @endforeach
                 <div class="justify-content-center text-center">
-                    <a role="button" type="button" class="btn btn-primary btn-lg" href="{{ route('index') }}#courses" id="gtm-back-courses">Voltar para o currículo</a>
+                    <a role="button" type="button" class="btn btn-primary btn-lg" rel="noopener noreferrer" href="{{ route('index') }}#courses" id="gtm-back-courses">Voltar para o currículo</a>
                 </div>
                 </div>
             </div>

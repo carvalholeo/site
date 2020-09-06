@@ -22,10 +22,10 @@
                                 @endIf
                             </h3>
 
-                            <a href="{{ $cert->certLink }}" target="_blank" rel="noreferrer">
+                            <a href="{{ $cert->certLink }}" target="_blank" rel="noopener noreferrer">
                                 <h2>{{ $cert->certName }}</h2>
                             </a>
-                            <a href="{{ $cert->issuerLink }}" target="_blank" rel="noreferrer">
+                            <a href="{{ $cert->issuerLink }}" target="_blank" rel="noopener noreferrer">
                                 <span class="position">{{ $cert->issuerName }}</span>
                             </a>
                             <p>{{ $cert->description }}</p>
@@ -38,7 +38,7 @@
                     </div>
 @endforeach
                     <div class="justify-content-center text-center">
-                        <a role="button" type="button" class="btn btn-primary btn-lg" href="{{ route('index') }}#certifications" id="gtm-back-certifications">Voltar para o currículo</a>
+                        <a role="button" type="button" class="btn btn-primary btn-lg" href="{{ route('index') }}#certifications" id="gtm-back-certifications" rel="noopener noreferrer">Voltar para o currículo</a>
                     </div>
                 </div>
             </div>

@@ -15,7 +15,7 @@
 @endphp
         <div class="col-md-4 d-flex ftco-animate">
             <div class="blog-entry justify-content-end">
-            <a href="{{ $post->link }}" id="bg-img" class="block-20 lazyload" data-bg='{{ $post->thumbnail }}'>
+            <a href="{{ $post->link }}" class="block-20 lazyload my-bg-img" data-bg='{{ $post->thumbnail }}' target="_blank" rel="noopener noreferrer">
             </a>
             <div class="text mt-3 float-right d-block">
               <h3 class="heading"><a href="{{ $post->link }}">{{ $post->title }}</a></h3>
@@ -26,7 +26,7 @@
               </div>
               <p> {{ $post->description }}</p>
 
-              <a role="button" class="btn btn-primary btn-sm" href="{{ $post->link }}">Continue lendo...</a>
+              <a role="button" class="btn btn-primary btn-sm" href="{{ $post->link }}" rel="noopener noreferrer" target="_blank">Continue lendo...</a>
               <p class="text-muted">Tags: {{ $categories }}</p>
 
             </div>
@@ -36,7 +36,7 @@
 
       </div>
       <div class="row justify-content-center text-center">
-          <a role="button" class="btn btn-primary " href="https://blog.leocarvalho.dev" id="gtm-transfer-blog">Leia outros artigos no blog</a>
+          <a role="button" class="btn btn-primary " href="https://blog.leocarvalho.dev" id="gtm-transfer-blog" target="_blank" rel="noopener noreferrer">Leia outros artigos no blog</a>
       </div>
     </div>
   </section>

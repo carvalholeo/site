@@ -99,7 +99,7 @@
         </div>
 
         <div class="col-md-6 d-flex">
-            <div class="img lazyload" data-bg="{{ asset('storage/images/leonardo.webp') }}" id="bg-img"></div>
+            <div class="img lazyload my-bg-img" data-bg="{{ asset('storage/images/leonardo.webp') }}"></div>
         </div>
       </div>
     </div>

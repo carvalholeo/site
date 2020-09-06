@@ -30,7 +30,7 @@
                             </h3>
                             <h2>{{ $educations[$i]->title }} - {{ $educations[$i]->isFinished ? 'Concluído' : 'Cursando' }}</h2>
 
-                            <a href="{{ $educations[$i]->institutionLink }}" target="_blank" rel="noreferrer">
+                            <a href="{{ $educations[$i]->institutionLink }}" target="_blank" rel="noopener noreferrer">
                                 <span class="position">{{ $educations[$i]->institution }}</span>
                             </a>
                             <p>{{ $educations[$i]->description }}</p>
@@ -42,7 +42,7 @@
                     </div>
 @endfor
                     <div class="justify-content-center text-center">
-                        <a role="button" type="button" class="btn btn-primary btn-lg" href="{{ route('resume.education') }}" id="gtm-resume-more-education">Ver mais experiências acadêmicas</a>
+                        <a role="button" type="button" class="btn btn-primary btn-lg" href="{{ route('resume.education') }}" id="gtm-resume-more-education" rel="noopener noreferrer">Ver mais experiências acadêmicas</a>
                     </div>
                 </div>
 
@@ -56,7 +56,7 @@
                         <div class="text pl-3">
                             <span class="date">{{ \Carbon\Carbon::parse($xps[$i]->startDate)->format('M/y')}} - {{ \Carbon\Carbon::parse($xps[$i]->endDate)->format('M/y')}}</span>
                             <h2>{{ $xps[$i]->role }}</h2>
-                            <a href="{{ $xps[$i]->companyLink }}" target="_blank" rel="noreferrer">
+                            <a href="{{ $xps[$i]->companyLink }}" target="_blank" rel="noopener noreferrer">
                                 <span class="position">{{ $xps[$i]->company }}</span>
                             </a>
                             <p>{{ $xps[$i]->description }}</p>
@@ -64,7 +64,7 @@
                     </div>
 @endfor
                     <div class="justify-content-center text-center">
-                        <a role="button" type="button" class="btn btn-primary btn-lg" href="{{ route('resume.professional') }}" id="gtm-resume-more-experience">Ver mais experiências profissionais</a>
+                        <a role="button" type="button" class="btn btn-primary btn-lg" href="{{ route('resume.professional') }}" id="gtm-resume-more-experience" rel="noopener noreferrer">Ver mais experiências profissionais</a>
                     </div>
                 </div>
 
@@ -139,10 +139,10 @@
                                 @endIf
                             </h3>
 
-                            <a href="{{ $courses[$i]->awardLink }}" target="_blank" rel="noreferrer">
+                            <a href="{{ $courses[$i]->awardLink }}" target="_blank" rel="noopener noreferrer">
                                 <h2>{{ $courses[$i]->awardName }}</h2>
                             </a>
-                            <a href="{{ $courses[$i]->institutionLink }}" target="_blank" rel="noreferrer">
+                            <a href="{{ $courses[$i]->institutionLink }}" target="_blank" rel="noopener noreferrer">
                                 <span class="position">{{ $courses[$i]->institutionName }}</span>
                             </a>
                             <p>{{ $courses[$i]->description }}</p>
@@ -155,7 +155,7 @@
                     </div>
 @endfor
                 <div class="justify-content-center text-center">
-                    <a role="button" type="button" class="btn btn-primary btn-lg" href="{{ route('resume.courses') }}" id="gtm-resume-more-courses">Ver mais cursos</a>
+                    <a role="button" type="button" class="btn btn-primary btn-lg" href="{{ route('resume.courses') }}" id="gtm-resume-more-courses" rel="noopener noreferrer">Ver mais cursos</a>
                 </div>
                 </div>
 
@@ -176,7 +176,7 @@
                             </span>
 
                             <h2>{{ $volunteers[$i]->position }}</h2>
-                            <a href="{{ $volunteers[$i]->institutionLink }}" target="_blank" rel="noreferrer">
+                            <a href="{{ $volunteers[$i]->institutionLink }}" target="_blank" rel="noopener noreferrer">
                                 <span class="position">{{ $volunteers[$i]->institutionName }}</span>
                             </a>
                             <p>{{ $volunteers[$i]->description }}</p>
@@ -184,7 +184,7 @@
                     </div>
 @endfor
                 <div class="justify-content-center text-center">
-                    <a role="button" type="button" class="btn btn-primary btn-lg" href="{{ route('resume.volunteer') }}" id="gtm-resume-more-volunteers">Ver mais trabalhos voluntários</a>
+                    <a role="button" type="button" class="btn btn-primary btn-lg" href="{{ route('resume.volunteer') }}" id="gtm-resume-more-volunteers" rel="noopener noreferrer">Ver mais trabalhos voluntários</a>
                 </div>
                 </div>
                 <div id="certifications" class= "page six">
@@ -204,10 +204,10 @@
                                 @endIf
                             </h3>
 
-                            <a href="{{ $certifications[$i]->certLink }}" target="_blank" rel="noreferrer">
+                            <a href="{{ $certifications[$i]->certLink }}" target="_blank" rel="noopener noreferrer">
                                 <h2>{{ $certifications[$i]->certName }}</h2>
                             </a>
-                            <a href="{{ $certifications[$i]->issuerLink }}" target="_blank" rel="noreferrer">
+                            <a href="{{ $certifications[$i]->issuerLink }}" target="_blank" rel="noopener noreferrer">
                                 <span class="position">{{ $certifications[$i]->issuerName }}</span>
                             </a>
                             <p>{{ $certifications[$i]->description }}</p>
@@ -220,7 +220,7 @@
                     </div>
 @endfor
                 <div class="justify-content-center text-center">
-                    <a role="button" type="button" class="btn btn-primary btn-lg" href="{{ route('resume.certifications') }}" id="gtm-resume-more-certifications">Ver mais certificações e reconhecimentos</a>
+                    <a role="button" type="button" class="btn btn-primary btn-lg" href="{{ route('resume.certifications') }}" id="gtm-resume-more-certifications" rel="noopener noreferrer">Ver mais certificações e reconhecimentos</a>
                 </div>
                 </div>
             </div>
