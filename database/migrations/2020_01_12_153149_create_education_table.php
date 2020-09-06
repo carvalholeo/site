@@ -23,6 +23,7 @@ class CreateEducationTable extends Migration
             $table->date('endDate')->nullable();
             $table->boolean('isFinished');
             $table->timestamps();
+            
         });
     }
 
