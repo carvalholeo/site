@@ -39,7 +39,7 @@
                 </div>
                 <div>
                     <h3 class="mb-4">Email</h3>
-                  <p class="text-break"><a href="mailto:leonardo.cscarvalho@outlook.com.br" id="gtm-email-link">leonardo.cscarvalho@outlook.com.br</a></p>
+                  <p class="text-break"><a href="mailto:leo@leocarvalho.dev" id="gtm-email-link">leo@leocarvalho.dev</a></p>
                 </div>
             </div>
         </div>

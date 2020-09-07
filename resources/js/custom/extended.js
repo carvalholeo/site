@@ -1,16 +1,14 @@
 function redirect(url) {
     try {
-        window.onload = window.location.replace(url);
+        window.addEventListener(() => {
+            window.location.replace(url)
+        });
+
+        window.addEventListener(() => {
+            window.location = url
+        });
     } catch(e) {
-        try {
-            window.onload = window.location.assign(url);
-        } catch(e) {
-            try {
-                window.onload = window.location(url);
-            } catch(e) {
-                console.error(e);
-            }
-        }
+        console.log(e);
     }
 }
 
@@ -36,12 +34,12 @@ function redirectToSection(sectionId) {
     window.location.href = sectionId;
 }
 
-let bgImg = document.querySelectorAll('.my-bg-img');
+const bgImg = document.querySelectorAll('.my-bg-img');
 bgImg.forEach(el => {
     el.addEventListener('lazybeforeunveil', function(e){
-        let bg = e.target.getAttribute('data-bg');
+        const bg = e.target.getAttribute('data-bg');
         if(bg){
-            e.target.style.backgroundImage = 'url(' + bg + ')';
+            e.target.style.backgroundImage = `url(${bg})`;
         }
     });
 });
@@ -64,7 +62,7 @@ gtag('config', 'UA-139872605-1', {
 if (window.performance) {
     // Gets the number of milliseconds since page load
     // (and rounds the result since the value must be an integer).
-    let timeSincePageLoad = Math.round(performance.now());
+    const timeSincePageLoad = Math.round(performance.now());
 
     // Sends the timing event to Google Analytics.
     gtag('event', 'timing_complete', {
@@ -79,6 +77,10 @@ function $buo_f(){
     var e = document.createElement("script");
     e.src = "//browser-update.org/update.min.js";
     document.body.appendChild(e);
-};
-try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
-catch(e){window.attachEvent("onload", $buo_f)}
+}
+try {
+    document.addEventListener("DOMContentLoaded", $buo_f,false)
+}
+catch(e){
+    window.attachEvent("onload", $buo_f)
+}

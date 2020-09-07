@@ -6,20 +6,19 @@
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-
-    <div class="container">
+    
         @component('components.navbar')
         @endcomponent
-        <main role="main">
-            @component('components.flash-messages')
-            @endcomponent
+    
+    <main role="main">
+        @component('components.flash-messages')
+        @endcomponent
 
-            @hasSection('body')
-                @yield('body')
-            @endif
-        </main>
-        <br>
-    </div>
+        @hasSection('body')
+            @yield('body')
+        @endif
+    </main>
+    <br>
 
     <footer class="ftco-footer ftco-section" role="complementary">
         @component('components.footer')

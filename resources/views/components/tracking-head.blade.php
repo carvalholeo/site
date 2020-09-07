@@ -25,7 +25,22 @@
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" media="none" onload="if(media!='all')media='all'">
 
-<link rel="stylesheet" href="{{ mix('css/all.css') }}">
+<link rel="stylesheet" href="{{ mix('css/open-iconic-bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ mix('css/animate.compat.css') }}">
+
+<link rel="stylesheet" href="{{ mix('css/owl.carousel.min.css') }}">
+<link rel="stylesheet" href="{{ mix('css/owl.theme.default.min.css') }}">
+<link rel="stylesheet" href="{{ mix('css/magnific-popup.css') }}">
+
+<link rel="stylesheet" href="{{ mix('css/aos.css') }}">
+
+<link rel="stylesheet" href="{{ mix('css/ionicons.min.css') }}">
+
+<link rel="stylesheet" href="{{ mix('css/flaticon.css') }}">
+<link rel="stylesheet" href="{{ mix('css/icomoon.min.css') }}">
+<link rel="stylesheet" href="{{ mix('css/style.css') }}">
+
+<link rel="stylesheet" href="{{ mix('css/custom.css') }}">
 
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 <link rel="apple-touch-icon" href="{{ asset('/icon.png') }}">
