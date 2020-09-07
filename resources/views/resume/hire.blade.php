@@ -1,4 +1,4 @@
-<section class="ftco-section ftco-hireme img lazyload" id="bg-img" data-bg="{{ asset('storage/images/bg_1.webp') }}">
+<section class="ftco-section ftco-hireme img lazyload my-bg-img" data-bg="{{ asset('storage/images/bg_1.webp') }}">
     <div class="overlay"></div>
     <div class="container">
         <div class="row justify-content-center">

@@ -22,7 +22,7 @@
                             </span>
 
                             <h2>{{ $volunteer->position }}</h2>
-                            <a href="{{ $volunteer->institutionLink }}" target="_blank" rel="noreferrer">
+                            <a href="{{ $volunteer->institutionLink }}" target="_blank" rel="noopener noreferrer">
                                 <span class="position">{{ $volunteer->institutionName }}</span>
                             </a>
                             <p>{{ $volunteer->description }}</p>
@@ -30,7 +30,7 @@
                     </div>
 @endforeach
                     <div class="justify-content-center text-center">
-                        <a role="button" type="button" class="btn btn-primary btn-lg" href="{{ route('index') }}#volunteer" id="gtm-back-volunteer">Voltar para o currículo</a>
+                        <a role="button" type="button" class="btn btn-primary btn-lg" rel="noopener noreferrer" href="{{ route('index') }}#volunteer" id="gtm-back-volunteer">Voltar para o currículo</a>
                     </div>
                 </div>
             </div>

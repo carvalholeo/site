@@ -17,7 +17,7 @@
                         </div>
 
                         <p class="text-muted">Infelizmente não tenho como te ajudar com isso.</p>
-                        <p class="text-muted">Tente ir para a <a href="{{ route('index') }}">página inicial</a> do site ou entrar em algum dos links no menu
+                        <p class="text-muted">Tente ir para a <a href="{{ route('index') }}" rel="noopener noreferrer">página inicial</a> do site ou entrar em algum dos links no menu
                             acima. =D </p>
                     </div>
                 </div>

@@ -25,7 +25,7 @@
                                     uma manutenção programada neste momento.</p>
                                 <p class="text-muted">Em breve, voltaremos com a nossa programação normal. Se esta
                                     página estiver aparecendo por mais de 10 minutos, me manda um <a
-                                        href="https://twitter.com/_carvalho_leo" target="_blank" rel="noreferrer">DM no Twitter</a> sobre a
+                                        href="https://twitter.com/_carvalho_leo" target="_blank" rel="noreferrer noopener">DM no Twitter</a> sobre a
                                     falha! </p>
                         </div>
                     </div>

@@ -4,7 +4,7 @@
             <div class="col-md-6 col-lg-6 d-flex">
                 <div class="img-about img d-flex align-items-stretch">
                     <div class="overlay"></div>
-                    <div class="img d-flex align-self-stretch align-items-center lazyload" id="bg-img" data-bg="{{ asset('storage/images/leonardo.webp') }}">
+                    <div class="img d-flex align-self-stretch align-items-center lazyload my-bg-img"  data-bg="{{ asset('storage/images/leonardo.webp') }}">
                     </div>
                 </div>
             </div>
@@ -17,8 +17,8 @@
                 <ul class="about-info mt-4 px-md-0 px-2">
                     <li class="d-flex"><span>Nome:</span> <span>Leonardo Carvalho</span></li>
                     <li class="d-flex"><span>Aniversário:</span> <span>28 de abril</span></li>
-                    <li class="d-flex"><span>Email:</span> <a href="mailto:leonardo.cscarvalho@outlook.com.br" target="_blank" id="gtm-email-link"><span>leonardo.cscarvalho@outlook.com.br</span></a></li>
-                    <li class="d-flex"><span>Telefone: </span> <a href="tel://13997375760" id="gtm-telephone-link"><span>(13) 99737-5760</span></a></li>
+                    <li class="d-flex"><span>Email:</span> <a href="mailto:leo@leocarvalho.dev" target="_blank" id="gtm-email-link" rel="noopener noreferrer"><span>leo@leocarvalho.dev</span></a></li>
+                    <li class="d-flex"><span>Telefone: </span> <a href="tel://13997375760" id="gtm-telephone-link" rel="noopener noreferrer"><span>(13) 99737-5760</span></a></li>
                 </ul>
               </div>
             </div>

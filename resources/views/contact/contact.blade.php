@@ -39,7 +39,7 @@
                 </div>
                 <div>
                     <h3 class="mb-4">Email</h3>
-                  <p class="text-break"><a href="mailto:leonardo.cscarvalho@outlook.com.br" id="gtm-email-link">leonardo.cscarvalho@outlook.com.br</a></p>
+                  <p class="text-break"><a href="mailto:leo@leocarvalho.dev" id="gtm-email-link">leo@leocarvalho.dev</a></p>
                 </div>
             </div>
         </div>
@@ -99,7 +99,7 @@
         </div>
 
         <div class="col-md-6 d-flex">
-            <div class="img lazyload" data-bg="{{ asset('storage/images/leonardo.webp') }}" id="bg-img"></div>
+            <div class="img lazyload my-bg-img" data-bg="{{ asset('storage/images/leonardo.webp') }}"></div>
         </div>
       </div>
     </div>
