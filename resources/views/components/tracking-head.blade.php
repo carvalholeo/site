@@ -1,8 +1,11 @@
+<link rel="preload" href="/fonts/open-iconic.woff" as="font" type="font/woff" crossorigin>
+
+<link rel="preconnect" href="//leocarvalho.dev">
 <link rel="preconnect" href="//fonts.gstatic.com">
 <link rel="preconnect" href="//fonts.googleapis.com">
 <link rel="preconnect" href="//www.gstatic.com">
 <link rel="preconnect" href="//www.google.com">
-<link rel="preconnect" href="//browser-update.org">
+<link rel="preconnect" href="https://browser-update.org">
 <link rel="preconnect" href="//www.googletagmanager.com">
 <link rel="preconnect" href="//wakatime.com">
 <link rel="preconnect" href="//pagead2.googlesyndication.com">
@@ -10,12 +13,18 @@
 <link rel="preconnect" href="//www.google-analytics.com">
 <link rel="preconnect" href="//stats.g.doubleclick.net">
 
+<script src="{{ mix('js/extended.js') }}"></script>
+
 @env('production')
 {!! SEO::generate(true) !!}
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script src="https://www.googletagmanager.com/gtag/js?id=UA-139872605-1"></script>
+<script src="{{ mix('js/analytics.js') }}"></script>
 @endenv
 
 @env('local')
 {!! SEO::generate() !!}
+<link rel="preconnect" href="//localhost:8000">
 @endenv
 
 <meta charset="utf-8">

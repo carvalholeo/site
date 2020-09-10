@@ -39,7 +39,7 @@
                 </div>
                 <div>
                     <h3 class="mb-4">Email</h3>
-                  <p class="text-break"><a href="mailto:leo@leocarvalho.dev" id="gtm-email-link">leo@leocarvalho.dev</a></p>
+                  <p class="text-break"><a href="mailto:leo@leocarvalho.dev" id="gtm-email-link" target="_blank" rel="noreferrer noopener">leo@leocarvalho.dev</a></p>
                 </div>
             </div>
         </div>
@@ -50,7 +50,7 @@
                 </div>
                 <div>
                     <h3 class="mb-4">Portifólio</h3>
-                <p><a href="{{ route('social.github') }}" id="gtm-enter-github">github.com/carvalholeo</a></p>
+                <p><a href="{{ route('social.github') }}" id="gtm-enter-github" target="_blank" rel="noreferrer noopener">github.com/carvalholeo</a></p>
               </div>
             </div>
         </div>
