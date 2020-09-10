@@ -10,7 +10,7 @@
         @component('components.navbar')
         @endcomponent
 
-    <main role="main">
+    <main role="main" class="container">
         @component('components.flash-messages')
         @endcomponent
 
