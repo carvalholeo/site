@@ -1,3 +1,4 @@
+<link rel="preconnect" href="//leocarvalho.dev">
 <link rel="preconnect" href="//fonts.gstatic.com">
 <link rel="preconnect" href="//fonts.googleapis.com">
 <link rel="preconnect" href="//www.gstatic.com">
@@ -10,8 +11,13 @@
 <link rel="preconnect" href="//www.google-analytics.com">
 <link rel="preconnect" href="//stats.g.doubleclick.net">
 
+<script src="{{ mix('js/extended.js') }}"></script>
+
 @env('production')
 {!! SEO::generate(true) !!}
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script src="https://www.googletagmanager.com/gtag/js?id=UA-139872605-1"></script>
+<script src="{{ mix('js/analytics.js') }}"></script>
 @endenv
 
 @env('local')

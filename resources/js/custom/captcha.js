@@ -1,12 +1,17 @@
-$(document).ready(function() {
-    grecaptcha.ready(function() {
-        grecaptcha.execute('6LdoxaYUAAAAAJx8MEuu-K5-AeStQBO9l8yBPpyq', {action: 'contact'})
-            .then(function(token) {
-                document.getElementById('submit').disabled = false;
-                
-                var recaptchaResponse = document.getElementById('recaptchaResponse');
-                recaptchaResponse.value = token;
+const recaptchaSuccess = response => {
+    document.getElementById('submit').disabled = false;
+    document.getElementById('submit').autofocus = true;
+};
 
-            });
+const recaptchaError = () => {
+    document.getElementById('submit').disabled = true;
+};
+
+const onloadCallback = () => {
+    grecaptcha.render('recaptcha', {
+        'sitekey' : '6LcEScgUAAAAAIxwvlfw5rbvAuVYdhbbPmChcept',
+        'callback' : recaptchaSuccess,
+        'expired-callback' : recaptchaError,
+        'error-callback' : recaptchaError
     });
-});
+};

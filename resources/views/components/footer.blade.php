@@ -45,7 +45,7 @@
                     <div class="block-23 mb-3">
                         <ul>
                         <li><a href="{{ route('social.whatsapp') }}" id="gtm-telephone-link"><span class="icon icon-whatsapp"></span><span class="text">(13) 99737-5760 (WhatsApp)</span></a></li>
-                        <li><a href="mailto:leonardo.cscarvalho@outlook.com.br" id="gtm-email-link"><span class="icon icon-envelope"></span><span class="text"> leonardo.cscarvalho@outlook.com.br</span></a></li>
+                        <li><a href="mailto:leo@leocarvalho.dev" id="gtm-email-link"><span class="icon icon-envelope"></span><span class="text"> leo@leocarvalho.dev</span></a></li>
                         </ul>
                     </div>
                 </div>

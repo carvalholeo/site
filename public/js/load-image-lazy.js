@@ -1,0 +1,1 @@
+var bgImg=document.querySelectorAll(".my-bg-img");bgImg.forEach(function(t){t.addEventListener("lazybeforeunveil",function(t){var e=t.target.getAttribute("data-bg");e&&(t.target.style.backgroundImage="url(".concat(e,")"))})});

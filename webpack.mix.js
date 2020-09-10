@@ -36,6 +36,9 @@ mix.babel('resources/js/custom/popper.min.js', 'public/js/popper.min.js');
 mix.babel('resources/js/custom/scrollax.min.js', 'public/js/scrollax.min.js');
 mix.babel('resources/js/custom/main.js', 'public/js/main.js');
 mix.babel('resources/js/custom/extended.js', 'public/js/extended.js');
+mix.babel('resources/js/custom/captcha.js', 'public/js/captcha.js');
+mix.babel('resources/js/custom/analytics.js', 'public/js/analytics.js');
+mix.babel('resources/js/custom/load-image-lazy.js', 'public/js/load-image-lazy.js');
 //JS from npm
 mix.babel('node_modules/lazysizes/lazysizes.min.js', 'public/js/lazysize.js');
 mix.babel('node_modules/jquery/dist/jquery.min.js', 'public/js/jquery.min.js');
