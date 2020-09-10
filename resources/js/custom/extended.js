@@ -13,7 +13,7 @@ function redirectToSection(sectionId) {
     window.location.href = sectionId;
 }
 
-let $buoop = {
+const $buoop = {
     required: {
         e: -4,
         f:-3,
@@ -22,12 +22,13 @@ let $buoop = {
         c:-3
     },
     insecure: true,
-    api:2020.02 
+    unsupported:true,
+    api: 2020.09
 };
 
 function $buo_f(){
-    var e = document.createElement("script");
-    e.src = "//browser-update.org/update.min.js";
+    const e = document.createElement("script");
+    e.src = "https://browser-update.org/update.min.js";
     document.body.appendChild(e);
 }
 try {
