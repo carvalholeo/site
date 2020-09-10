@@ -1,5 +1,4 @@
 <link rel="preload" href="/fonts/open-iconic.woff" as="font" type="font/woff" crossorigin>
-<link rel="preload" href="https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2" as="font" type="font/woff2" crossorigin>
 
 <link rel="preconnect" href="//leocarvalho.dev">
 <link rel="preconnect" href="//fonts.gstatic.com">
@@ -25,6 +24,7 @@
 
 @env('local')
 {!! SEO::generate() !!}
+<link rel="preconnect" href="//localhost:8000">
 @endenv
 
 <meta charset="utf-8">
