@@ -4,7 +4,7 @@
             <div class="col-md-6 col-lg-6 d-flex">
                 <div class="img-about img d-flex align-items-stretch">
                     <div class="overlay"></div>
-                    <div class="img d-flex align-self-stretch align-items-center lazyload my-bg-img"  data-bg="{{ asset('storage/images/leonardo.webp') }}">
+                    <div class="img d-flex align-self-stretch align-items-center lazyload my-bg-img"  data-bg="{{ asset('storage/images/leonardo.webp') }}" style="background-position: unset;">
                     </div>
                 </div>
             </div>
