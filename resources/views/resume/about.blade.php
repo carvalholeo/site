@@ -17,8 +17,8 @@
                 <ul class="about-info mt-4 px-md-0 px-2">
                     <li class="d-flex"><span>Nome:</span> <span>Leonardo Carvalho</span></li>
                     <li class="d-flex"><span>Aniversário:</span> <span>28 de abril</span></li>
-                    <li class="d-flex"><span>Email:</span> <a href="mailto:leo@leocarvalho.dev" target="_blank" id="gtm-email-link" rel="noopener noreferrer"><span>leo@leocarvalho.dev</span></a></li>
-                    <li class="d-flex"><span>Telefone: </span> <a href="tel://13997375760" id="gtm-telephone-link" rel="noopener noreferrer"><span>(13) 99737-5760</span></a></li>
+                    <li class="d-flex"><span>Email:</span> <a href="mailto:leo@leocarvalho.dev" target="_blank" id="gtm-email-link" target="_blank" rel="noreferrer noopener"><span>leo@leocarvalho.dev</span></a></li>
+                    <li class="d-flex"><span>Telefone: </span> <a href="tel://13997375760" id="gtm-telephone-link"><span>(13) 99737-5760</span></a></li>
                 </ul>
               </div>
             </div>
@@ -28,7 +28,7 @@
                     <span class="number" data-number="120">0</span>
                     <span>Projetos completos</span>
                 </p-->
-            <p><a href="{{ route('resume.download') }}" class="btn btn-primary py-3 px-3" id="gtm-resume-download">Download do Currículo</a></p>
+            <p><a href="{{ route('resume.download') }}" class="btn btn-primary py-3 px-3" id="gtm-resume-download" target="_blank" rel="noreferrer noopener">Download do Currículo</a></p>
           </div>
           </div>
         </div>
